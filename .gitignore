@@ -1,0 +1,9 @@
+.gradle/
+.kotlin/
+build/
+out/
+.idea/
+*.iml
+local.properties
+.DS_Store
+__pycache__/

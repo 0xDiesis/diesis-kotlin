@@ -1,0 +1,7 @@
+src/main/kotlin/xyz/diesis/contracts/** linguist-generated=true
+src/main/kotlin/xyz/diesis/DiesisAddresses.kt linguist-generated=true
+src/main/kotlin/xyz/diesis/DiesisChains.kt linguist-generated=true
+src/main/kotlin/xyz/diesis/DiesisContracts.kt linguist-generated=true
+gradlew text eol=lf
+*.bat text eol=crlf
+*.jar binary
