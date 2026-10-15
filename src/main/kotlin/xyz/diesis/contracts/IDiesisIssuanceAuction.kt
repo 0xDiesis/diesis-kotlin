@@ -8,51 +8,38 @@ import org.web3j.abi.datatypes.StaticStruct
 import org.web3j.abi.datatypes.generated.Bytes32
 import org.web3j.abi.datatypes.generated.Uint256
 import org.web3j.abi.datatypes.generated.Uint64
-import org.web3j.abi.datatypes.generated.Uint8
 
 /** Types and constants of the `IDiesisIssuanceAuction` contract. */
 object IDiesisIssuanceAuction {
     /** JSON ABI of the `IDiesisIssuanceAuction` contract. */
     @JvmField
     val JSON: String = arrayOf(
-        "[{\"inputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"baseAsset\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quoteAsset\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"evidenceHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"pricingVersion\",\"type\":\"uint8\"},{\"internalType\":\"uint64\",\"name\":\"priceDenominator\",\"type\":\"uint64\"}],\"internalType\":\"struct IDiesisIssuanceAuction.PricedPerpRegistration\",\"name\":\"registration\",\"type\":\"tuple\"}],\"name\":\"bidPricedPerpListing\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"baseAsset\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quoteAsset\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"evidenceHash\",\"type\":\"bytes32\"}],\"internalType\":\"struct IDiesisIssuanceAuction.UnpricedPerpRegistration\",\"name\":\"registration\",\"type\":\"tuple\"}],\"name\":\"bidUnpricedPerpListing\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentPerpListingPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPerpListingSlot\",\"outputs\":[{\"components\":[{\"internalType\":\"uint64\",\"name\":\"slotStartBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"slotLengthBlocks\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"initialPriceUsdc\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"winningPriceUsdc\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"currentWinner\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"registrationDigest\",\"type\":\"bytes32\"}],\"internalType\":\"struct IDiesisIssuanceAuction.PerpListingSlot\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getPerpRegistrationPricing\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"pricingVersion\",\"type\":\"uint8\"},{\"internalType\":\"uint64\",\"name\":\"priceDenominator\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"settlePerpListing\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"bidder\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"registrationDigest\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"priceUsdc\",\"type\":\"uint256\"}],\"name\":\"BidAccepted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"winner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"registrationDigest\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"priceUsdc\",\"type\":\"uint256\"}],\"name\":\"SlotSettled\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"AuctionNotSettled\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidUnpricedPerpRegistration\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"IssuanceAuctionCallFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"RegistrationConflict\",\"type\":\"error\"}]",
+        "[{\"inputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"baseAsset\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quoteAsset\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"evidenceHash\",\"type\":\"bytes32\"}],\"internalType\":\"struct IDiesisIssuanceAuction.PerpRegistrationV1\",\"name\":\"registration\",\"type\":\"tuple\"}],\"name\":\"bidPerpListingV1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentPerpListingPriceV1\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPerpListingSlotV1\",\"outputs\":[{\"components\":[{\"internalType\":\"uint64\",\"name\":\"slotStartBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"slotLengthBlocks\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"initialPriceUsdc\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"winningPriceUsdc\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"currentWinner\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"registrationDigest\",\"type\":\"bytes32\"}],\"internalType\":\"struct IDiesisIssuanceAuction.PerpListingSlotV1\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"settlePerpListingV1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"bidder\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"registrationDigest\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"priceUsdc\",\"type\":\"uint256\"}],\"name\":\"BidAccepted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"winner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"registrationDigest\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"priceUsdc\",\"type\":\"uint256\"}],\"name\":\"SlotSettled\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"AuctionNotSettled\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidPerpRegistrationV1\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"IssuanceAuctionCallFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"RegistrationConflict\",\"type\":\"error\"}]",
     ).joinToString("")
 
-    /** Canonical signature of `bidPricedPerpListing((bytes32,address,address,bytes32,uint8,uint64))`. */
-    const val BID_PRICED_PERP_LISTING_SIGNATURE: String = "bidPricedPerpListing((bytes32,address,address,bytes32,uint8,uint64))"
+    /** Canonical signature of `bidPerpListingV1((bytes32,address,address,bytes32))`. */
+    const val BID_PERP_LISTING_V1_SIGNATURE: String = "bidPerpListingV1((bytes32,address,address,bytes32))"
 
-    /** Selector of `bidPricedPerpListing((bytes32,address,address,bytes32,uint8,uint64))`. */
-    const val BID_PRICED_PERP_LISTING_SELECTOR: String = "0xf8a631a6"
+    /** Selector of `bidPerpListingV1((bytes32,address,address,bytes32))`. */
+    const val BID_PERP_LISTING_V1_SELECTOR: String = "0xc73f51bc"
 
-    /** Canonical signature of `bidUnpricedPerpListing((bytes32,address,address,bytes32))`. */
-    const val BID_UNPRICED_PERP_LISTING_SIGNATURE: String = "bidUnpricedPerpListing((bytes32,address,address,bytes32))"
+    /** Canonical signature of `currentPerpListingPriceV1()`. */
+    const val CURRENT_PERP_LISTING_PRICE_V1_SIGNATURE: String = "currentPerpListingPriceV1()"
 
-    /** Selector of `bidUnpricedPerpListing((bytes32,address,address,bytes32))`. */
-    const val BID_UNPRICED_PERP_LISTING_SELECTOR: String = "0x2b37f88d"
+    /** Selector of `currentPerpListingPriceV1()`. */
+    const val CURRENT_PERP_LISTING_PRICE_V1_SELECTOR: String = "0x5f4e5ecf"
 
-    /** Canonical signature of `currentPerpListingPrice()`. */
-    const val CURRENT_PERP_LISTING_PRICE_SIGNATURE: String = "currentPerpListingPrice()"
+    /** Canonical signature of `getPerpListingSlotV1()`. */
+    const val GET_PERP_LISTING_SLOT_V1_SIGNATURE: String = "getPerpListingSlotV1()"
 
-    /** Selector of `currentPerpListingPrice()`. */
-    const val CURRENT_PERP_LISTING_PRICE_SELECTOR: String = "0x6acdd627"
+    /** Selector of `getPerpListingSlotV1()`. */
+    const val GET_PERP_LISTING_SLOT_V1_SELECTOR: String = "0x4e8d9d31"
 
-    /** Canonical signature of `getPerpListingSlot()`. */
-    const val GET_PERP_LISTING_SLOT_SIGNATURE: String = "getPerpListingSlot()"
+    /** Canonical signature of `settlePerpListingV1()`. */
+    const val SETTLE_PERP_LISTING_V1_SIGNATURE: String = "settlePerpListingV1()"
 
-    /** Selector of `getPerpListingSlot()`. */
-    const val GET_PERP_LISTING_SLOT_SELECTOR: String = "0x01e06b79"
-
-    /** Canonical signature of `getPerpRegistrationPricing(bytes32)`. */
-    const val GET_PERP_REGISTRATION_PRICING_SIGNATURE: String = "getPerpRegistrationPricing(bytes32)"
-
-    /** Selector of `getPerpRegistrationPricing(bytes32)`. */
-    const val GET_PERP_REGISTRATION_PRICING_SELECTOR: String = "0x79dbb199"
-
-    /** Canonical signature of `settlePerpListing()`. */
-    const val SETTLE_PERP_LISTING_SIGNATURE: String = "settlePerpListing()"
-
-    /** Selector of `settlePerpListing()`. */
-    const val SETTLE_PERP_LISTING_SELECTOR: String = "0x2c4e0da1"
+    /** Selector of `settlePerpListingV1()`. */
+    const val SETTLE_PERP_LISTING_V1_SELECTOR: String = "0x5c66b78b"
 
     /** Canonical signature of the `BidAccepted(address,bytes32,bytes32,uint256)` event. */
     const val BID_ACCEPTED_EVENT_SIGNATURE: String = "BidAccepted(address,bytes32,bytes32,uint256)"
@@ -72,11 +59,11 @@ object IDiesisIssuanceAuction {
     /** Selector of the `AuctionNotSettled()` error. */
     const val AUCTION_NOT_SETTLED_ERROR_SELECTOR: String = "0x472fd199"
 
-    /** Canonical signature of the `InvalidUnpricedPerpRegistration()` error. */
-    const val INVALID_UNPRICED_PERP_REGISTRATION_ERROR_SIGNATURE: String = "InvalidUnpricedPerpRegistration()"
+    /** Canonical signature of the `InvalidPerpRegistrationV1()` error. */
+    const val INVALID_PERP_REGISTRATION_V1_ERROR_SIGNATURE: String = "InvalidPerpRegistrationV1()"
 
-    /** Selector of the `InvalidUnpricedPerpRegistration()` error. */
-    const val INVALID_UNPRICED_PERP_REGISTRATION_ERROR_SELECTOR: String = "0xe431e4d8"
+    /** Selector of the `InvalidPerpRegistrationV1()` error. */
+    const val INVALID_PERP_REGISTRATION_V1_ERROR_SELECTOR: String = "0x97bb0617"
 
     /** Canonical signature of the `IssuanceAuctionCallFailed()` error. */
     const val ISSUANCE_AUCTION_CALL_FAILED_ERROR_SIGNATURE: String = "IssuanceAuctionCallFailed()"
@@ -90,20 +77,8 @@ object IDiesisIssuanceAuction {
     /** Selector of the `RegistrationConflict()` error. */
     const val REGISTRATION_CONFLICT_ERROR_SELECTOR: String = "0x54ddadaf"
 
-    /** The `PricedPerpRegistration` tuple. */
-    data class PricedPerpRegistration(
-        val marketId: Bytes32,
-        val baseAsset: String,
-        val quoteAsset: String,
-        val evidenceHash: Bytes32,
-        val pricingVersion: BigInteger,
-        val priceDenominator: BigInteger,
-    ) : StaticStruct(marketId, Address(baseAsset), Address(quoteAsset), evidenceHash, Uint8(pricingVersion), Uint64(priceDenominator)) {
-        constructor(marketId: Bytes32, baseAsset: Address, quoteAsset: Address, evidenceHash: Bytes32, pricingVersion: Uint8, priceDenominator: Uint64) : this(marketId, baseAsset.value, quoteAsset.value, evidenceHash, pricingVersion.value, priceDenominator.value)
-    }
-
-    /** The `UnpricedPerpRegistration` tuple. */
-    data class UnpricedPerpRegistration(
+    /** The `PerpRegistrationV1` tuple. */
+    data class PerpRegistrationV1(
         val marketId: Bytes32,
         val baseAsset: String,
         val quoteAsset: String,
@@ -112,8 +87,8 @@ object IDiesisIssuanceAuction {
         constructor(marketId: Bytes32, baseAsset: Address, quoteAsset: Address, evidenceHash: Bytes32) : this(marketId, baseAsset.value, quoteAsset.value, evidenceHash)
     }
 
-    /** The `PerpListingSlot` tuple. */
-    data class PerpListingSlot(
+    /** The `PerpListingSlotV1` tuple. */
+    data class PerpListingSlotV1(
         val slotStartBlock: BigInteger,
         val slotLengthBlocks: BigInteger,
         val initialPriceUsdc: BigInteger,
@@ -125,33 +100,13 @@ object IDiesisIssuanceAuction {
     }
 
     /**
-     * Arguments of `bidPricedPerpListing((bytes32,address,address,bytes32,uint8,uint64))`.
-     *
-     * Place a canonical-USDC bid bound to immutable priced units.
-     * The native runtime debits msg.sender and retains the accepted      identity preimage. Successful admission and identical retries      return no data, as with bidUnpricedPerpListing.
-     */
-    data class BidPricedPerpListingParams(
-        val registration: PricedPerpRegistration,
-    )
-
-    /**
-     * Arguments of `bidUnpricedPerpListing((bytes32,address,address,bytes32))`.
+     * Arguments of `bidPerpListingV1((bytes32,address,address,bytes32))`.
      *
      * Place a canonical-USDC bid bound to one perpetual registration.
      * The native runtime debits USDC; this selector is intentionally not      payable and accepts no caller-supplied winner.
      */
-    data class BidUnpricedPerpListingParams(
-        val registration: UnpricedPerpRegistration,
-    )
-
-    /**
-     * Arguments of `getPerpRegistrationPricing(bytes32)`.
-     *
-     * Read the authenticated units retained by an accepted bid.
-     * A proved legacy registration returns zero and one. Unknown records,      absent identity preimages, or deleted priced metadata revert.
-     */
-    data class GetPerpRegistrationPricingParams(
-        val marketId: Bytes32,
+    data class BidPerpListingV1Params(
+        val registration: PerpRegistrationV1,
     )
 
     /** Fields of the `BidAccepted(address,bytes32,bytes32,uint256)` event. */
@@ -173,8 +128,8 @@ object IDiesisIssuanceAuction {
     /** Arguments of the `AuctionNotSettled()` error. */
     data object AuctionNotSettledError
 
-    /** Arguments of the `InvalidUnpricedPerpRegistration()` error. */
-    data object InvalidUnpricedPerpRegistrationError
+    /** Arguments of the `InvalidPerpRegistrationV1()` error. */
+    data object InvalidPerpRegistrationV1Error
 
     /** Arguments of the `IssuanceAuctionCallFailed()` error. */
     data object IssuanceAuctionCallFailedError
@@ -287,162 +242,105 @@ object IDiesisIssuanceAuction {
     }
 
     @Suppress("UNCHECKED_CAST")
-    private fun layoutPricedPerpRegistration(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value })) { values -> PricedPerpRegistration(values[0] as Bytes32, values[1] as String, values[2] as String, values[3] as Bytes32, values[4] as BigInteger, values[5] as BigInteger) }
+    private fun layoutPerpRegistrationV1(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { values -> PerpRegistrationV1(values[0] as Bytes32, values[1] as String, values[2] as String, values[3] as Bytes32) }
 
-    /** Decodes a single ABI return value of tuple `PricedPerpRegistration`. */
+    /** Decodes a single ABI return value of tuple `PerpRegistrationV1`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodePricedPerpRegistrationValue(data: String): PricedPerpRegistration =
-        (decodeLayout(data, AbiTuple(listOf(layoutPricedPerpRegistration())) { it }) as List<Any>)[0] as PricedPerpRegistration
+    fun decodePerpRegistrationV1Value(data: String): PerpRegistrationV1 =
+        (decodeLayout(data, AbiTuple(listOf(layoutPerpRegistrationV1())) { it }) as List<Any>)[0] as PerpRegistrationV1
 
-    /** Type reference for decoding the `PricedPerpRegistration` tuple. */
-    fun referencePricedPerpRegistration(): org.web3j.abi.TypeReference<PricedPerpRegistration> =
-        object : org.web3j.abi.TypeReference<PricedPerpRegistration>(false, listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<Uint64>() {})) {}
-
-    @Suppress("UNCHECKED_CAST")
-    private fun layoutUnpricedPerpRegistration(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { values -> UnpricedPerpRegistration(values[0] as Bytes32, values[1] as String, values[2] as String, values[3] as Bytes32) }
-
-    /** Decodes a single ABI return value of tuple `UnpricedPerpRegistration`. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodeUnpricedPerpRegistrationValue(data: String): UnpricedPerpRegistration =
-        (decodeLayout(data, AbiTuple(listOf(layoutUnpricedPerpRegistration())) { it }) as List<Any>)[0] as UnpricedPerpRegistration
-
-    /** Type reference for decoding the `UnpricedPerpRegistration` tuple. */
-    fun referenceUnpricedPerpRegistration(): org.web3j.abi.TypeReference<UnpricedPerpRegistration> =
-        object : org.web3j.abi.TypeReference<UnpricedPerpRegistration>(false, listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {})) {}
+    /** Type reference for decoding the `PerpRegistrationV1` tuple. */
+    fun referencePerpRegistrationV1(): org.web3j.abi.TypeReference<PerpRegistrationV1> =
+        object : org.web3j.abi.TypeReference<PerpRegistrationV1>(false, listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {})) {}
 
     @Suppress("UNCHECKED_CAST")
-    private fun layoutPerpListingSlot(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint256::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint256::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { values -> PerpListingSlot(values[0] as BigInteger, values[1] as BigInteger, values[2] as BigInteger, values[3] as BigInteger, values[4] as String, values[5] as Bytes32) }
+    private fun layoutPerpListingSlotV1(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint256::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint256::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { values -> PerpListingSlotV1(values[0] as BigInteger, values[1] as BigInteger, values[2] as BigInteger, values[3] as BigInteger, values[4] as String, values[5] as Bytes32) }
 
-    /** Decodes a single ABI return value of tuple `PerpListingSlot`. */
+    /** Decodes a single ABI return value of tuple `PerpListingSlotV1`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodePerpListingSlotValue(data: String): PerpListingSlot =
-        (decodeLayout(data, AbiTuple(listOf(layoutPerpListingSlot())) { it }) as List<Any>)[0] as PerpListingSlot
+    fun decodePerpListingSlotV1Value(data: String): PerpListingSlotV1 =
+        (decodeLayout(data, AbiTuple(listOf(layoutPerpListingSlotV1())) { it }) as List<Any>)[0] as PerpListingSlotV1
 
-    /** Type reference for decoding the `PerpListingSlot` tuple. */
-    fun referencePerpListingSlot(): org.web3j.abi.TypeReference<PerpListingSlot> =
-        object : org.web3j.abi.TypeReference<PerpListingSlot>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint256>() {}, object : org.web3j.abi.TypeReference<Uint256>() {}, object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {})) {}
+    /** Type reference for decoding the `PerpListingSlotV1` tuple. */
+    fun referencePerpListingSlotV1(): org.web3j.abi.TypeReference<PerpListingSlotV1> =
+        object : org.web3j.abi.TypeReference<PerpListingSlotV1>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint256>() {}, object : org.web3j.abi.TypeReference<Uint256>() {}, object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {})) {}
 
-    /** ABI function for `bidPricedPerpListing((bytes32,address,address,bytes32,uint8,uint64))`. */
-    fun functionBidPricedPerpListing(registration: PricedPerpRegistration): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("bidPricedPerpListing", listOf(registration), emptyList())
+    /** ABI function for `bidPerpListingV1((bytes32,address,address,bytes32))`. */
+    fun functionBidPerpListingV1(registration: PerpRegistrationV1): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("bidPerpListingV1", listOf(registration), emptyList())
 
-    /** Encodes calldata for `bidPricedPerpListing((bytes32,address,address,bytes32,uint8,uint64))` without an RPC call. */
-    fun encodeBidPricedPerpListing(registration: PricedPerpRegistration): String = org.web3j.abi.FunctionEncoder.encode(functionBidPricedPerpListing(registration))
+    /** Encodes calldata for `bidPerpListingV1((bytes32,address,address,bytes32))` without an RPC call. */
+    fun encodeBidPerpListingV1(registration: PerpRegistrationV1): String = org.web3j.abi.FunctionEncoder.encode(functionBidPerpListingV1(registration))
 
-    /** Decodes the ABI output of `bidPricedPerpListing((bytes32,address,address,bytes32,uint8,uint64))`. */
+    /** Decodes the ABI output of `bidPerpListingV1((bytes32,address,address,bytes32))`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeBidPricedPerpListingResult(data: String): Unit {
+    fun decodeBidPerpListingV1Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `bidPricedPerpListing((bytes32,address,address,bytes32,uint8,uint64))`. */
-    fun sendBidPricedPerpListing(client: Client, registration: PricedPerpRegistration, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `bidPerpListingV1((bytes32,address,address,bytes32))`. */
+    fun sendBidPerpListingV1(client: Client, registration: PerpRegistrationV1, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeBidPricedPerpListing(registration), options)
+        return client.send(encodeBidPerpListingV1(registration), options)
     }
 
-    /** ABI function for `bidUnpricedPerpListing((bytes32,address,address,bytes32))`. */
-    fun functionBidUnpricedPerpListing(registration: UnpricedPerpRegistration): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("bidUnpricedPerpListing", listOf(registration), emptyList())
+    /** ABI function for `currentPerpListingPriceV1()`. */
+    fun functionCurrentPerpListingPriceV1(): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("currentPerpListingPriceV1", emptyList(), listOf(object : org.web3j.abi.TypeReference<Uint256>() {}))
 
-    /** Encodes calldata for `bidUnpricedPerpListing((bytes32,address,address,bytes32))` without an RPC call. */
-    fun encodeBidUnpricedPerpListing(registration: UnpricedPerpRegistration): String = org.web3j.abi.FunctionEncoder.encode(functionBidUnpricedPerpListing(registration))
+    /** Encodes calldata for `currentPerpListingPriceV1()` without an RPC call. */
+    fun encodeCurrentPerpListingPriceV1(): String = org.web3j.abi.FunctionEncoder.encode(functionCurrentPerpListingPriceV1())
 
-    /** Decodes the ABI output of `bidUnpricedPerpListing((bytes32,address,address,bytes32))`. */
+    /** Decodes the ABI output of `currentPerpListingPriceV1()`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeBidUnpricedPerpListingResult(data: String): Unit {
-        require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
-        return Unit
-    }
-
-    /** Sends a write transaction for `bidUnpricedPerpListing((bytes32,address,address,bytes32))`. */
-    fun sendBidUnpricedPerpListing(client: Client, registration: UnpricedPerpRegistration, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
-        require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeBidUnpricedPerpListing(registration), options)
-    }
-
-    /** ABI function for `currentPerpListingPrice()`. */
-    fun functionCurrentPerpListingPrice(): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("currentPerpListingPrice", emptyList(), listOf(object : org.web3j.abi.TypeReference<Uint256>() {}))
-
-    /** Encodes calldata for `currentPerpListingPrice()` without an RPC call. */
-    fun encodeCurrentPerpListingPrice(): String = org.web3j.abi.FunctionEncoder.encode(functionCurrentPerpListingPrice())
-
-    /** Decodes the ABI output of `currentPerpListingPrice()`. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodeCurrentPerpListingPriceResult(data: String): BigInteger {
+    fun decodeCurrentPerpListingPriceV1Result(data: String): BigInteger {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint256::class.java); decoded.value })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for currentPerpListingPrice()" }
+        require(values.size == 1) { "incorrect result arity for currentPerpListingPriceV1()" }
         return values[0] as BigInteger
     }
 
-    /** Executes a read call for `currentPerpListingPrice()`. */
-    fun callCurrentPerpListingPrice(client: Client): BigInteger =
-        decodeCurrentPerpListingPriceResult(client.call(encodeCurrentPerpListingPrice()))
+    /** Executes a read call for `currentPerpListingPriceV1()`. */
+    fun callCurrentPerpListingPriceV1(client: Client): BigInteger =
+        decodeCurrentPerpListingPriceV1Result(client.call(encodeCurrentPerpListingPriceV1()))
 
-    /** ABI function for `getPerpListingSlot()`. */
-    fun functionGetPerpListingSlot(): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("getPerpListingSlot", emptyList(), listOf(object : org.web3j.abi.TypeReference<PerpListingSlot>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint256>() {}, object : org.web3j.abi.TypeReference<Uint256>() {}, object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {})) {}))
+    /** ABI function for `getPerpListingSlotV1()`. */
+    fun functionGetPerpListingSlotV1(): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("getPerpListingSlotV1", emptyList(), listOf(object : org.web3j.abi.TypeReference<PerpListingSlotV1>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint256>() {}, object : org.web3j.abi.TypeReference<Uint256>() {}, object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {})) {}))
 
-    /** Encodes calldata for `getPerpListingSlot()` without an RPC call. */
-    fun encodeGetPerpListingSlot(): String = org.web3j.abi.FunctionEncoder.encode(functionGetPerpListingSlot())
+    /** Encodes calldata for `getPerpListingSlotV1()` without an RPC call. */
+    fun encodeGetPerpListingSlotV1(): String = org.web3j.abi.FunctionEncoder.encode(functionGetPerpListingSlotV1())
 
-    /** Decodes the ABI output of `getPerpListingSlot()`. */
+    /** Decodes the ABI output of `getPerpListingSlotV1()`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeGetPerpListingSlotResult(data: String): PerpListingSlot {
-        val values = decodeLayout(data, AbiTuple(listOf(layoutPerpListingSlot())) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for getPerpListingSlot()" }
-        return values[0] as PerpListingSlot
+    fun decodeGetPerpListingSlotV1Result(data: String): PerpListingSlotV1 {
+        val values = decodeLayout(data, AbiTuple(listOf(layoutPerpListingSlotV1())) { it }) as List<Any>
+        require(values.size == 1) { "incorrect result arity for getPerpListingSlotV1()" }
+        return values[0] as PerpListingSlotV1
     }
 
-    /** Executes a read call for `getPerpListingSlot()`. */
-    fun callGetPerpListingSlot(client: Client): PerpListingSlot =
-        decodeGetPerpListingSlotResult(client.call(encodeGetPerpListingSlot()))
+    /** Executes a read call for `getPerpListingSlotV1()`. */
+    fun callGetPerpListingSlotV1(client: Client): PerpListingSlotV1 =
+        decodeGetPerpListingSlotV1Result(client.call(encodeGetPerpListingSlotV1()))
 
-    /** ABI function for `getPerpRegistrationPricing(bytes32)`. */
-    fun functionGetPerpRegistrationPricing(marketId: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("getPerpRegistrationPricing", listOf(marketId), listOf(object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<Uint64>() {}))
+    /** ABI function for `settlePerpListingV1()`. */
+    fun functionSettlePerpListingV1(): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("settlePerpListingV1", emptyList(), emptyList())
 
-    /** Encodes calldata for `getPerpRegistrationPricing(bytes32)` without an RPC call. */
-    fun encodeGetPerpRegistrationPricing(marketId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionGetPerpRegistrationPricing(marketId))
+    /** Encodes calldata for `settlePerpListingV1()` without an RPC call. */
+    fun encodeSettlePerpListingV1(): String = org.web3j.abi.FunctionEncoder.encode(functionSettlePerpListingV1())
 
-    /** Decoded result of `getPerpRegistrationPricing(bytes32)`. */
-    data class GetPerpRegistrationPricingResult(
-        val pricingVersion: BigInteger,
-        val priceDenominator: BigInteger,
-    )
-
-    /** Decodes the ABI output of `getPerpRegistrationPricing(bytes32)`. */
+    /** Decodes the ABI output of `settlePerpListingV1()`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeGetPerpRegistrationPricingResult(data: String): GetPerpRegistrationPricingResult {
-        val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value })) { it }) as List<Any>
-        require(values.size == 2) { "incorrect result arity for getPerpRegistrationPricing(bytes32)" }
-        return GetPerpRegistrationPricingResult(values[0] as BigInteger, values[1] as BigInteger)
-    }
-
-    /** Executes a read call for `getPerpRegistrationPricing(bytes32)`. */
-    fun callGetPerpRegistrationPricing(client: Client, marketId: Bytes32): GetPerpRegistrationPricingResult =
-        decodeGetPerpRegistrationPricingResult(client.call(encodeGetPerpRegistrationPricing(marketId)))
-
-    /** ABI function for `settlePerpListing()`. */
-    fun functionSettlePerpListing(): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("settlePerpListing", emptyList(), emptyList())
-
-    /** Encodes calldata for `settlePerpListing()` without an RPC call. */
-    fun encodeSettlePerpListing(): String = org.web3j.abi.FunctionEncoder.encode(functionSettlePerpListing())
-
-    /** Decodes the ABI output of `settlePerpListing()`. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodeSettlePerpListingResult(data: String): Unit {
+    fun decodeSettlePerpListingV1Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `settlePerpListing()`. */
-    fun sendSettlePerpListing(client: Client, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `settlePerpListingV1()`. */
+    fun sendSettlePerpListingV1(client: Client, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeSettlePerpListing(), options)
+        return client.send(encodeSettlePerpListingV1(), options)
     }
 
     /** Decodes a matching `BidAccepted(address,bytes32,bytes32,uint256)` log, or returns null. */
@@ -494,13 +392,13 @@ object IDiesisIssuanceAuction {
         return AuctionNotSettledError
     }
 
-    /** Decodes the `InvalidUnpricedPerpRegistration()` custom error, or returns null for another selector. */
+    /** Decodes the `InvalidPerpRegistrationV1()` custom error, or returns null for another selector. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeInvalidUnpricedPerpRegistrationError(data: String): InvalidUnpricedPerpRegistrationError? {
-        if (!data.startsWith("0xe431e4d8", ignoreCase = true)) return null
+    fun decodeInvalidPerpRegistrationV1Error(data: String): InvalidPerpRegistrationV1Error? {
+        if (!data.startsWith("0x97bb0617", ignoreCase = true)) return null
         val values = decodeLayout("0x" + data.substring(10), AbiTuple(listOf()) { it }) as List<Any>
         require(values.size == 0) { "incorrect custom error arity" }
-        return InvalidUnpricedPerpRegistrationError
+        return InvalidPerpRegistrationV1Error
     }
 
     /** Decodes the `IssuanceAuctionCallFailed()` custom error, or returns null for another selector. */

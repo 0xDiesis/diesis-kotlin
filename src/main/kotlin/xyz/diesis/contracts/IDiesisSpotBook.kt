@@ -19,7 +19,7 @@ object IDiesisSpotBook {
     /** JSON ABI of the `IDiesisSpotBook` contract. */
     @JvmField
     val JSON: String = arrayOf(
-        "[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"newPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"newAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"newFlags\",\"type\":\"uint8\"}],\"name\":\"amendOrder\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"newOrderId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"name\":\"cancelOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"fillPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"fillQty\",\"type\":\"uint256\"}],\"name\":\"executeSpotFill\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"filledQty\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"executionPrice\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"makerOrderId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"takerOrderId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"fillPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"fillQty\",\"type\":\"uint256\"}],\"name\":\"executeSpotTrade\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"filledQty\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"executionPrice\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"finalizeOpeningAuction\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"clearingPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"totalVolume\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getBestAsk\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"priceTicks\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountLots\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getBestBid\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"priceTicks\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountLots\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getOpeningAuction\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"startBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"endBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"referencePrice\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"finalized\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"clearingPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"totalVolume\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"levels\",\"type\":\"uint8\"}],\"name\":\"getOrderBookDepth\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"bidPrices\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"bidAmounts\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"askPrices\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"askAmounts\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getUserOrders\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"orderIds\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"startBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"endBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"referencePrice\",\"type\":\"uint256\"}],\"name\":\"startOpeningAuction\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"encodedWrapper\",\"type\":\"bytes\"}],\"name\":\"submitBoundSessionActions\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"resultHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"acceptedCount\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"rejectedCount\",\"type\":\"uint16\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"encodedActions\",\"type\":\"bytes\"}],\"name\":\"submitExchangeActions\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"resultHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"acceptedCount\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"rejectedCount\",\"type\":\"uint16\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"priceTicks\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountLots\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"flags\",\"type\":\"uint8\"}],\"name\":\"submitLimitOrder\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amountLots\",\"type\":\"uint256\"}],\"name\":\"submitMarketOrder\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"filledAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"signedCancelAllJson\",\"type\":\"bytes\"}],\"name\":\"submitSignedCancelAllSpotIntent\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"cancelled\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"signedIntentJson\",\"type\":\"bytes\"}],\"name\":\"submitSignedSpotIntent\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"maxOrders\",\"type\":\"uint16\"}],\"name\":\"triggerSpotStops\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"activated\",\"type\":\"uint16\"},{\"internalType\":\"bool\",\"name\":\"hasMore\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"clearingPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"totalVolume\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"residualOrders\",\"type\":\"uint256\"}],\"name\":\"BatchAuctionCleared\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes16\",\"name\":\"clientActionId\",\"type\":\"bytes16\"},{\"indexed\":true,\"internalType\":\"uint16\",\"name\":\"actionIndex\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"actionTag\",\"type\":\"uint8\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"principal\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"resultId\",\"type\":\"bytes32\"}],\"name\":\"ExchangeActionAccepted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes16\",\"name\":\"clientActionId\",\"type\":\"bytes16\"},{\"indexed\":true,\"internalType\":\"uint16\",\"name\":\"actionIndex\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"actionTag\",\"type\":\"uint8\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"principal\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"reasonCode\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"context\",\"type\":\"bytes32\"}],\"name\":\"ExchangeActionRejected\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"mutation\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"priceTicks\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"quantityLots\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"remainingLots\",\"type\":\"uint64\"}],\"name\":\"ExchangeL3Mutation\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"makerOrderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"takerOrderId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"maker\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"taker\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"aggressorSide\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"priceTicks\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"quantityLots\",\"type\":\"uint64\"}],\"name\":\"ExchangeTradeFill\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"}],\"name\":\"OrderCancelled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fillQty\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fillPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"remainingAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"complete\",\"type\":\"bool\"}],\"name\":\"OrderFilled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"flags\",\"type\":\"uint8\"}],\"name\":\"OrderPlaced\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"activationPrice\",\"type\":\"uint256\"}],\"name\":\"StopOrderTriggered\",\"type\":\"event\"}]",
+        "[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"newPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"newAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"newFlags\",\"type\":\"uint8\"}],\"name\":\"amendOrder\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"newOrderId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"name\":\"cancelOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"fillPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"fillQty\",\"type\":\"uint256\"}],\"name\":\"executeSpotFill\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"filledQty\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"executionPrice\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"makerOrderId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"takerOrderId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"fillPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"fillQty\",\"type\":\"uint256\"}],\"name\":\"executeSpotTrade\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"filledQty\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"executionPrice\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"finalizeOpeningAuction\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"clearingPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"totalVolume\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getBestAsk\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"priceTicks\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountLots\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getBestBid\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"priceTicks\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountLots\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getOpeningAuction\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"startBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"endBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"referencePrice\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"finalized\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"clearingPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"totalVolume\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"levels\",\"type\":\"uint8\"}],\"name\":\"getOrderBookDepth\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"bidPrices\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"bidAmounts\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"askPrices\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"askAmounts\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getUserOrders\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"orderIds\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"startBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"endBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"referencePrice\",\"type\":\"uint256\"}],\"name\":\"startOpeningAuction\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"encodedActions\",\"type\":\"bytes\"}],\"name\":\"submitExchangeActionsV2\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"resultHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"acceptedCount\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"rejectedCount\",\"type\":\"uint16\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"priceTicks\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountLots\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"flags\",\"type\":\"uint8\"}],\"name\":\"submitLimitOrder\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amountLots\",\"type\":\"uint256\"}],\"name\":\"submitMarketOrder\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"filledAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"signedCancelAllJson\",\"type\":\"bytes\"}],\"name\":\"submitSignedCancelAllSpotIntent\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"cancelled\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"signedIntentJson\",\"type\":\"bytes\"}],\"name\":\"submitSignedSpotIntent\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"maxOrders\",\"type\":\"uint16\"}],\"name\":\"triggerSpotStops\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"activated\",\"type\":\"uint16\"},{\"internalType\":\"bool\",\"name\":\"hasMore\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"clearingPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"totalVolume\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"residualOrders\",\"type\":\"uint256\"}],\"name\":\"BatchAuctionCleared\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes16\",\"name\":\"clientActionId\",\"type\":\"bytes16\"},{\"indexed\":true,\"internalType\":\"uint16\",\"name\":\"actionIndex\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"actionTag\",\"type\":\"uint8\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"principal\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"resultId\",\"type\":\"bytes32\"}],\"name\":\"ExchangeActionAcceptedV2\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes16\",\"name\":\"clientActionId\",\"type\":\"bytes16\"},{\"indexed\":true,\"internalType\":\"uint16\",\"name\":\"actionIndex\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"actionTag\",\"type\":\"uint8\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"principal\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"reasonCode\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"context\",\"type\":\"bytes32\"}],\"name\":\"ExchangeActionRejectedV2\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"mutation\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"priceTicks\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"quantityLots\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"remainingLots\",\"type\":\"uint64\"}],\"name\":\"ExchangeL3MutationV2\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"makerOrderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"takerOrderId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"maker\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"taker\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"aggressorSide\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"priceTicks\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"quantityLots\",\"type\":\"uint64\"}],\"name\":\"ExchangeTradeFillV2\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"}],\"name\":\"OrderCancelled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fillQty\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fillPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"remainingAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"complete\",\"type\":\"bool\"}],\"name\":\"OrderFilled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"flags\",\"type\":\"uint8\"}],\"name\":\"OrderPlaced\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"activationPrice\",\"type\":\"uint256\"}],\"name\":\"StopOrderTriggered\",\"type\":\"event\"}]",
     ).joinToString("")
 
     /** Canonical signature of `amendOrder(bytes32,uint256,uint256,uint8)`. */
@@ -88,17 +88,11 @@ object IDiesisSpotBook {
     /** Selector of `startOpeningAuction(bytes32,uint64,uint64,uint256)`. */
     const val START_OPENING_AUCTION_SELECTOR: String = "0x49359265"
 
-    /** Canonical signature of `submitBoundSessionActions(bytes)`. */
-    const val SUBMIT_BOUND_SESSION_ACTIONS_SIGNATURE: String = "submitBoundSessionActions(bytes)"
+    /** Canonical signature of `submitExchangeActionsV2(bytes)`. */
+    const val SUBMIT_EXCHANGE_ACTIONS_V2_SIGNATURE: String = "submitExchangeActionsV2(bytes)"
 
-    /** Selector of `submitBoundSessionActions(bytes)`. */
-    const val SUBMIT_BOUND_SESSION_ACTIONS_SELECTOR: String = "0x1cf05da9"
-
-    /** Canonical signature of `submitExchangeActions(bytes)`. */
-    const val SUBMIT_EXCHANGE_ACTIONS_SIGNATURE: String = "submitExchangeActions(bytes)"
-
-    /** Selector of `submitExchangeActions(bytes)`. */
-    const val SUBMIT_EXCHANGE_ACTIONS_SELECTOR: String = "0xd47b704f"
+    /** Selector of `submitExchangeActionsV2(bytes)`. */
+    const val SUBMIT_EXCHANGE_ACTIONS_V2_SELECTOR: String = "0x881c51de"
 
     /** Canonical signature of `submitLimitOrder(bytes32,uint8,uint256,uint256,uint8)`. */
     const val SUBMIT_LIMIT_ORDER_SIGNATURE: String = "submitLimitOrder(bytes32,uint8,uint256,uint256,uint8)"
@@ -136,29 +130,29 @@ object IDiesisSpotBook {
     /** Topic 0 of the `BatchAuctionCleared(bytes32,uint256,uint256,uint256)` event. */
     const val BATCH_AUCTION_CLEARED_EVENT_TOPIC: String = "0x23282c934e72938479026cddeea9b09391eaeb609937a76d3b01a1d5292231d8"
 
-    /** Canonical signature of the `ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
-    const val EXCHANGE_ACTION_ACCEPTED_EVENT_SIGNATURE: String = "ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)"
+    /** Canonical signature of the `ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
+    const val EXCHANGE_ACTION_ACCEPTED_V2_EVENT_SIGNATURE: String = "ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)"
 
-    /** Topic 0 of the `ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
-    const val EXCHANGE_ACTION_ACCEPTED_EVENT_TOPIC: String = "0x9fd3566e39f14b3c593967cf13d7e11e65dafed9c4a3bfeab39504f893a72158"
+    /** Topic 0 of the `ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
+    const val EXCHANGE_ACTION_ACCEPTED_V2_EVENT_TOPIC: String = "0x3ca6ab0c0316f6313bc20abbc2dc769133834b25425e93a865b9ef0892d83e2f"
 
-    /** Canonical signature of the `ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
-    const val EXCHANGE_ACTION_REJECTED_EVENT_SIGNATURE: String = "ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)"
+    /** Canonical signature of the `ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
+    const val EXCHANGE_ACTION_REJECTED_V2_EVENT_SIGNATURE: String = "ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)"
 
-    /** Topic 0 of the `ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
-    const val EXCHANGE_ACTION_REJECTED_EVENT_TOPIC: String = "0x70937d7f9595dc387b9e50f455a240b0830750a17ec1be4373c143fc5dde1b54"
+    /** Topic 0 of the `ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
+    const val EXCHANGE_ACTION_REJECTED_V2_EVENT_TOPIC: String = "0x919a92f6cab2e02a0599f1c76ab564597ac54873d064ae7b21c5ba8a8744d958"
 
-    /** Canonical signature of the `ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
-    const val EXCHANGE_L3_MUTATION_EVENT_SIGNATURE: String = "ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)"
+    /** Canonical signature of the `ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
+    const val EXCHANGE_L3_MUTATION_V2_EVENT_SIGNATURE: String = "ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)"
 
-    /** Topic 0 of the `ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
-    const val EXCHANGE_L3_MUTATION_EVENT_TOPIC: String = "0x2a5a4fc8324c7e62213e49aee23883746c4398ed74bd31d2eccc48de31026734"
+    /** Topic 0 of the `ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
+    const val EXCHANGE_L3_MUTATION_V2_EVENT_TOPIC: String = "0x083d99cea649c1d115fc1f70b8045c9b198634bd9b286cc43a595e2f5328fbdd"
 
-    /** Canonical signature of the `ExchangeTradeFill(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)` event. */
-    const val EXCHANGE_TRADE_FILL_EVENT_SIGNATURE: String = "ExchangeTradeFill(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)"
+    /** Canonical signature of the `ExchangeTradeFillV2(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)` event. */
+    const val EXCHANGE_TRADE_FILL_V2_EVENT_SIGNATURE: String = "ExchangeTradeFillV2(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)"
 
-    /** Topic 0 of the `ExchangeTradeFill(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)` event. */
-    const val EXCHANGE_TRADE_FILL_EVENT_TOPIC: String = "0xa9f7130999050253a9d4be9931ac9c49de061fca2e6833ad1422f1d74ce0fb92"
+    /** Topic 0 of the `ExchangeTradeFillV2(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)` event. */
+    const val EXCHANGE_TRADE_FILL_V2_EVENT_TOPIC: String = "0x74eea602401da7376b8e69a8401c0164dea612f7370c6d2ed8f016e86b19e5e2"
 
     /** Canonical signature of the `OrderCancelled(bytes32,bytes32,address)` event. */
     const val ORDER_CANCELLED_EVENT_SIGNATURE: String = "OrderCancelled(bytes32,bytes32,address)"
@@ -305,22 +299,12 @@ object IDiesisSpotBook {
     )
 
     /**
-     * Arguments of `submitBoundSessionActions(bytes)`.
-     *
-     * Proposed ordinary-caller bound-session V3 action wrapper.
-     * Inactive until a separately accepted resource policy and dispatch revision.      DXS3 contains the expected principal and current positive generation,      followed by unchanged DXA2 bytes. The result commits the full wrapper.      Sponsorship and relayer adapters are unsupported. Counts retain V2 types.
-     */
-    data class SubmitBoundSessionActionsParams(
-        val encodedWrapper: DynamicBytes,
-    )
-
-    /**
-     * Arguments of `submitExchangeActions(bytes)`.
+     * Arguments of `submitExchangeActionsV2(bytes)`.
      *
      * Submit one strictly bounded canonical V2 action batch.
      * The ordinary EVM caller authenticates the batch. The encoded bytes      contain no action-level signature or replay nonce. `resultHash`      commits to the original bytes and every ordered action outcome.
      */
-    data class SubmitExchangeActionsParams(
+    data class SubmitExchangeActionsV2Params(
         val encodedActions: DynamicBytes,
     )
 
@@ -389,8 +373,8 @@ object IDiesisSpotBook {
         val residualOrders: BigInteger,
     )
 
-    /** Fields of the `ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
-    data class ExchangeActionAcceptedEvent(
+    /** Fields of the `ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
+    data class ExchangeActionAcceptedV2Event(
         val clientActionId: Bytes16,
         val actionIndex: BigInteger,
         val actionTag: BigInteger,
@@ -399,8 +383,8 @@ object IDiesisSpotBook {
         val resultId: Bytes32,
     )
 
-    /** Fields of the `ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
-    data class ExchangeActionRejectedEvent(
+    /** Fields of the `ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
+    data class ExchangeActionRejectedV2Event(
         val clientActionId: Bytes16,
         val actionIndex: BigInteger,
         val actionTag: BigInteger,
@@ -410,8 +394,8 @@ object IDiesisSpotBook {
         val context: Bytes32,
     )
 
-    /** Fields of the `ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
-    data class ExchangeL3MutationEvent(
+    /** Fields of the `ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
+    data class ExchangeL3MutationV2Event(
         val marketId: Bytes32,
         val orderId: Bytes32,
         val trader: String,
@@ -422,8 +406,8 @@ object IDiesisSpotBook {
         val remainingLots: BigInteger,
     )
 
-    /** Fields of the `ExchangeTradeFill(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)` event. */
-    data class ExchangeTradeFillEvent(
+    /** Fields of the `ExchangeTradeFillV2(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)` event. */
+    data class ExchangeTradeFillV2Event(
         val marketId: Bytes32,
         val makerOrderId: Bytes32,
         val takerOrderId: Bytes32,
@@ -843,60 +827,32 @@ object IDiesisSpotBook {
         return client.send(encodeStartOpeningAuction(marketId, startBlock, endBlock, referencePrice), options)
     }
 
-    /** ABI function for `submitBoundSessionActions(bytes)`. */
-    fun functionSubmitBoundSessionActions(encodedWrapper: DynamicBytes): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("submitBoundSessionActions", listOf(encodedWrapper), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}))
+    /** ABI function for `submitExchangeActionsV2(bytes)`. */
+    fun functionSubmitExchangeActionsV2(encodedActions: DynamicBytes): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("submitExchangeActionsV2", listOf(encodedActions), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}))
 
-    /** Encodes calldata for `submitBoundSessionActions(bytes)` without an RPC call. */
-    fun encodeSubmitBoundSessionActions(encodedWrapper: DynamicBytes): String = org.web3j.abi.FunctionEncoder.encode(functionSubmitBoundSessionActions(encodedWrapper))
+    /** Encodes calldata for `submitExchangeActionsV2(bytes)` without an RPC call. */
+    fun encodeSubmitExchangeActionsV2(encodedActions: DynamicBytes): String = org.web3j.abi.FunctionEncoder.encode(functionSubmitExchangeActionsV2(encodedActions))
 
-    /** Decoded result of `submitBoundSessionActions(bytes)`. */
-    data class SubmitBoundSessionActionsResult(
+    /** Decoded result of `submitExchangeActionsV2(bytes)`. */
+    data class SubmitExchangeActionsV2Result(
         val resultHash: Bytes32,
         val acceptedCount: BigInteger,
         val rejectedCount: BigInteger,
     )
 
-    /** Decodes the ABI output of `submitBoundSessionActions(bytes)`. */
+    /** Decodes the ABI output of `submitExchangeActionsV2(bytes)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeSubmitBoundSessionActionsResult(data: String): SubmitBoundSessionActionsResult {
+    fun decodeSubmitExchangeActionsV2Result(data: String): SubmitExchangeActionsV2Result {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value })) { it }) as List<Any>
-        require(values.size == 3) { "incorrect result arity for submitBoundSessionActions(bytes)" }
-        return SubmitBoundSessionActionsResult(values[0] as Bytes32, values[1] as BigInteger, values[2] as BigInteger)
+        require(values.size == 3) { "incorrect result arity for submitExchangeActionsV2(bytes)" }
+        return SubmitExchangeActionsV2Result(values[0] as Bytes32, values[1] as BigInteger, values[2] as BigInteger)
     }
 
-    /** Sends a write transaction for `submitBoundSessionActions(bytes)`. */
-    fun sendSubmitBoundSessionActions(client: Client, encodedWrapper: DynamicBytes, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `submitExchangeActionsV2(bytes)`. */
+    fun sendSubmitExchangeActionsV2(client: Client, encodedActions: DynamicBytes, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeSubmitBoundSessionActions(encodedWrapper), options)
-    }
-
-    /** ABI function for `submitExchangeActions(bytes)`. */
-    fun functionSubmitExchangeActions(encodedActions: DynamicBytes): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("submitExchangeActions", listOf(encodedActions), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}))
-
-    /** Encodes calldata for `submitExchangeActions(bytes)` without an RPC call. */
-    fun encodeSubmitExchangeActions(encodedActions: DynamicBytes): String = org.web3j.abi.FunctionEncoder.encode(functionSubmitExchangeActions(encodedActions))
-
-    /** Decoded result of `submitExchangeActions(bytes)`. */
-    data class SubmitExchangeActionsResult(
-        val resultHash: Bytes32,
-        val acceptedCount: BigInteger,
-        val rejectedCount: BigInteger,
-    )
-
-    /** Decodes the ABI output of `submitExchangeActions(bytes)`. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodeSubmitExchangeActionsResult(data: String): SubmitExchangeActionsResult {
-        val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value })) { it }) as List<Any>
-        require(values.size == 3) { "incorrect result arity for submitExchangeActions(bytes)" }
-        return SubmitExchangeActionsResult(values[0] as Bytes32, values[1] as BigInteger, values[2] as BigInteger)
-    }
-
-    /** Sends a write transaction for `submitExchangeActions(bytes)`. */
-    fun sendSubmitExchangeActions(client: Client, encodedActions: DynamicBytes, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
-        require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeSubmitExchangeActions(encodedActions), options)
+        return client.send(encodeSubmitExchangeActionsV2(encodedActions), options)
     }
 
     /** ABI function for `submitLimitOrder(bytes32,uint8,uint256,uint256,uint8)`. */
@@ -1034,84 +990,84 @@ object IDiesisSpotBook {
         return filter
     }
 
-    /** Decodes a matching `ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)` log, or returns null. */
+    /** Decodes a matching `ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)` log, or returns null. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeExchangeActionAcceptedEvent(log: org.web3j.protocol.core.methods.response.Log): ExchangeActionAcceptedEvent? {
-        if (log.topics.firstOrNull()?.equals("0x9fd3566e39f14b3c593967cf13d7e11e65dafed9c4a3bfeab39504f893a72158", ignoreCase = true) != true) return null
+    fun decodeExchangeActionAcceptedV2Event(log: org.web3j.protocol.core.methods.response.Log): ExchangeActionAcceptedV2Event? {
+        if (log.topics.firstOrNull()?.equals("0x3ca6ab0c0316f6313bc20abbc2dc769133834b25425e93a865b9ef0892d83e2f", ignoreCase = true) != true) return null
         val indexed = log.topics.drop(1)
         if (indexed.size != 3) return null
         val values = decodeLayout(log.data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
         require(values.size == 3) { "incorrect event data arity" }
-        return ExchangeActionAcceptedEvent((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes16>(true) {}) as Bytes16), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Uint16>(true) {}) as Uint16).value, values[0] as BigInteger, (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[1] as String, values[2] as Bytes32)
+        return ExchangeActionAcceptedV2Event((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes16>(true) {}) as Bytes16), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Uint16>(true) {}) as Uint16).value, values[0] as BigInteger, (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[1] as String, values[2] as Bytes32)
     }
 
-    /** Creates an SDK filter for `ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)` at one contract address. */
-    fun filterExchangeActionAcceptedEvent(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, clientActionId: Bytes16? = null, actionIndex: BigInteger? = null, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
+    /** Creates an SDK filter for `ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)` at one contract address. */
+    fun filterExchangeActionAcceptedV2Event(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, clientActionId: Bytes16? = null, actionIndex: BigInteger? = null, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
         val filter = org.web3j.protocol.core.methods.request.EthFilter(fromBlock, toBlock, address)
-        filter.addSingleTopic("0x9fd3566e39f14b3c593967cf13d7e11e65dafed9c4a3bfeab39504f893a72158")
+        filter.addSingleTopic("0x3ca6ab0c0316f6313bc20abbc2dc769133834b25425e93a865b9ef0892d83e2f")
         if (clientActionId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(clientActionId))
         if (actionIndex == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(Uint16(actionIndex)))
         if (marketId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(marketId))
         return filter
     }
 
-    /** Decodes a matching `ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` log, or returns null. */
+    /** Decodes a matching `ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` log, or returns null. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeExchangeActionRejectedEvent(log: org.web3j.protocol.core.methods.response.Log): ExchangeActionRejectedEvent? {
-        if (log.topics.firstOrNull()?.equals("0x70937d7f9595dc387b9e50f455a240b0830750a17ec1be4373c143fc5dde1b54", ignoreCase = true) != true) return null
+    fun decodeExchangeActionRejectedV2Event(log: org.web3j.protocol.core.methods.response.Log): ExchangeActionRejectedV2Event? {
+        if (log.topics.firstOrNull()?.equals("0x919a92f6cab2e02a0599f1c76ab564597ac54873d064ae7b21c5ba8a8744d958", ignoreCase = true) != true) return null
         val indexed = log.topics.drop(1)
         if (indexed.size != 3) return null
         val values = decodeLayout(log.data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
         require(values.size == 4) { "incorrect event data arity" }
-        return ExchangeActionRejectedEvent((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes16>(true) {}) as Bytes16), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Uint16>(true) {}) as Uint16).value, values[0] as BigInteger, (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[1] as String, values[2] as BigInteger, values[3] as Bytes32)
+        return ExchangeActionRejectedV2Event((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes16>(true) {}) as Bytes16), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Uint16>(true) {}) as Uint16).value, values[0] as BigInteger, (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[1] as String, values[2] as BigInteger, values[3] as Bytes32)
     }
 
-    /** Creates an SDK filter for `ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` at one contract address. */
-    fun filterExchangeActionRejectedEvent(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, clientActionId: Bytes16? = null, actionIndex: BigInteger? = null, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
+    /** Creates an SDK filter for `ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` at one contract address. */
+    fun filterExchangeActionRejectedV2Event(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, clientActionId: Bytes16? = null, actionIndex: BigInteger? = null, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
         val filter = org.web3j.protocol.core.methods.request.EthFilter(fromBlock, toBlock, address)
-        filter.addSingleTopic("0x70937d7f9595dc387b9e50f455a240b0830750a17ec1be4373c143fc5dde1b54")
+        filter.addSingleTopic("0x919a92f6cab2e02a0599f1c76ab564597ac54873d064ae7b21c5ba8a8744d958")
         if (clientActionId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(clientActionId))
         if (actionIndex == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(Uint16(actionIndex)))
         if (marketId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(marketId))
         return filter
     }
 
-    /** Decodes a matching `ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` log, or returns null. */
+    /** Decodes a matching `ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` log, or returns null. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeExchangeL3MutationEvent(log: org.web3j.protocol.core.methods.response.Log): ExchangeL3MutationEvent? {
-        if (log.topics.firstOrNull()?.equals("0x2a5a4fc8324c7e62213e49aee23883746c4398ed74bd31d2eccc48de31026734", ignoreCase = true) != true) return null
+    fun decodeExchangeL3MutationV2Event(log: org.web3j.protocol.core.methods.response.Log): ExchangeL3MutationV2Event? {
+        if (log.topics.firstOrNull()?.equals("0x083d99cea649c1d115fc1f70b8045c9b198634bd9b286cc43a595e2f5328fbdd", ignoreCase = true) != true) return null
         val indexed = log.topics.drop(1)
         if (indexed.size != 3) return null
         val values = decodeLayout(log.data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value })) { it }) as List<Any>
         require(values.size == 5) { "incorrect event data arity" }
-        return ExchangeL3MutationEvent((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Address>(true) {}) as Address).value, values[0] as BigInteger, values[1] as BigInteger, values[2] as BigInteger, values[3] as BigInteger, values[4] as BigInteger)
+        return ExchangeL3MutationV2Event((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Address>(true) {}) as Address).value, values[0] as BigInteger, values[1] as BigInteger, values[2] as BigInteger, values[3] as BigInteger, values[4] as BigInteger)
     }
 
-    /** Creates an SDK filter for `ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` at one contract address. */
-    fun filterExchangeL3MutationEvent(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null, orderId: Bytes32? = null, trader: String? = null): org.web3j.protocol.core.methods.request.EthFilter {
+    /** Creates an SDK filter for `ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` at one contract address. */
+    fun filterExchangeL3MutationV2Event(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null, orderId: Bytes32? = null, trader: String? = null): org.web3j.protocol.core.methods.request.EthFilter {
         val filter = org.web3j.protocol.core.methods.request.EthFilter(fromBlock, toBlock, address)
-        filter.addSingleTopic("0x2a5a4fc8324c7e62213e49aee23883746c4398ed74bd31d2eccc48de31026734")
+        filter.addSingleTopic("0x083d99cea649c1d115fc1f70b8045c9b198634bd9b286cc43a595e2f5328fbdd")
         if (marketId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(marketId))
         if (orderId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(orderId))
         if (trader == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(Address(trader)))
         return filter
     }
 
-    /** Decodes a matching `ExchangeTradeFill(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)` log, or returns null. */
+    /** Decodes a matching `ExchangeTradeFillV2(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)` log, or returns null. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeExchangeTradeFillEvent(log: org.web3j.protocol.core.methods.response.Log): ExchangeTradeFillEvent? {
-        if (log.topics.firstOrNull()?.equals("0xa9f7130999050253a9d4be9931ac9c49de061fca2e6833ad1422f1d74ce0fb92", ignoreCase = true) != true) return null
+    fun decodeExchangeTradeFillV2Event(log: org.web3j.protocol.core.methods.response.Log): ExchangeTradeFillV2Event? {
+        if (log.topics.firstOrNull()?.equals("0x74eea602401da7376b8e69a8401c0164dea612f7370c6d2ed8f016e86b19e5e2", ignoreCase = true) != true) return null
         val indexed = log.topics.drop(1)
         if (indexed.size != 3) return null
         val values = decodeLayout(log.data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value })) { it }) as List<Any>
         require(values.size == 5) { "incorrect event data arity" }
-        return ExchangeTradeFillEvent((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[0] as String, values[1] as String, values[2] as BigInteger, values[3] as BigInteger, values[4] as BigInteger)
+        return ExchangeTradeFillV2Event((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[0] as String, values[1] as String, values[2] as BigInteger, values[3] as BigInteger, values[4] as BigInteger)
     }
 
-    /** Creates an SDK filter for `ExchangeTradeFill(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)` at one contract address. */
-    fun filterExchangeTradeFillEvent(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null, makerOrderId: Bytes32? = null, takerOrderId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
+    /** Creates an SDK filter for `ExchangeTradeFillV2(bytes32,bytes32,bytes32,address,address,uint8,uint64,uint64)` at one contract address. */
+    fun filterExchangeTradeFillV2Event(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null, makerOrderId: Bytes32? = null, takerOrderId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
         val filter = org.web3j.protocol.core.methods.request.EthFilter(fromBlock, toBlock, address)
-        filter.addSingleTopic("0xa9f7130999050253a9d4be9931ac9c49de061fca2e6833ad1422f1d74ce0fb92")
+        filter.addSingleTopic("0x74eea602401da7376b8e69a8401c0164dea612f7370c6d2ed8f016e86b19e5e2")
         if (marketId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(marketId))
         if (makerOrderId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(makerOrderId))
         if (takerOrderId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(takerOrderId))

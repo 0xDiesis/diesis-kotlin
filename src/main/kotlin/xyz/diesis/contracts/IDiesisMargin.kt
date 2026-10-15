@@ -12,14 +12,14 @@ object IDiesisMargin {
     /** JSON ABI of the `IDiesisMargin` contract. */
     @JvmField
     val JSON: String = arrayOf(
-        "[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"resolvePerpProtection\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"transactionId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"deleveraged\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"counterparty\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"size\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"AutoDeleverage\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"size\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"penalty\",\"type\":\"uint256\"}],\"name\":\"Liquidation\",\"type\":\"event\"}]",
+        "[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"resolvePerpProtectionV1\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"transactionId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"deleveraged\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"counterparty\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"size\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"AutoDeleverage\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"size\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"penalty\",\"type\":\"uint256\"}],\"name\":\"Liquidation\",\"type\":\"event\"}]",
     ).joinToString("")
 
-    /** Canonical signature of `resolvePerpProtection(bytes32)`. */
-    const val RESOLVE_PERP_PROTECTION_SIGNATURE: String = "resolvePerpProtection(bytes32)"
+    /** Canonical signature of `resolvePerpProtectionV1(bytes32)`. */
+    const val RESOLVE_PERP_PROTECTION_V1_SIGNATURE: String = "resolvePerpProtectionV1(bytes32)"
 
-    /** Selector of `resolvePerpProtection(bytes32)`. */
-    const val RESOLVE_PERP_PROTECTION_SELECTOR: String = "0x94481298"
+    /** Selector of `resolvePerpProtectionV1(bytes32)`. */
+    const val RESOLVE_PERP_PROTECTION_V1_SELECTOR: String = "0x310d20c3"
 
     /** Canonical signature of the `AutoDeleverage(bytes32,address,address,uint256,uint256)` event. */
     const val AUTO_DELEVERAGE_EVENT_SIGNATURE: String = "AutoDeleverage(bytes32,address,address,uint256,uint256)"
@@ -34,11 +34,11 @@ object IDiesisMargin {
     const val LIQUIDATION_EVENT_TOPIC: String = "0x3ba36e5650f62551141712b1c51bb87efe733d5e06ba74059260acc44e998448"
 
     /**
-     * Arguments of `resolvePerpProtection(bytes32)`.
+     * Arguments of `resolvePerpProtectionV1(bytes32)`.
      *
      * System-owned canonical frontier resolution. External callers are rejected.
      */
-    data class ResolvePerpProtectionParams(
+    data class ResolvePerpProtectionV1Params(
         val marketId: Bytes32,
     )
 
@@ -164,25 +164,25 @@ object IDiesisMargin {
         return layout.read(data.substring(2), 0)
     }
 
-    /** ABI function for `resolvePerpProtection(bytes32)`. */
-    fun functionResolvePerpProtection(marketId: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("resolvePerpProtection", listOf(marketId), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
+    /** ABI function for `resolvePerpProtectionV1(bytes32)`. */
+    fun functionResolvePerpProtectionV1(marketId: Bytes32): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("resolvePerpProtectionV1", listOf(marketId), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
 
-    /** Encodes calldata for `resolvePerpProtection(bytes32)` without an RPC call. */
-    fun encodeResolvePerpProtection(marketId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionResolvePerpProtection(marketId))
+    /** Encodes calldata for `resolvePerpProtectionV1(bytes32)` without an RPC call. */
+    fun encodeResolvePerpProtectionV1(marketId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionResolvePerpProtectionV1(marketId))
 
-    /** Decodes the ABI output of `resolvePerpProtection(bytes32)`. */
+    /** Decodes the ABI output of `resolvePerpProtectionV1(bytes32)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeResolvePerpProtectionResult(data: String): Bytes32 {
+    fun decodeResolvePerpProtectionV1Result(data: String): Bytes32 {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for resolvePerpProtection(bytes32)" }
+        require(values.size == 1) { "incorrect result arity for resolvePerpProtectionV1(bytes32)" }
         return values[0] as Bytes32
     }
 
-    /** Sends a write transaction for `resolvePerpProtection(bytes32)`. */
-    fun sendResolvePerpProtection(client: Client, marketId: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `resolvePerpProtectionV1(bytes32)`. */
+    fun sendResolvePerpProtectionV1(client: Client, marketId: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeResolvePerpProtection(marketId), options)
+        return client.send(encodeResolvePerpProtectionV1(marketId), options)
     }
 
     /** Decodes a matching `AutoDeleverage(bytes32,address,address,uint256,uint256)` log, or returns null. */

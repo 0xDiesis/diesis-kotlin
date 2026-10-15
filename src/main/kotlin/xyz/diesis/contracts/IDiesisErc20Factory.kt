@@ -111,7 +111,7 @@ object IDiesisErc20Factory {
      * Arguments of `deploy((bytes11,string,uint256,address))`.
      *
      * Deploy a new ERC-20 at the deterministic address.
-     * Reverts with `DuplicateDeployment` if the `(deployer, symbol)` pair      has already been used, with `InvalidSymbolLength` or `InvalidSupply`      on parameter validation, and with `FactoryCallFailed` for any other      precompile-side failure.
+     * Reverts with `DuplicateDeployment` if the `(deployer, symbol)` pair      has already been used, with `InvalidSymbolLength` or `InvalidSupply`      on parameter validation, and with `FactoryCallFailed` for any other      precompile-side failure.External callers must equal `params.deployer`.
      */
     data class Deploy2Params(
         val params: DeployParams,
@@ -131,8 +131,8 @@ object IDiesisErc20Factory {
     /**
      * Arguments of `proposeTemplateUpdate(bytes32)`.
      *
-     * Propose a new template bytecode hash. Subject to a 7-day timelock.
-     * Multiple proposals overwrite the previous pending hash and reset the timelock.
+     * Propose a new template bytecode hash. Subject to a 604,800-block delay.
+     * The current Config owner must propose a runtime embedded in this node build. Multiple proposals overwrite the pending hash and reset the block delay.
      */
     data class ProposeTemplateUpdateParams(
         val newHash: Bytes32,

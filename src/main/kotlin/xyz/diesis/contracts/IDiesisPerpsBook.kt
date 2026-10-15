@@ -20,7 +20,7 @@ object IDiesisPerpsBook {
     /** JSON ABI of the `IDiesisPerpsBook` contract. */
     @JvmField
     val JSON: String = arrayOf(
-        "[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"int256\",\"name\":\"marginDelta\",\"type\":\"int256\"}],\"name\":\"adjustIsolatedMargin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"policyHash\",\"type\":\"bytes32\"}],\"name\":\"advancePricedPerpRuntime\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"expiry\",\"type\":\"uint64\"}],\"name\":\"amendPerpOrder\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"replacementOrderId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"int256\",\"name\":\"fundingRateBps\",\"type\":\"int256\"}],\"name\":\"applyPerpFunding\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"name\":\"cancelPerpOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"makerOrderId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"takerOrderId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"fillPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"fillQty\",\"type\":\"uint256\"}],\"name\":\"executePerpTrade\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"clearingTransactionId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"name\":\"expirePerpOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"epoch\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"snapshotHash\",\"type\":\"bytes32\"}],\"name\":\"finalizePerpFeeEpoch\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getIsolatedMargin\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"isolatedMargin\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getPosition\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"header\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"size\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"entryPrice\",\"type\":\"uint256\"}],\"internalType\":\"struct IDiesisPerpsBook.PackedPosition\",\"name\":\"position\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"encodedWrapper\",\"type\":\"bytes\"}],\"name\":\"submitBoundSessionActions\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"resultHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"acceptedCount\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"rejectedCount\",\"type\":\"uint16\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"encodedActions\",\"type\":\"bytes\"}],\"name\":\"submitExchangeActions\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"resultHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"acceptedCount\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"rejectedCount\",\"type\":\"uint16\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"orderType\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"flags\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"marginType\",\"type\":\"uint8\"},{\"internalType\":\"uint64\",\"name\":\"expiry\",\"type\":\"uint64\"}],\"name\":\"submitPerpOrder\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"signedEnvelope\",\"type\":\"bytes\"}],\"name\":\"submitSponsoredPerpActions\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"batchId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"markPrice\",\"type\":\"uint256\"}],\"name\":\"updatePerpMark\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"indexPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"markPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"observedAt\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"oracleRound\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"sourceSetHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"evidenceHash\",\"type\":\"bytes32\"}],\"name\":\"updatePerpOracle\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"payload\",\"type\":\"bytes\"}],\"name\":\"updatePricedOracle\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes16\",\"name\":\"clientActionId\",\"type\":\"bytes16\"},{\"indexed\":true,\"internalType\":\"uint16\",\"name\":\"actionIndex\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"actionTag\",\"type\":\"uint8\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"principal\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"resultId\",\"type\":\"bytes32\"}],\"name\":\"ExchangeActionAccepted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes16\",\"name\":\"clientActionId\",\"type\":\"bytes16\"},{\"indexed\":true,\"internalType\":\"uint16\",\"name\":\"actionIndex\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"actionTag\",\"type\":\"uint8\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"principal\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"reasonCode\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"context\",\"type\":\"bytes32\"}],\"name\":\"ExchangeActionRejected\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"mutation\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"priceTicks\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"quantityLots\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"remainingLots\",\"type\":\"uint64\"}],\"name\":\"ExchangeL3Mutation\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"fundingRate\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"timestamp\",\"type\":\"uint64\"}],\"name\":\"FundingApplied\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"marginDelta\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newIsolatedMargin\",\"type\":\"uint256\"}],\"name\":\"IsolatedMarginAdjusted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"MarkPriceUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"}],\"name\":\"OrderCancelled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fillQty\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fillPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"remainingAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"complete\",\"type\":\"bool\"}],\"name\":\"OrderFilled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"flags\",\"type\":\"uint8\"}],\"name\":\"OrderPlaced\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"realizedPnl\",\"type\":\"int256\"}],\"name\":\"PositionClosed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"collateralDelta\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newClaim\",\"type\":\"uint256\"}],\"name\":\"PositionCollateralAdjusted\",\"type\":\"event\"}]",
+        "[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"int256\",\"name\":\"marginDelta\",\"type\":\"int256\"}],\"name\":\"adjustIsolatedMargin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"expiry\",\"type\":\"uint64\"}],\"name\":\"amendPerpOrderV1\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"replacementOrderId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"int256\",\"name\":\"fundingRateBps\",\"type\":\"int256\"}],\"name\":\"applyPerpFundingV1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"name\":\"cancelPerpOrderV1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"makerOrderId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"takerOrderId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"fillPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"fillQty\",\"type\":\"uint256\"}],\"name\":\"executePerpTradeV1\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"clearingTransactionId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"name\":\"expirePerpOrderV1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"epoch\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"snapshotHash\",\"type\":\"bytes32\"}],\"name\":\"finalizePerpFeeEpochV2\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getIsolatedMargin\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"isolatedMargin\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getPosition\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"header\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"size\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"entryPrice\",\"type\":\"uint256\"}],\"internalType\":\"struct IDiesisPerpsBook.PackedPosition\",\"name\":\"position\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"encodedActions\",\"type\":\"bytes\"}],\"name\":\"submitExchangeActionsV2\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"resultHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"acceptedCount\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"rejectedCount\",\"type\":\"uint16\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"orderType\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"flags\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"marginType\",\"type\":\"uint8\"},{\"internalType\":\"uint64\",\"name\":\"expiry\",\"type\":\"uint64\"}],\"name\":\"submitPerpOrderV1\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"signedEnvelope\",\"type\":\"bytes\"}],\"name\":\"submitSignedPerpActionsV2\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"batchId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"markPrice\",\"type\":\"uint256\"}],\"name\":\"updatePerpMarkV1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"indexPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"markPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"observedAt\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"oracleRound\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"sourceSetHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"evidenceHash\",\"type\":\"bytes32\"}],\"name\":\"updatePerpOracleV1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes16\",\"name\":\"clientActionId\",\"type\":\"bytes16\"},{\"indexed\":true,\"internalType\":\"uint16\",\"name\":\"actionIndex\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"actionTag\",\"type\":\"uint8\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"principal\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"resultId\",\"type\":\"bytes32\"}],\"name\":\"ExchangeActionAcceptedV2\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes16\",\"name\":\"clientActionId\",\"type\":\"bytes16\"},{\"indexed\":true,\"internalType\":\"uint16\",\"name\":\"actionIndex\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"actionTag\",\"type\":\"uint8\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"principal\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"reasonCode\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"context\",\"type\":\"bytes32\"}],\"name\":\"ExchangeActionRejectedV2\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"mutation\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"priceTicks\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"quantityLots\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"remainingLots\",\"type\":\"uint64\"}],\"name\":\"ExchangeL3MutationV2\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"fundingRate\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"timestamp\",\"type\":\"uint64\"}],\"name\":\"FundingApplied\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"marginDelta\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newIsolatedMargin\",\"type\":\"uint256\"}],\"name\":\"IsolatedMarginAdjusted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"MarkPriceUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"}],\"name\":\"OrderCancelled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fillQty\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fillPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"remainingAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"complete\",\"type\":\"bool\"}],\"name\":\"OrderFilled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"orderId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"side\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"flags\",\"type\":\"uint8\"}],\"name\":\"OrderPlaced\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"realizedPnl\",\"type\":\"int256\"}],\"name\":\"PositionClosed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"trader\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"collateralDelta\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newClaim\",\"type\":\"uint256\"}],\"name\":\"PositionCollateralAdjusted\",\"type\":\"event\"}]",
     ).joinToString("")
 
     /** Canonical signature of `adjustIsolatedMargin(bytes32,int256)`. */
@@ -29,47 +29,41 @@ object IDiesisPerpsBook {
     /** Selector of `adjustIsolatedMargin(bytes32,int256)`. */
     const val ADJUST_ISOLATED_MARGIN_SELECTOR: String = "0xea2630bc"
 
-    /** Canonical signature of `advancePricedPerpRuntime(bytes32)`. */
-    const val ADVANCE_PRICED_PERP_RUNTIME_SIGNATURE: String = "advancePricedPerpRuntime(bytes32)"
+    /** Canonical signature of `amendPerpOrderV1(bytes32,uint256,uint256,uint64)`. */
+    const val AMEND_PERP_ORDER_V1_SIGNATURE: String = "amendPerpOrderV1(bytes32,uint256,uint256,uint64)"
 
-    /** Selector of `advancePricedPerpRuntime(bytes32)`. */
-    const val ADVANCE_PRICED_PERP_RUNTIME_SELECTOR: String = "0xe13d5c47"
+    /** Selector of `amendPerpOrderV1(bytes32,uint256,uint256,uint64)`. */
+    const val AMEND_PERP_ORDER_V1_SELECTOR: String = "0xb4a95c17"
 
-    /** Canonical signature of `amendPerpOrder(bytes32,uint256,uint256,uint64)`. */
-    const val AMEND_PERP_ORDER_SIGNATURE: String = "amendPerpOrder(bytes32,uint256,uint256,uint64)"
+    /** Canonical signature of `applyPerpFundingV1(bytes32,int256)`. */
+    const val APPLY_PERP_FUNDING_V1_SIGNATURE: String = "applyPerpFundingV1(bytes32,int256)"
 
-    /** Selector of `amendPerpOrder(bytes32,uint256,uint256,uint64)`. */
-    const val AMEND_PERP_ORDER_SELECTOR: String = "0xefa58ca6"
+    /** Selector of `applyPerpFundingV1(bytes32,int256)`. */
+    const val APPLY_PERP_FUNDING_V1_SELECTOR: String = "0xf0e81677"
 
-    /** Canonical signature of `applyPerpFunding(bytes32,int256)`. */
-    const val APPLY_PERP_FUNDING_SIGNATURE: String = "applyPerpFunding(bytes32,int256)"
+    /** Canonical signature of `cancelPerpOrderV1(bytes32)`. */
+    const val CANCEL_PERP_ORDER_V1_SIGNATURE: String = "cancelPerpOrderV1(bytes32)"
 
-    /** Selector of `applyPerpFunding(bytes32,int256)`. */
-    const val APPLY_PERP_FUNDING_SELECTOR: String = "0xdbb469ae"
+    /** Selector of `cancelPerpOrderV1(bytes32)`. */
+    const val CANCEL_PERP_ORDER_V1_SELECTOR: String = "0x21c202d4"
 
-    /** Canonical signature of `cancelPerpOrder(bytes32)`. */
-    const val CANCEL_PERP_ORDER_SIGNATURE: String = "cancelPerpOrder(bytes32)"
+    /** Canonical signature of `executePerpTradeV1(bytes32,bytes32,uint256,uint256)`. */
+    const val EXECUTE_PERP_TRADE_V1_SIGNATURE: String = "executePerpTradeV1(bytes32,bytes32,uint256,uint256)"
 
-    /** Selector of `cancelPerpOrder(bytes32)`. */
-    const val CANCEL_PERP_ORDER_SELECTOR: String = "0xd7f87590"
+    /** Selector of `executePerpTradeV1(bytes32,bytes32,uint256,uint256)`. */
+    const val EXECUTE_PERP_TRADE_V1_SELECTOR: String = "0x898772b8"
 
-    /** Canonical signature of `executePerpTrade(bytes32,bytes32,uint256,uint256)`. */
-    const val EXECUTE_PERP_TRADE_SIGNATURE: String = "executePerpTrade(bytes32,bytes32,uint256,uint256)"
+    /** Canonical signature of `expirePerpOrderV1(bytes32)`. */
+    const val EXPIRE_PERP_ORDER_V1_SIGNATURE: String = "expirePerpOrderV1(bytes32)"
 
-    /** Selector of `executePerpTrade(bytes32,bytes32,uint256,uint256)`. */
-    const val EXECUTE_PERP_TRADE_SELECTOR: String = "0x0067531e"
+    /** Selector of `expirePerpOrderV1(bytes32)`. */
+    const val EXPIRE_PERP_ORDER_V1_SELECTOR: String = "0xa2c86402"
 
-    /** Canonical signature of `expirePerpOrder(bytes32)`. */
-    const val EXPIRE_PERP_ORDER_SIGNATURE: String = "expirePerpOrder(bytes32)"
+    /** Canonical signature of `finalizePerpFeeEpochV2(bytes32,uint64,bytes32)`. */
+    const val FINALIZE_PERP_FEE_EPOCH_V2_SIGNATURE: String = "finalizePerpFeeEpochV2(bytes32,uint64,bytes32)"
 
-    /** Selector of `expirePerpOrder(bytes32)`. */
-    const val EXPIRE_PERP_ORDER_SELECTOR: String = "0xbd97048f"
-
-    /** Canonical signature of `finalizePerpFeeEpoch(bytes32,uint64,bytes32)`. */
-    const val FINALIZE_PERP_FEE_EPOCH_SIGNATURE: String = "finalizePerpFeeEpoch(bytes32,uint64,bytes32)"
-
-    /** Selector of `finalizePerpFeeEpoch(bytes32,uint64,bytes32)`. */
-    const val FINALIZE_PERP_FEE_EPOCH_SELECTOR: String = "0x9f6373eb"
+    /** Selector of `finalizePerpFeeEpochV2(bytes32,uint64,bytes32)`. */
+    const val FINALIZE_PERP_FEE_EPOCH_V2_SELECTOR: String = "0x521f5d0c"
 
     /** Canonical signature of `getIsolatedMargin(address,bytes32)`. */
     const val GET_ISOLATED_MARGIN_SIGNATURE: String = "getIsolatedMargin(address,bytes32)"
@@ -83,65 +77,53 @@ object IDiesisPerpsBook {
     /** Selector of `getPosition(address,bytes32)`. */
     const val GET_POSITION_SELECTOR: String = "0x0fa8f516"
 
-    /** Canonical signature of `submitBoundSessionActions(bytes)`. */
-    const val SUBMIT_BOUND_SESSION_ACTIONS_SIGNATURE: String = "submitBoundSessionActions(bytes)"
+    /** Canonical signature of `submitExchangeActionsV2(bytes)`. */
+    const val SUBMIT_EXCHANGE_ACTIONS_V2_SIGNATURE: String = "submitExchangeActionsV2(bytes)"
 
-    /** Selector of `submitBoundSessionActions(bytes)`. */
-    const val SUBMIT_BOUND_SESSION_ACTIONS_SELECTOR: String = "0x1cf05da9"
+    /** Selector of `submitExchangeActionsV2(bytes)`. */
+    const val SUBMIT_EXCHANGE_ACTIONS_V2_SELECTOR: String = "0x881c51de"
 
-    /** Canonical signature of `submitExchangeActions(bytes)`. */
-    const val SUBMIT_EXCHANGE_ACTIONS_SIGNATURE: String = "submitExchangeActions(bytes)"
+    /** Canonical signature of `submitPerpOrderV1(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`. */
+    const val SUBMIT_PERP_ORDER_V1_SIGNATURE: String = "submitPerpOrderV1(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)"
 
-    /** Selector of `submitExchangeActions(bytes)`. */
-    const val SUBMIT_EXCHANGE_ACTIONS_SELECTOR: String = "0xd47b704f"
+    /** Selector of `submitPerpOrderV1(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`. */
+    const val SUBMIT_PERP_ORDER_V1_SELECTOR: String = "0xa6c40b3c"
 
-    /** Canonical signature of `submitPerpOrder(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`. */
-    const val SUBMIT_PERP_ORDER_SIGNATURE: String = "submitPerpOrder(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)"
+    /** Canonical signature of `submitSignedPerpActionsV2(bytes)`. */
+    const val SUBMIT_SIGNED_PERP_ACTIONS_V2_SIGNATURE: String = "submitSignedPerpActionsV2(bytes)"
 
-    /** Selector of `submitPerpOrder(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`. */
-    const val SUBMIT_PERP_ORDER_SELECTOR: String = "0x08186390"
+    /** Selector of `submitSignedPerpActionsV2(bytes)`. */
+    const val SUBMIT_SIGNED_PERP_ACTIONS_V2_SELECTOR: String = "0xabde9b72"
 
-    /** Canonical signature of `submitSponsoredPerpActions(bytes)`. */
-    const val SUBMIT_SPONSORED_PERP_ACTIONS_SIGNATURE: String = "submitSponsoredPerpActions(bytes)"
+    /** Canonical signature of `updatePerpMarkV1(bytes32,uint256)`. */
+    const val UPDATE_PERP_MARK_V1_SIGNATURE: String = "updatePerpMarkV1(bytes32,uint256)"
 
-    /** Selector of `submitSponsoredPerpActions(bytes)`. */
-    const val SUBMIT_SPONSORED_PERP_ACTIONS_SELECTOR: String = "0x22dbf541"
+    /** Selector of `updatePerpMarkV1(bytes32,uint256)`. */
+    const val UPDATE_PERP_MARK_V1_SELECTOR: String = "0x38ea0be1"
 
-    /** Canonical signature of `updatePerpMark(bytes32,uint256)`. */
-    const val UPDATE_PERP_MARK_SIGNATURE: String = "updatePerpMark(bytes32,uint256)"
+    /** Canonical signature of `updatePerpOracleV1(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`. */
+    const val UPDATE_PERP_ORACLE_V1_SIGNATURE: String = "updatePerpOracleV1(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)"
 
-    /** Selector of `updatePerpMark(bytes32,uint256)`. */
-    const val UPDATE_PERP_MARK_SELECTOR: String = "0x6ee832f9"
+    /** Selector of `updatePerpOracleV1(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`. */
+    const val UPDATE_PERP_ORACLE_V1_SELECTOR: String = "0xebf18a92"
 
-    /** Canonical signature of `updatePerpOracle(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`. */
-    const val UPDATE_PERP_ORACLE_SIGNATURE: String = "updatePerpOracle(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)"
+    /** Canonical signature of the `ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
+    const val EXCHANGE_ACTION_ACCEPTED_V2_EVENT_SIGNATURE: String = "ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)"
 
-    /** Selector of `updatePerpOracle(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`. */
-    const val UPDATE_PERP_ORACLE_SELECTOR: String = "0x855dc976"
+    /** Topic 0 of the `ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
+    const val EXCHANGE_ACTION_ACCEPTED_V2_EVENT_TOPIC: String = "0x3ca6ab0c0316f6313bc20abbc2dc769133834b25425e93a865b9ef0892d83e2f"
 
-    /** Canonical signature of `updatePricedOracle(bytes)`. */
-    const val UPDATE_PRICED_ORACLE_SIGNATURE: String = "updatePricedOracle(bytes)"
+    /** Canonical signature of the `ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
+    const val EXCHANGE_ACTION_REJECTED_V2_EVENT_SIGNATURE: String = "ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)"
 
-    /** Selector of `updatePricedOracle(bytes)`. */
-    const val UPDATE_PRICED_ORACLE_SELECTOR: String = "0x96fbe971"
+    /** Topic 0 of the `ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
+    const val EXCHANGE_ACTION_REJECTED_V2_EVENT_TOPIC: String = "0x919a92f6cab2e02a0599f1c76ab564597ac54873d064ae7b21c5ba8a8744d958"
 
-    /** Canonical signature of the `ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
-    const val EXCHANGE_ACTION_ACCEPTED_EVENT_SIGNATURE: String = "ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)"
+    /** Canonical signature of the `ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
+    const val EXCHANGE_L3_MUTATION_V2_EVENT_SIGNATURE: String = "ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)"
 
-    /** Topic 0 of the `ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
-    const val EXCHANGE_ACTION_ACCEPTED_EVENT_TOPIC: String = "0x9fd3566e39f14b3c593967cf13d7e11e65dafed9c4a3bfeab39504f893a72158"
-
-    /** Canonical signature of the `ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
-    const val EXCHANGE_ACTION_REJECTED_EVENT_SIGNATURE: String = "ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)"
-
-    /** Topic 0 of the `ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
-    const val EXCHANGE_ACTION_REJECTED_EVENT_TOPIC: String = "0x70937d7f9595dc387b9e50f455a240b0830750a17ec1be4373c143fc5dde1b54"
-
-    /** Canonical signature of the `ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
-    const val EXCHANGE_L3_MUTATION_EVENT_SIGNATURE: String = "ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)"
-
-    /** Topic 0 of the `ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
-    const val EXCHANGE_L3_MUTATION_EVENT_TOPIC: String = "0x2a5a4fc8324c7e62213e49aee23883746c4398ed74bd31d2eccc48de31026734"
+    /** Topic 0 of the `ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
+    const val EXCHANGE_L3_MUTATION_V2_EVENT_TOPIC: String = "0x083d99cea649c1d115fc1f70b8045c9b198634bd9b286cc43a595e2f5328fbdd"
 
     /** Canonical signature of the `FundingApplied(bytes32,int256,uint64)` event. */
     const val FUNDING_APPLIED_EVENT_SIGNATURE: String = "FundingApplied(bytes32,int256,uint64)"
@@ -212,21 +194,11 @@ object IDiesisPerpsBook {
     )
 
     /**
-     * Arguments of `advancePricedPerpRuntime(bytes32)`.
-     *
-     * Request the system-owned canonical priced runtime tick.
-     * Inactive until qualified runtime activation. Every caller currently reverts.      Future execution requires authenticated selected authority and a matching policy hash.
-     */
-    data class AdvancePricedPerpRuntimeParams(
-        val policyHash: Bytes32,
-    )
-
-    /**
-     * Arguments of `amendPerpOrder(bytes32,uint256,uint256,uint64)`.
+     * Arguments of `amendPerpOrderV1(bytes32,uint256,uint256,uint64)`.
      *
      * Atomically cancel and replace an order with new price, amount,         expiry, canonical margin reservation, and priority identity.
      */
-    data class AmendPerpOrderParams(
+    data class AmendPerpOrderV1Params(
         val orderId: Bytes32,
         val price: BigInteger,
         val amount: BigInteger,
@@ -234,32 +206,32 @@ object IDiesisPerpsBook {
     )
 
     /**
-     * Arguments of `applyPerpFunding(bytes32,int256)`.
+     * Arguments of `applyPerpFundingV1(bytes32,int256)`.
      *
      * Advance canonical funding through solvency-frontier segments.
      * System-only and bounded to the protocol funding-rate limit.
      */
-    data class ApplyPerpFundingParams(
+    data class ApplyPerpFundingV1Params(
         val marketId: Bytes32,
         val fundingRateBps: BigInteger,
     )
 
     /**
-     * Arguments of `cancelPerpOrder(bytes32)`.
+     * Arguments of `cancelPerpOrderV1(bytes32)`.
      *
      * Cancel an owned V1 order and return all unused canonical margin.
      */
-    data class CancelPerpOrderParams(
+    data class CancelPerpOrderV1Params(
         val orderId: Bytes32,
     )
 
     /**
-     * Arguments of `executePerpTrade(bytes32,bytes32,uint256,uint256)`.
+     * Arguments of `executePerpTradeV1(bytes32,bytes32,uint256,uint256)`.
      *
      * Commit one system-owned opposite-side fill through canonical clearing.
      * Reads and validates both stored V1 orders, derives deterministic      maker/taker fees and persistent frontier proofs, then commits the      PreparedClearingTransactionV1 and both order consumptions under one      outer EVM checkpoint. The lower order ID is the canonical maker.
      */
-    data class ExecutePerpTradeParams(
+    data class ExecutePerpTradeV1Params(
         val makerOrderId: Bytes32,
         val takerOrderId: Bytes32,
         val fillPrice: BigInteger,
@@ -267,21 +239,21 @@ object IDiesisPerpsBook {
     )
 
     /**
-     * Arguments of `expirePerpOrder(bytes32)`.
+     * Arguments of `expirePerpOrderV1(bytes32)`.
      *
      * Permissionlessly expire a GTD order after its canonical deadline.
      */
-    data class ExpirePerpOrderParams(
+    data class ExpirePerpOrderV1Params(
         val orderId: Bytes32,
     )
 
     /**
-     * Arguments of `finalizePerpFeeEpoch(bytes32,uint64,bytes32)`.
+     * Arguments of `finalizePerpFeeEpochV2(bytes32,uint64,bytes32)`.
      *
      * Finalize the exact stored snapshot of one closed fee epoch.
      * Native queue/accounting behavior is introduced by X4b M3. This      declaration prevents public ABI drift before that implementation.
      */
-    data class FinalizePerpFeeEpochParams(
+    data class FinalizePerpFeeEpochV2Params(
         val marketId: Bytes32,
         val epoch: BigInteger,
         val snapshotHash: Bytes32,
@@ -308,32 +280,22 @@ object IDiesisPerpsBook {
     )
 
     /**
-     * Arguments of `submitBoundSessionActions(bytes)`.
-     *
-     * Proposed ordinary-caller bound-session V3 action wrapper.
-     * Inactive until a separately accepted resource policy and dispatch revision.      DXS3 contains the expected principal and current positive generation,      followed by unchanged DXA2 bytes. The result commits the full wrapper.      Sponsorship and relayer adapters are unsupported. Counts retain V2 types.
-     */
-    data class SubmitBoundSessionActionsParams(
-        val encodedWrapper: DynamicBytes,
-    )
-
-    /**
-     * Arguments of `submitExchangeActions(bytes)`.
+     * Arguments of `submitExchangeActionsV2(bytes)`.
      *
      * Encode the shared bounded V2 action call for future Lane B use.
      * The ABI is frozen for tooling parity, but perpetual V2 execution      remains protocol-gated until the Lane B activation revision.      `resultHash` commits to the original bytes and every ordered action outcome.
      */
-    data class SubmitExchangeActionsParams(
+    data class SubmitExchangeActionsV2Params(
         val encodedActions: DynamicBytes,
     )
 
     /**
-     * Arguments of `submitPerpOrder(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`.
+     * Arguments of `submitPerpOrderV1(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`.
      *
      * Submit one versioned perpetual order funded from canonical settlement custody.
      * The call atomically moves initial margin plus the deterministic fee      reserve from GlobalUserAvailable to the market's UserMargin ledger.      `price` is a nonzero integer tick and price-protected market orders      use it as their worst acceptable execution price. `expiry == 0`      selects GTC; otherwise expiry is a Unix timestamp in seconds.      V1 requires `flags == 0`; reduce-only and advanced time-in-force      semantics are reserved for the bounded V2 action surface.
      */
-    data class SubmitPerpOrderParams(
+    data class SubmitPerpOrderV1Params(
         val marketId: Bytes32,
         val side: BigInteger,
         val orderType: BigInteger,
@@ -345,33 +307,33 @@ object IDiesisPerpsBook {
     )
 
     /**
-     * Arguments of `submitSponsoredPerpActions(bytes)`.
+     * Arguments of `submitSignedPerpActionsV2(bytes)`.
      *
      * Execute a sponsored bounded V2 action batch on behalf of a signer.
-     * The relayer is the outer transaction sender and pays fees; the      recovered EIP-712 signer of `signedEnvelope` is the trading      principal. The precompile verifies the signature, consumes the      signer's canonical per-trader nonce-bitmap bit, and executes the      exact same canonical action bytes, admission policy, replay      protection, clearing journal, and logs as the direct      `submitExchangeActions` path. Later tasks implement verification      and execution; this freezes the release selector and wire shape.
+     * The relayer is the outer transaction sender and pays fees; the      recovered EIP-712 signer of `signedEnvelope` is the trading      principal. The precompile verifies the signature, consumes the      signer's canonical per-trader nonce-bitmap bit, and executes the      exact same canonical action bytes, admission policy, replay      protection, clearing journal, and logs as the direct      `submitExchangeActionsV2` path. Later tasks implement verification      and execution; this freezes the release selector and wire shape.
      */
-    data class SubmitSponsoredPerpActionsParams(
+    data class SubmitSignedPerpActionsV2Params(
         val signedEnvelope: DynamicBytes,
     )
 
     /**
-     * Arguments of `updatePerpMark(bytes32,uint256)`.
+     * Arguments of `updatePerpMarkV1(bytes32,uint256)`.
      *
      * Advance the canonical scaled mark through solvency-frontier segments.
      * System-only. If a root is reached, the market enters Protection and      persists the original target until liquidation resolves the root.
      */
-    data class UpdatePerpMarkParams(
+    data class UpdatePerpMarkV1Params(
         val marketId: Bytes32,
         val markPrice: BigInteger,
     )
 
     /**
-     * Arguments of `updatePerpOracle(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`.
+     * Arguments of `updatePerpOracleV1(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`.
      *
      * Persist one validator-attested oracle round for a market.
      * System-only. Accepts strictly increasing rounds and observed-at      timestamps, an active `sourceSetHash`, and a canonical `evidenceHash`      commitment. The call atomically writes the canonical index/mark,      round, observed-at, source-set/evidence commitments, and derived      circuit-breaker/recovery state; there is no operator path that      bypasses freshness or evidence. Later tasks implement the transition;      this freezes the release selector and argument layout.
      */
-    data class UpdatePerpOracleParams(
+    data class UpdatePerpOracleV1Params(
         val marketId: Bytes32,
         val indexPrice: BigInteger,
         val markPrice: BigInteger,
@@ -381,18 +343,8 @@ object IDiesisPerpsBook {
         val evidenceHash: Bytes32,
     )
 
-    /**
-     * Arguments of `updatePricedOracle(bytes)`.
-     *
-     * Persist one descriptor-authorized priced oracle observation.
-     * System-only, caller address zero. payload is exactly one canonical      DOR2 observation: a 128-byte V2 context/round header followed by a      144-byte observation. The native runtime verifies chain, genesis,      exact parent number/hash, immutable descriptor/source commitments,      tick alignment and canonical observation freshness before writes.      Canonical oracle prices use p; the clearing mirror uses p*PRICE_SCALE.      This distinct selector returns no data and leaves V1 encoding intact.
-     */
-    data class UpdatePricedOracleParams(
-        val payload: DynamicBytes,
-    )
-
-    /** Fields of the `ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
-    data class ExchangeActionAcceptedEvent(
+    /** Fields of the `ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)` event. */
+    data class ExchangeActionAcceptedV2Event(
         val clientActionId: Bytes16,
         val actionIndex: BigInteger,
         val actionTag: BigInteger,
@@ -401,8 +353,8 @@ object IDiesisPerpsBook {
         val resultId: Bytes32,
     )
 
-    /** Fields of the `ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
-    data class ExchangeActionRejectedEvent(
+    /** Fields of the `ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` event. */
+    data class ExchangeActionRejectedV2Event(
         val clientActionId: Bytes16,
         val actionIndex: BigInteger,
         val actionTag: BigInteger,
@@ -412,8 +364,8 @@ object IDiesisPerpsBook {
         val context: Bytes32,
     )
 
-    /** Fields of the `ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
-    data class ExchangeL3MutationEvent(
+    /** Fields of the `ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` event. */
+    data class ExchangeL3MutationV2Event(
         val marketId: Bytes32,
         val orderId: Bytes32,
         val trader: String,
@@ -626,146 +578,126 @@ object IDiesisPerpsBook {
         return client.send(encodeAdjustIsolatedMargin(marketId, marginDelta), options)
     }
 
-    /** ABI function for `advancePricedPerpRuntime(bytes32)`. */
-    fun functionAdvancePricedPerpRuntime(policyHash: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("advancePricedPerpRuntime", listOf(policyHash), emptyList())
+    /** ABI function for `amendPerpOrderV1(bytes32,uint256,uint256,uint64)`. */
+    fun functionAmendPerpOrderV1(orderId: Bytes32, price: BigInteger, amount: BigInteger, expiry: BigInteger): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("amendPerpOrderV1", listOf(orderId, Uint256(price), Uint256(amount), Uint64(expiry)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
 
-    /** Encodes calldata for `advancePricedPerpRuntime(bytes32)` without an RPC call. */
-    fun encodeAdvancePricedPerpRuntime(policyHash: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionAdvancePricedPerpRuntime(policyHash))
+    /** Encodes calldata for `amendPerpOrderV1(bytes32,uint256,uint256,uint64)` without an RPC call. */
+    fun encodeAmendPerpOrderV1(orderId: Bytes32, price: BigInteger, amount: BigInteger, expiry: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionAmendPerpOrderV1(orderId, price, amount, expiry))
 
-    /** Decodes the ABI output of `advancePricedPerpRuntime(bytes32)`. */
+    /** Decodes the ABI output of `amendPerpOrderV1(bytes32,uint256,uint256,uint64)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeAdvancePricedPerpRuntimeResult(data: String): Unit {
-        require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
-        return Unit
-    }
-
-    /** Sends a write transaction for `advancePricedPerpRuntime(bytes32)`. */
-    fun sendAdvancePricedPerpRuntime(client: Client, policyHash: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
-        require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeAdvancePricedPerpRuntime(policyHash), options)
-    }
-
-    /** ABI function for `amendPerpOrder(bytes32,uint256,uint256,uint64)`. */
-    fun functionAmendPerpOrder(orderId: Bytes32, price: BigInteger, amount: BigInteger, expiry: BigInteger): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("amendPerpOrder", listOf(orderId, Uint256(price), Uint256(amount), Uint64(expiry)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
-
-    /** Encodes calldata for `amendPerpOrder(bytes32,uint256,uint256,uint64)` without an RPC call. */
-    fun encodeAmendPerpOrder(orderId: Bytes32, price: BigInteger, amount: BigInteger, expiry: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionAmendPerpOrder(orderId, price, amount, expiry))
-
-    /** Decodes the ABI output of `amendPerpOrder(bytes32,uint256,uint256,uint64)`. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodeAmendPerpOrderResult(data: String): Bytes32 {
+    fun decodeAmendPerpOrderV1Result(data: String): Bytes32 {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for amendPerpOrder(bytes32,uint256,uint256,uint64)" }
+        require(values.size == 1) { "incorrect result arity for amendPerpOrderV1(bytes32,uint256,uint256,uint64)" }
         return values[0] as Bytes32
     }
 
-    /** Sends a write transaction for `amendPerpOrder(bytes32,uint256,uint256,uint64)`. */
-    fun sendAmendPerpOrder(client: Client, orderId: Bytes32, price: BigInteger, amount: BigInteger, expiry: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `amendPerpOrderV1(bytes32,uint256,uint256,uint64)`. */
+    fun sendAmendPerpOrderV1(client: Client, orderId: Bytes32, price: BigInteger, amount: BigInteger, expiry: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeAmendPerpOrder(orderId, price, amount, expiry), options)
+        return client.send(encodeAmendPerpOrderV1(orderId, price, amount, expiry), options)
     }
 
-    /** ABI function for `applyPerpFunding(bytes32,int256)`. */
-    fun functionApplyPerpFunding(marketId: Bytes32, fundingRateBps: BigInteger): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("applyPerpFunding", listOf(marketId, Int256(fundingRateBps)), emptyList())
+    /** ABI function for `applyPerpFundingV1(bytes32,int256)`. */
+    fun functionApplyPerpFundingV1(marketId: Bytes32, fundingRateBps: BigInteger): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("applyPerpFundingV1", listOf(marketId, Int256(fundingRateBps)), emptyList())
 
-    /** Encodes calldata for `applyPerpFunding(bytes32,int256)` without an RPC call. */
-    fun encodeApplyPerpFunding(marketId: Bytes32, fundingRateBps: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionApplyPerpFunding(marketId, fundingRateBps))
+    /** Encodes calldata for `applyPerpFundingV1(bytes32,int256)` without an RPC call. */
+    fun encodeApplyPerpFundingV1(marketId: Bytes32, fundingRateBps: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionApplyPerpFundingV1(marketId, fundingRateBps))
 
-    /** Decodes the ABI output of `applyPerpFunding(bytes32,int256)`. */
+    /** Decodes the ABI output of `applyPerpFundingV1(bytes32,int256)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeApplyPerpFundingResult(data: String): Unit {
+    fun decodeApplyPerpFundingV1Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `applyPerpFunding(bytes32,int256)`. */
-    fun sendApplyPerpFunding(client: Client, marketId: Bytes32, fundingRateBps: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `applyPerpFundingV1(bytes32,int256)`. */
+    fun sendApplyPerpFundingV1(client: Client, marketId: Bytes32, fundingRateBps: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeApplyPerpFunding(marketId, fundingRateBps), options)
+        return client.send(encodeApplyPerpFundingV1(marketId, fundingRateBps), options)
     }
 
-    /** ABI function for `cancelPerpOrder(bytes32)`. */
-    fun functionCancelPerpOrder(orderId: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("cancelPerpOrder", listOf(orderId), emptyList())
+    /** ABI function for `cancelPerpOrderV1(bytes32)`. */
+    fun functionCancelPerpOrderV1(orderId: Bytes32): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("cancelPerpOrderV1", listOf(orderId), emptyList())
 
-    /** Encodes calldata for `cancelPerpOrder(bytes32)` without an RPC call. */
-    fun encodeCancelPerpOrder(orderId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionCancelPerpOrder(orderId))
+    /** Encodes calldata for `cancelPerpOrderV1(bytes32)` without an RPC call. */
+    fun encodeCancelPerpOrderV1(orderId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionCancelPerpOrderV1(orderId))
 
-    /** Decodes the ABI output of `cancelPerpOrder(bytes32)`. */
+    /** Decodes the ABI output of `cancelPerpOrderV1(bytes32)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeCancelPerpOrderResult(data: String): Unit {
+    fun decodeCancelPerpOrderV1Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `cancelPerpOrder(bytes32)`. */
-    fun sendCancelPerpOrder(client: Client, orderId: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `cancelPerpOrderV1(bytes32)`. */
+    fun sendCancelPerpOrderV1(client: Client, orderId: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeCancelPerpOrder(orderId), options)
+        return client.send(encodeCancelPerpOrderV1(orderId), options)
     }
 
-    /** ABI function for `executePerpTrade(bytes32,bytes32,uint256,uint256)`. */
-    fun functionExecutePerpTrade(makerOrderId: Bytes32, takerOrderId: Bytes32, fillPrice: BigInteger, fillQty: BigInteger): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("executePerpTrade", listOf(makerOrderId, takerOrderId, Uint256(fillPrice), Uint256(fillQty)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
+    /** ABI function for `executePerpTradeV1(bytes32,bytes32,uint256,uint256)`. */
+    fun functionExecutePerpTradeV1(makerOrderId: Bytes32, takerOrderId: Bytes32, fillPrice: BigInteger, fillQty: BigInteger): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("executePerpTradeV1", listOf(makerOrderId, takerOrderId, Uint256(fillPrice), Uint256(fillQty)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
 
-    /** Encodes calldata for `executePerpTrade(bytes32,bytes32,uint256,uint256)` without an RPC call. */
-    fun encodeExecutePerpTrade(makerOrderId: Bytes32, takerOrderId: Bytes32, fillPrice: BigInteger, fillQty: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionExecutePerpTrade(makerOrderId, takerOrderId, fillPrice, fillQty))
+    /** Encodes calldata for `executePerpTradeV1(bytes32,bytes32,uint256,uint256)` without an RPC call. */
+    fun encodeExecutePerpTradeV1(makerOrderId: Bytes32, takerOrderId: Bytes32, fillPrice: BigInteger, fillQty: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionExecutePerpTradeV1(makerOrderId, takerOrderId, fillPrice, fillQty))
 
-    /** Decodes the ABI output of `executePerpTrade(bytes32,bytes32,uint256,uint256)`. */
+    /** Decodes the ABI output of `executePerpTradeV1(bytes32,bytes32,uint256,uint256)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeExecutePerpTradeResult(data: String): Bytes32 {
+    fun decodeExecutePerpTradeV1Result(data: String): Bytes32 {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for executePerpTrade(bytes32,bytes32,uint256,uint256)" }
+        require(values.size == 1) { "incorrect result arity for executePerpTradeV1(bytes32,bytes32,uint256,uint256)" }
         return values[0] as Bytes32
     }
 
-    /** Sends a write transaction for `executePerpTrade(bytes32,bytes32,uint256,uint256)`. */
-    fun sendExecutePerpTrade(client: Client, makerOrderId: Bytes32, takerOrderId: Bytes32, fillPrice: BigInteger, fillQty: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `executePerpTradeV1(bytes32,bytes32,uint256,uint256)`. */
+    fun sendExecutePerpTradeV1(client: Client, makerOrderId: Bytes32, takerOrderId: Bytes32, fillPrice: BigInteger, fillQty: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeExecutePerpTrade(makerOrderId, takerOrderId, fillPrice, fillQty), options)
+        return client.send(encodeExecutePerpTradeV1(makerOrderId, takerOrderId, fillPrice, fillQty), options)
     }
 
-    /** ABI function for `expirePerpOrder(bytes32)`. */
-    fun functionExpirePerpOrder(orderId: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("expirePerpOrder", listOf(orderId), emptyList())
+    /** ABI function for `expirePerpOrderV1(bytes32)`. */
+    fun functionExpirePerpOrderV1(orderId: Bytes32): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("expirePerpOrderV1", listOf(orderId), emptyList())
 
-    /** Encodes calldata for `expirePerpOrder(bytes32)` without an RPC call. */
-    fun encodeExpirePerpOrder(orderId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionExpirePerpOrder(orderId))
+    /** Encodes calldata for `expirePerpOrderV1(bytes32)` without an RPC call. */
+    fun encodeExpirePerpOrderV1(orderId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionExpirePerpOrderV1(orderId))
 
-    /** Decodes the ABI output of `expirePerpOrder(bytes32)`. */
+    /** Decodes the ABI output of `expirePerpOrderV1(bytes32)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeExpirePerpOrderResult(data: String): Unit {
+    fun decodeExpirePerpOrderV1Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `expirePerpOrder(bytes32)`. */
-    fun sendExpirePerpOrder(client: Client, orderId: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `expirePerpOrderV1(bytes32)`. */
+    fun sendExpirePerpOrderV1(client: Client, orderId: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeExpirePerpOrder(orderId), options)
+        return client.send(encodeExpirePerpOrderV1(orderId), options)
     }
 
-    /** ABI function for `finalizePerpFeeEpoch(bytes32,uint64,bytes32)`. */
-    fun functionFinalizePerpFeeEpoch(marketId: Bytes32, epoch: BigInteger, snapshotHash: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("finalizePerpFeeEpoch", listOf(marketId, Uint64(epoch), snapshotHash), emptyList())
+    /** ABI function for `finalizePerpFeeEpochV2(bytes32,uint64,bytes32)`. */
+    fun functionFinalizePerpFeeEpochV2(marketId: Bytes32, epoch: BigInteger, snapshotHash: Bytes32): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("finalizePerpFeeEpochV2", listOf(marketId, Uint64(epoch), snapshotHash), emptyList())
 
-    /** Encodes calldata for `finalizePerpFeeEpoch(bytes32,uint64,bytes32)` without an RPC call. */
-    fun encodeFinalizePerpFeeEpoch(marketId: Bytes32, epoch: BigInteger, snapshotHash: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionFinalizePerpFeeEpoch(marketId, epoch, snapshotHash))
+    /** Encodes calldata for `finalizePerpFeeEpochV2(bytes32,uint64,bytes32)` without an RPC call. */
+    fun encodeFinalizePerpFeeEpochV2(marketId: Bytes32, epoch: BigInteger, snapshotHash: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionFinalizePerpFeeEpochV2(marketId, epoch, snapshotHash))
 
-    /** Decodes the ABI output of `finalizePerpFeeEpoch(bytes32,uint64,bytes32)`. */
+    /** Decodes the ABI output of `finalizePerpFeeEpochV2(bytes32,uint64,bytes32)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeFinalizePerpFeeEpochResult(data: String): Unit {
+    fun decodeFinalizePerpFeeEpochV2Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `finalizePerpFeeEpoch(bytes32,uint64,bytes32)`. */
-    fun sendFinalizePerpFeeEpoch(client: Client, marketId: Bytes32, epoch: BigInteger, snapshotHash: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `finalizePerpFeeEpochV2(bytes32,uint64,bytes32)`. */
+    fun sendFinalizePerpFeeEpochV2(client: Client, marketId: Bytes32, epoch: BigInteger, snapshotHash: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeFinalizePerpFeeEpoch(marketId, epoch, snapshotHash), options)
+        return client.send(encodeFinalizePerpFeeEpochV2(marketId, epoch, snapshotHash), options)
     }
 
     /** ABI function for `getIsolatedMargin(address,bytes32)`. */
@@ -806,221 +738,173 @@ object IDiesisPerpsBook {
     fun callGetPosition(client: Client, trader: String, marketId: Bytes32): PackedPosition =
         decodeGetPositionResult(client.call(encodeGetPosition(trader, marketId)))
 
-    /** ABI function for `submitBoundSessionActions(bytes)`. */
-    fun functionSubmitBoundSessionActions(encodedWrapper: DynamicBytes): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("submitBoundSessionActions", listOf(encodedWrapper), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}))
+    /** ABI function for `submitExchangeActionsV2(bytes)`. */
+    fun functionSubmitExchangeActionsV2(encodedActions: DynamicBytes): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("submitExchangeActionsV2", listOf(encodedActions), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}))
 
-    /** Encodes calldata for `submitBoundSessionActions(bytes)` without an RPC call. */
-    fun encodeSubmitBoundSessionActions(encodedWrapper: DynamicBytes): String = org.web3j.abi.FunctionEncoder.encode(functionSubmitBoundSessionActions(encodedWrapper))
+    /** Encodes calldata for `submitExchangeActionsV2(bytes)` without an RPC call. */
+    fun encodeSubmitExchangeActionsV2(encodedActions: DynamicBytes): String = org.web3j.abi.FunctionEncoder.encode(functionSubmitExchangeActionsV2(encodedActions))
 
-    /** Decoded result of `submitBoundSessionActions(bytes)`. */
-    data class SubmitBoundSessionActionsResult(
+    /** Decoded result of `submitExchangeActionsV2(bytes)`. */
+    data class SubmitExchangeActionsV2Result(
         val resultHash: Bytes32,
         val acceptedCount: BigInteger,
         val rejectedCount: BigInteger,
     )
 
-    /** Decodes the ABI output of `submitBoundSessionActions(bytes)`. */
+    /** Decodes the ABI output of `submitExchangeActionsV2(bytes)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeSubmitBoundSessionActionsResult(data: String): SubmitBoundSessionActionsResult {
+    fun decodeSubmitExchangeActionsV2Result(data: String): SubmitExchangeActionsV2Result {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value })) { it }) as List<Any>
-        require(values.size == 3) { "incorrect result arity for submitBoundSessionActions(bytes)" }
-        return SubmitBoundSessionActionsResult(values[0] as Bytes32, values[1] as BigInteger, values[2] as BigInteger)
+        require(values.size == 3) { "incorrect result arity for submitExchangeActionsV2(bytes)" }
+        return SubmitExchangeActionsV2Result(values[0] as Bytes32, values[1] as BigInteger, values[2] as BigInteger)
     }
 
-    /** Sends a write transaction for `submitBoundSessionActions(bytes)`. */
-    fun sendSubmitBoundSessionActions(client: Client, encodedWrapper: DynamicBytes, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `submitExchangeActionsV2(bytes)`. */
+    fun sendSubmitExchangeActionsV2(client: Client, encodedActions: DynamicBytes, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeSubmitBoundSessionActions(encodedWrapper), options)
+        return client.send(encodeSubmitExchangeActionsV2(encodedActions), options)
     }
 
-    /** ABI function for `submitExchangeActions(bytes)`. */
-    fun functionSubmitExchangeActions(encodedActions: DynamicBytes): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("submitExchangeActions", listOf(encodedActions), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}))
+    /** ABI function for `submitPerpOrderV1(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`. */
+    fun functionSubmitPerpOrderV1(marketId: Bytes32, side: BigInteger, orderType: BigInteger, price: BigInteger, amount: BigInteger, flags: BigInteger, marginType: BigInteger, expiry: BigInteger): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("submitPerpOrderV1", listOf(marketId, Uint8(side), Uint8(orderType), Uint256(price), Uint256(amount), Uint8(flags), Uint8(marginType), Uint64(expiry)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
 
-    /** Encodes calldata for `submitExchangeActions(bytes)` without an RPC call. */
-    fun encodeSubmitExchangeActions(encodedActions: DynamicBytes): String = org.web3j.abi.FunctionEncoder.encode(functionSubmitExchangeActions(encodedActions))
+    /** Encodes calldata for `submitPerpOrderV1(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)` without an RPC call. */
+    fun encodeSubmitPerpOrderV1(marketId: Bytes32, side: BigInteger, orderType: BigInteger, price: BigInteger, amount: BigInteger, flags: BigInteger, marginType: BigInteger, expiry: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionSubmitPerpOrderV1(marketId, side, orderType, price, amount, flags, marginType, expiry))
 
-    /** Decoded result of `submitExchangeActions(bytes)`. */
-    data class SubmitExchangeActionsResult(
-        val resultHash: Bytes32,
-        val acceptedCount: BigInteger,
-        val rejectedCount: BigInteger,
-    )
-
-    /** Decodes the ABI output of `submitExchangeActions(bytes)`. */
+    /** Decodes the ABI output of `submitPerpOrderV1(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeSubmitExchangeActionsResult(data: String): SubmitExchangeActionsResult {
-        val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value })) { it }) as List<Any>
-        require(values.size == 3) { "incorrect result arity for submitExchangeActions(bytes)" }
-        return SubmitExchangeActionsResult(values[0] as Bytes32, values[1] as BigInteger, values[2] as BigInteger)
-    }
-
-    /** Sends a write transaction for `submitExchangeActions(bytes)`. */
-    fun sendSubmitExchangeActions(client: Client, encodedActions: DynamicBytes, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
-        require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeSubmitExchangeActions(encodedActions), options)
-    }
-
-    /** ABI function for `submitPerpOrder(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`. */
-    fun functionSubmitPerpOrder(marketId: Bytes32, side: BigInteger, orderType: BigInteger, price: BigInteger, amount: BigInteger, flags: BigInteger, marginType: BigInteger, expiry: BigInteger): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("submitPerpOrder", listOf(marketId, Uint8(side), Uint8(orderType), Uint256(price), Uint256(amount), Uint8(flags), Uint8(marginType), Uint64(expiry)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
-
-    /** Encodes calldata for `submitPerpOrder(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)` without an RPC call. */
-    fun encodeSubmitPerpOrder(marketId: Bytes32, side: BigInteger, orderType: BigInteger, price: BigInteger, amount: BigInteger, flags: BigInteger, marginType: BigInteger, expiry: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionSubmitPerpOrder(marketId, side, orderType, price, amount, flags, marginType, expiry))
-
-    /** Decodes the ABI output of `submitPerpOrder(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodeSubmitPerpOrderResult(data: String): Bytes32 {
+    fun decodeSubmitPerpOrderV1Result(data: String): Bytes32 {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for submitPerpOrder(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)" }
+        require(values.size == 1) { "incorrect result arity for submitPerpOrderV1(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)" }
         return values[0] as Bytes32
     }
 
-    /** Sends a write transaction for `submitPerpOrder(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`. */
-    fun sendSubmitPerpOrder(client: Client, marketId: Bytes32, side: BigInteger, orderType: BigInteger, price: BigInteger, amount: BigInteger, flags: BigInteger, marginType: BigInteger, expiry: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `submitPerpOrderV1(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`. */
+    fun sendSubmitPerpOrderV1(client: Client, marketId: Bytes32, side: BigInteger, orderType: BigInteger, price: BigInteger, amount: BigInteger, flags: BigInteger, marginType: BigInteger, expiry: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeSubmitPerpOrder(marketId, side, orderType, price, amount, flags, marginType, expiry), options)
+        return client.send(encodeSubmitPerpOrderV1(marketId, side, orderType, price, amount, flags, marginType, expiry), options)
     }
 
-    /** ABI function for `submitSponsoredPerpActions(bytes)`. */
-    fun functionSubmitSponsoredPerpActions(signedEnvelope: DynamicBytes): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("submitSponsoredPerpActions", listOf(signedEnvelope), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
+    /** ABI function for `submitSignedPerpActionsV2(bytes)`. */
+    fun functionSubmitSignedPerpActionsV2(signedEnvelope: DynamicBytes): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("submitSignedPerpActionsV2", listOf(signedEnvelope), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
 
-    /** Encodes calldata for `submitSponsoredPerpActions(bytes)` without an RPC call. */
-    fun encodeSubmitSponsoredPerpActions(signedEnvelope: DynamicBytes): String = org.web3j.abi.FunctionEncoder.encode(functionSubmitSponsoredPerpActions(signedEnvelope))
+    /** Encodes calldata for `submitSignedPerpActionsV2(bytes)` without an RPC call. */
+    fun encodeSubmitSignedPerpActionsV2(signedEnvelope: DynamicBytes): String = org.web3j.abi.FunctionEncoder.encode(functionSubmitSignedPerpActionsV2(signedEnvelope))
 
-    /** Decodes the ABI output of `submitSponsoredPerpActions(bytes)`. */
+    /** Decodes the ABI output of `submitSignedPerpActionsV2(bytes)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeSubmitSponsoredPerpActionsResult(data: String): Bytes32 {
+    fun decodeSubmitSignedPerpActionsV2Result(data: String): Bytes32 {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for submitSponsoredPerpActions(bytes)" }
+        require(values.size == 1) { "incorrect result arity for submitSignedPerpActionsV2(bytes)" }
         return values[0] as Bytes32
     }
 
-    /** Sends a write transaction for `submitSponsoredPerpActions(bytes)`. */
-    fun sendSubmitSponsoredPerpActions(client: Client, signedEnvelope: DynamicBytes, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `submitSignedPerpActionsV2(bytes)`. */
+    fun sendSubmitSignedPerpActionsV2(client: Client, signedEnvelope: DynamicBytes, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeSubmitSponsoredPerpActions(signedEnvelope), options)
+        return client.send(encodeSubmitSignedPerpActionsV2(signedEnvelope), options)
     }
 
-    /** ABI function for `updatePerpMark(bytes32,uint256)`. */
-    fun functionUpdatePerpMark(marketId: Bytes32, markPrice: BigInteger): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("updatePerpMark", listOf(marketId, Uint256(markPrice)), emptyList())
+    /** ABI function for `updatePerpMarkV1(bytes32,uint256)`. */
+    fun functionUpdatePerpMarkV1(marketId: Bytes32, markPrice: BigInteger): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("updatePerpMarkV1", listOf(marketId, Uint256(markPrice)), emptyList())
 
-    /** Encodes calldata for `updatePerpMark(bytes32,uint256)` without an RPC call. */
-    fun encodeUpdatePerpMark(marketId: Bytes32, markPrice: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionUpdatePerpMark(marketId, markPrice))
+    /** Encodes calldata for `updatePerpMarkV1(bytes32,uint256)` without an RPC call. */
+    fun encodeUpdatePerpMarkV1(marketId: Bytes32, markPrice: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionUpdatePerpMarkV1(marketId, markPrice))
 
-    /** Decodes the ABI output of `updatePerpMark(bytes32,uint256)`. */
+    /** Decodes the ABI output of `updatePerpMarkV1(bytes32,uint256)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeUpdatePerpMarkResult(data: String): Unit {
+    fun decodeUpdatePerpMarkV1Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `updatePerpMark(bytes32,uint256)`. */
-    fun sendUpdatePerpMark(client: Client, marketId: Bytes32, markPrice: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `updatePerpMarkV1(bytes32,uint256)`. */
+    fun sendUpdatePerpMarkV1(client: Client, marketId: Bytes32, markPrice: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeUpdatePerpMark(marketId, markPrice), options)
+        return client.send(encodeUpdatePerpMarkV1(marketId, markPrice), options)
     }
 
-    /** ABI function for `updatePerpOracle(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`. */
-    fun functionUpdatePerpOracle(marketId: Bytes32, indexPrice: BigInteger, markPrice: BigInteger, observedAt: BigInteger, oracleRound: BigInteger, sourceSetHash: Bytes32, evidenceHash: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("updatePerpOracle", listOf(marketId, Uint256(indexPrice), Uint256(markPrice), Uint64(observedAt), Uint64(oracleRound), sourceSetHash, evidenceHash), emptyList())
+    /** ABI function for `updatePerpOracleV1(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`. */
+    fun functionUpdatePerpOracleV1(marketId: Bytes32, indexPrice: BigInteger, markPrice: BigInteger, observedAt: BigInteger, oracleRound: BigInteger, sourceSetHash: Bytes32, evidenceHash: Bytes32): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("updatePerpOracleV1", listOf(marketId, Uint256(indexPrice), Uint256(markPrice), Uint64(observedAt), Uint64(oracleRound), sourceSetHash, evidenceHash), emptyList())
 
-    /** Encodes calldata for `updatePerpOracle(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)` without an RPC call. */
-    fun encodeUpdatePerpOracle(marketId: Bytes32, indexPrice: BigInteger, markPrice: BigInteger, observedAt: BigInteger, oracleRound: BigInteger, sourceSetHash: Bytes32, evidenceHash: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionUpdatePerpOracle(marketId, indexPrice, markPrice, observedAt, oracleRound, sourceSetHash, evidenceHash))
+    /** Encodes calldata for `updatePerpOracleV1(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)` without an RPC call. */
+    fun encodeUpdatePerpOracleV1(marketId: Bytes32, indexPrice: BigInteger, markPrice: BigInteger, observedAt: BigInteger, oracleRound: BigInteger, sourceSetHash: Bytes32, evidenceHash: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionUpdatePerpOracleV1(marketId, indexPrice, markPrice, observedAt, oracleRound, sourceSetHash, evidenceHash))
 
-    /** Decodes the ABI output of `updatePerpOracle(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`. */
+    /** Decodes the ABI output of `updatePerpOracleV1(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeUpdatePerpOracleResult(data: String): Unit {
+    fun decodeUpdatePerpOracleV1Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `updatePerpOracle(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`. */
-    fun sendUpdatePerpOracle(client: Client, marketId: Bytes32, indexPrice: BigInteger, markPrice: BigInteger, observedAt: BigInteger, oracleRound: BigInteger, sourceSetHash: Bytes32, evidenceHash: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `updatePerpOracleV1(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`. */
+    fun sendUpdatePerpOracleV1(client: Client, marketId: Bytes32, indexPrice: BigInteger, markPrice: BigInteger, observedAt: BigInteger, oracleRound: BigInteger, sourceSetHash: Bytes32, evidenceHash: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeUpdatePerpOracle(marketId, indexPrice, markPrice, observedAt, oracleRound, sourceSetHash, evidenceHash), options)
+        return client.send(encodeUpdatePerpOracleV1(marketId, indexPrice, markPrice, observedAt, oracleRound, sourceSetHash, evidenceHash), options)
     }
 
-    /** ABI function for `updatePricedOracle(bytes)`. */
-    fun functionUpdatePricedOracle(payload: DynamicBytes): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("updatePricedOracle", listOf(payload), emptyList())
-
-    /** Encodes calldata for `updatePricedOracle(bytes)` without an RPC call. */
-    fun encodeUpdatePricedOracle(payload: DynamicBytes): String = org.web3j.abi.FunctionEncoder.encode(functionUpdatePricedOracle(payload))
-
-    /** Decodes the ABI output of `updatePricedOracle(bytes)`. */
+    /** Decodes a matching `ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)` log, or returns null. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeUpdatePricedOracleResult(data: String): Unit {
-        require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
-        return Unit
-    }
-
-    /** Sends a write transaction for `updatePricedOracle(bytes)`. */
-    fun sendUpdatePricedOracle(client: Client, payload: DynamicBytes, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
-        require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeUpdatePricedOracle(payload), options)
-    }
-
-    /** Decodes a matching `ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)` log, or returns null. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodeExchangeActionAcceptedEvent(log: org.web3j.protocol.core.methods.response.Log): ExchangeActionAcceptedEvent? {
-        if (log.topics.firstOrNull()?.equals("0x9fd3566e39f14b3c593967cf13d7e11e65dafed9c4a3bfeab39504f893a72158", ignoreCase = true) != true) return null
+    fun decodeExchangeActionAcceptedV2Event(log: org.web3j.protocol.core.methods.response.Log): ExchangeActionAcceptedV2Event? {
+        if (log.topics.firstOrNull()?.equals("0x3ca6ab0c0316f6313bc20abbc2dc769133834b25425e93a865b9ef0892d83e2f", ignoreCase = true) != true) return null
         val indexed = log.topics.drop(1)
         if (indexed.size != 3) return null
         val values = decodeLayout(log.data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
         require(values.size == 3) { "incorrect event data arity" }
-        return ExchangeActionAcceptedEvent((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes16>(true) {}) as Bytes16), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Uint16>(true) {}) as Uint16).value, values[0] as BigInteger, (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[1] as String, values[2] as Bytes32)
+        return ExchangeActionAcceptedV2Event((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes16>(true) {}) as Bytes16), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Uint16>(true) {}) as Uint16).value, values[0] as BigInteger, (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[1] as String, values[2] as Bytes32)
     }
 
-    /** Creates an SDK filter for `ExchangeActionAccepted(bytes16,uint16,uint8,bytes32,address,bytes32)` at one contract address. */
-    fun filterExchangeActionAcceptedEvent(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, clientActionId: Bytes16? = null, actionIndex: BigInteger? = null, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
+    /** Creates an SDK filter for `ExchangeActionAcceptedV2(bytes16,uint16,uint8,bytes32,address,bytes32)` at one contract address. */
+    fun filterExchangeActionAcceptedV2Event(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, clientActionId: Bytes16? = null, actionIndex: BigInteger? = null, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
         val filter = org.web3j.protocol.core.methods.request.EthFilter(fromBlock, toBlock, address)
-        filter.addSingleTopic("0x9fd3566e39f14b3c593967cf13d7e11e65dafed9c4a3bfeab39504f893a72158")
+        filter.addSingleTopic("0x3ca6ab0c0316f6313bc20abbc2dc769133834b25425e93a865b9ef0892d83e2f")
         if (clientActionId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(clientActionId))
         if (actionIndex == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(Uint16(actionIndex)))
         if (marketId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(marketId))
         return filter
     }
 
-    /** Decodes a matching `ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` log, or returns null. */
+    /** Decodes a matching `ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` log, or returns null. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeExchangeActionRejectedEvent(log: org.web3j.protocol.core.methods.response.Log): ExchangeActionRejectedEvent? {
-        if (log.topics.firstOrNull()?.equals("0x70937d7f9595dc387b9e50f455a240b0830750a17ec1be4373c143fc5dde1b54", ignoreCase = true) != true) return null
+    fun decodeExchangeActionRejectedV2Event(log: org.web3j.protocol.core.methods.response.Log): ExchangeActionRejectedV2Event? {
+        if (log.topics.firstOrNull()?.equals("0x919a92f6cab2e02a0599f1c76ab564597ac54873d064ae7b21c5ba8a8744d958", ignoreCase = true) != true) return null
         val indexed = log.topics.drop(1)
         if (indexed.size != 3) return null
         val values = decodeLayout(log.data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
         require(values.size == 4) { "incorrect event data arity" }
-        return ExchangeActionRejectedEvent((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes16>(true) {}) as Bytes16), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Uint16>(true) {}) as Uint16).value, values[0] as BigInteger, (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[1] as String, values[2] as BigInteger, values[3] as Bytes32)
+        return ExchangeActionRejectedV2Event((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes16>(true) {}) as Bytes16), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Uint16>(true) {}) as Uint16).value, values[0] as BigInteger, (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[1] as String, values[2] as BigInteger, values[3] as Bytes32)
     }
 
-    /** Creates an SDK filter for `ExchangeActionRejected(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` at one contract address. */
-    fun filterExchangeActionRejectedEvent(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, clientActionId: Bytes16? = null, actionIndex: BigInteger? = null, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
+    /** Creates an SDK filter for `ExchangeActionRejectedV2(bytes16,uint16,uint8,bytes32,address,uint16,bytes32)` at one contract address. */
+    fun filterExchangeActionRejectedV2Event(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, clientActionId: Bytes16? = null, actionIndex: BigInteger? = null, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
         val filter = org.web3j.protocol.core.methods.request.EthFilter(fromBlock, toBlock, address)
-        filter.addSingleTopic("0x70937d7f9595dc387b9e50f455a240b0830750a17ec1be4373c143fc5dde1b54")
+        filter.addSingleTopic("0x919a92f6cab2e02a0599f1c76ab564597ac54873d064ae7b21c5ba8a8744d958")
         if (clientActionId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(clientActionId))
         if (actionIndex == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(Uint16(actionIndex)))
         if (marketId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(marketId))
         return filter
     }
 
-    /** Decodes a matching `ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` log, or returns null. */
+    /** Decodes a matching `ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` log, or returns null. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeExchangeL3MutationEvent(log: org.web3j.protocol.core.methods.response.Log): ExchangeL3MutationEvent? {
-        if (log.topics.firstOrNull()?.equals("0x2a5a4fc8324c7e62213e49aee23883746c4398ed74bd31d2eccc48de31026734", ignoreCase = true) != true) return null
+    fun decodeExchangeL3MutationV2Event(log: org.web3j.protocol.core.methods.response.Log): ExchangeL3MutationV2Event? {
+        if (log.topics.firstOrNull()?.equals("0x083d99cea649c1d115fc1f70b8045c9b198634bd9b286cc43a595e2f5328fbdd", ignoreCase = true) != true) return null
         val indexed = log.topics.drop(1)
         if (indexed.size != 3) return null
         val values = decodeLayout(log.data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value })) { it }) as List<Any>
         require(values.size == 5) { "incorrect event data arity" }
-        return ExchangeL3MutationEvent((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Address>(true) {}) as Address).value, values[0] as BigInteger, values[1] as BigInteger, values[2] as BigInteger, values[3] as BigInteger, values[4] as BigInteger)
+        return ExchangeL3MutationV2Event((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[1], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), (org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[2], object : org.web3j.abi.TypeReference<Address>(true) {}) as Address).value, values[0] as BigInteger, values[1] as BigInteger, values[2] as BigInteger, values[3] as BigInteger, values[4] as BigInteger)
     }
 
-    /** Creates an SDK filter for `ExchangeL3Mutation(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` at one contract address. */
-    fun filterExchangeL3MutationEvent(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null, orderId: Bytes32? = null, trader: String? = null): org.web3j.protocol.core.methods.request.EthFilter {
+    /** Creates an SDK filter for `ExchangeL3MutationV2(bytes32,bytes32,address,uint8,uint8,uint64,uint64,uint64)` at one contract address. */
+    fun filterExchangeL3MutationV2Event(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null, orderId: Bytes32? = null, trader: String? = null): org.web3j.protocol.core.methods.request.EthFilter {
         val filter = org.web3j.protocol.core.methods.request.EthFilter(fromBlock, toBlock, address)
-        filter.addSingleTopic("0x2a5a4fc8324c7e62213e49aee23883746c4398ed74bd31d2eccc48de31026734")
+        filter.addSingleTopic("0x083d99cea649c1d115fc1f70b8045c9b198634bd9b286cc43a595e2f5328fbdd")
         if (marketId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(marketId))
         if (orderId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(orderId))
         if (trader == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(Address(trader)))

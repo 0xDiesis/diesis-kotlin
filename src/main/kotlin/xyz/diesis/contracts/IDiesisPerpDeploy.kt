@@ -21,14 +21,14 @@ object IDiesisPerpDeploy {
     /** JSON ABI of the `IDiesisPerpDeploy` contract. */
     @JvmField
     val JSON: String = arrayOf(
-        "[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"parentHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"blockNumber\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"policyEpoch\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"policyHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"windowStart\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"windowEnd\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"filledVolume\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"operatorFees\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"lastMetadataUpdate\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"inputHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"committeeEpoch\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"committeeIdentity\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"quorumPower\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"attestingPower\",\"type\":\"uint64\"},{\"internalType\":\"uint16\",\"name\":\"voterCount\",\"type\":\"uint16\"},{\"internalType\":\"bytes32\",\"name\":\"evidenceHash\",\"type\":\"bytes32\"}],\"name\":\"applyPerpAbandonment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"reason\",\"type\":\"uint8\"}],\"name\":\"applySlash\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"slotId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"sourceList\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"metadata\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"signatures\",\"type\":\"bytes\"}],\"name\":\"deployPerp\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"expireNextUnactivatedPerp\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"expireUnactivatedPerp\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"finalizeClose\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"revision\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"proposalId\",\"type\":\"bytes32\"}],\"name\":\"finalizePerpPolicy\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getDeploymentState\",\"outputs\":[{\"components\":[{\"internalType\":\"uint8\",\"name\":\"stateTag\",\"type\":\"uint8\"},{\"internalType\":\"uint64\",\"name\":\"deadlineOrLiveBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"windowCloseBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"slashReason\",\"type\":\"uint8\"}],\"internalType\":\"struct IDiesisPerpDeploy.DeploymentInfo\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getMarketDeploymentState\",\"outputs\":[{\"components\":[{\"internalType\":\"uint8\",\"name\":\"stateTag\",\"type\":\"uint8\"},{\"internalType\":\"uint64\",\"name\":\"deadlineOrLiveBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"windowCloseBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"slashReason\",\"type\":\"uint8\"}],\"internalType\":\"struct IDiesisPerpDeploy.DeploymentInfo\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"getOperatorBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getPerpPolicy\",\"outputs\":[{\"components\":[{\"internalType\":\"uint64\",\"name\":\"revision\",\"type\":\"uint64\"},{\"internalType\":\"uint16\",\"name\":\"backstopTopupBps\",\"type\":\"uint16\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"maxNotional\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"maxLeverage\",\"type\":\"uint8\"},{\"internalType\":\"uint16\",\"name\":\"maintenanceMarginBps\",\"type\":\"uint16\"}],\"internalType\":\"struct IDiesisPerpDeploy.RiskTierInput[]\",\"name\":\"tiers\",\"type\":\"tuple[]\"}],\"internalType\":\"struct IDiesisPerpDeploy.PerpPolicy\",\"name\":\"policy\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"epoch\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"threshold\",\"type\":\"uint8\"},{\"internalType\":\"address[]\",\"name\":\"signers\",\"type\":\"address[]\"}],\"internalType\":\"struct IDiesisPerpDeploy.MetadataKeyset\",\"name\":\"keyset\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"tickSize\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"lotSize\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"maxOpenInterest\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"initialMark\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"maxLeverage\",\"type\":\"uint8\"}],\"name\":\"initializeBasicPerpMarket\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"tickSize\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"lotSize\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"maxOpenInterest\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"initialMark\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"revision\",\"type\":\"uint64\"},{\"internalType\":\"uint16\",\"name\":\"backstopTopupBps\",\"type\":\"uint16\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"maxNotional\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"maxLeverage\",\"type\":\"uint8\"},{\"internalType\":\"uint16\",\"name\":\"maintenanceMarginBps\",\"type\":\"uint16\"}],\"internalType\":\"struct IDiesisPerpDeploy.RiskTierInput[]\",\"name\":\"tiers\",\"type\":\"tuple[]\"}],\"internalType\":\"struct IDiesisPerpDeploy.PerpPolicy\",\"name\":\"policy\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"epoch\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"threshold\",\"type\":\"uint8\"},{\"internalType\":\"address[]\",\"name\":\"signers\",\"type\":\"address[]\"}],\"internalType\":\"struct IDiesisPerpDeploy.MetadataKeyset\",\"name\":\"keyset\",\"type\":\"tuple\"}],\"name\":\"initializePolicyPerpMarket\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"tickSize\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"lotSize\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"priceDenominator\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"maxOpenInterest\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"initialMark\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"revision\",\"type\":\"uint64\"},{\"internalType\":\"uint16\",\"name\":\"backstopTopupBps\",\"type\":\"uint16\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"maxNotional\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"maxLeverage\",\"type\":\"uint8\"},{\"internalType\":\"uint16\",\"name\":\"maintenanceMarginBps\",\"type\":\"uint16\"}],\"internalType\":\"struct IDiesisPerpDeploy.RiskTierInput[]\",\"name\":\"tiers\",\"type\":\"tuple[]\"}],\"internalType\":\"struct IDiesisPerpDeploy.PerpPolicy\",\"name\":\"policy\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"epoch\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"threshold\",\"type\":\"uint8\"},{\"internalType\":\"address[]\",\"name\":\"signers\",\"type\":\"address[]\"}],\"internalType\":\"struct IDiesisPerpDeploy.MetadataKeyset\",\"name\":\"keyset\",\"type\":\"tuple\"}],\"name\":\"initializePricedPerpMarket\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"initiateDelist\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"baseDecimals\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"quoteDecimals\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"roundingPolicy\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"sourceSetHash\",\"type\":\"bytes32\"}],\"name\":\"installPricedOracleDescriptor\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"maxOrders\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"maxPositions\",\"type\":\"uint16\"}],\"name\":\"preparePerpMarketClose\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"readyToFinalize\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"promoteToLive\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"expectedRevision\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"expectedKeysetEpoch\",\"type\":\"uint64\"},{\"internalType\":\"uint16\",\"name\":\"backstopTopupBps\",\"type\":\"uint16\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"maxNotional\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"maxLeverage\",\"type\":\"uint8\"},{\"internalType\":\"uint16\",\"name\":\"maintenanceMarginBps\",\"type\":\"uint16\"}],\"internalType\":\"struct IDiesisPerpDeploy.RiskTierInput[]\",\"name\":\"tiers\",\"type\":\"tuple[]\"},{\"internalType\":\"address[]\",\"name\":\"nextSigners\",\"type\":\"address[]\"},{\"internalType\":\"uint8\",\"name\":\"nextThreshold\",\"type\":\"uint8\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"signer\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"}],\"internalType\":\"struct IDiesisPerpDeploy.MetadataSignature[]\",\"name\":\"signatures\",\"type\":\"tuple[]\"}],\"name\":\"proposePerpPolicy\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"proposalId\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"executeAfter\",\"type\":\"uint64\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"registrationDigest\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"evidenceHash\",\"type\":\"bytes32\"}],\"name\":\"recordAuctionWin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"liveAtBlock\",\"type\":\"uint64\"}],\"name\":\"Activated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"AuctionWinRecorded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"BasicPerpMarketInitialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"Closed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"windowCloseBlock\",\"type\":\"uint64\"}],\"name\":\"Delisting\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"LiveStarted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"ordersCancelled\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"positionsSettled\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"readyToFinalize\",\"type\":\"bool\"}],\"name\":\"PerpMarketClosePrepared\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"policyHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"keysetHash\",\"type\":\"bytes32\"}],\"name\":\"PolicyPerpMarketInitialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"reason\",\"type\":\"uint8\"}],\"name\":\"Slashed\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DeadlineExceeded\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidStateTransition\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NoSuchMarket\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"PerpDeployCallFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"WrongOperator\",\"type\":\"error\"}]",
+        "[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"parentHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"blockNumber\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"policyEpoch\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"policyHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"windowStart\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"windowEnd\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"filledVolume\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"operatorFees\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"lastMetadataUpdate\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"inputHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"committeeEpoch\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"committeeIdentity\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"quorumPower\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"attestingPower\",\"type\":\"uint64\"},{\"internalType\":\"uint16\",\"name\":\"voterCount\",\"type\":\"uint16\"},{\"internalType\":\"bytes32\",\"name\":\"evidenceHash\",\"type\":\"bytes32\"}],\"name\":\"applyPerpAbandonmentV1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"reason\",\"type\":\"uint8\"}],\"name\":\"applySlash\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"slotId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"sourceList\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"metadata\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"signatures\",\"type\":\"bytes\"}],\"name\":\"deployPerp\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"expireNextUnactivatedPerpV1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"expireUnactivatedPerpV1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"finalizeClose\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"revision\",\"type\":\"uint64\"},{\"internalType\":\"bytes32\",\"name\":\"proposalId\",\"type\":\"bytes32\"}],\"name\":\"finalizePerpPolicyV1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getDeploymentState\",\"outputs\":[{\"components\":[{\"internalType\":\"uint8\",\"name\":\"stateTag\",\"type\":\"uint8\"},{\"internalType\":\"uint64\",\"name\":\"deadlineOrLiveBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"windowCloseBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"slashReason\",\"type\":\"uint8\"}],\"internalType\":\"struct IDiesisPerpDeploy.DeploymentInfo\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getMarketDeploymentState\",\"outputs\":[{\"components\":[{\"internalType\":\"uint8\",\"name\":\"stateTag\",\"type\":\"uint8\"},{\"internalType\":\"uint64\",\"name\":\"deadlineOrLiveBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"windowCloseBlock\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"slashReason\",\"type\":\"uint8\"}],\"internalType\":\"struct IDiesisPerpDeploy.DeploymentInfo\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"getOperatorBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getPerpPolicyV1\",\"outputs\":[{\"components\":[{\"internalType\":\"uint64\",\"name\":\"revision\",\"type\":\"uint64\"},{\"internalType\":\"uint16\",\"name\":\"backstopTopupBps\",\"type\":\"uint16\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"maxNotional\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"maxLeverage\",\"type\":\"uint8\"},{\"internalType\":\"uint16\",\"name\":\"maintenanceMarginBps\",\"type\":\"uint16\"}],\"internalType\":\"struct IDiesisPerpDeploy.RiskTierInputV1[]\",\"name\":\"tiers\",\"type\":\"tuple[]\"}],\"internalType\":\"struct IDiesisPerpDeploy.PerpPolicyV1\",\"name\":\"policy\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"epoch\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"threshold\",\"type\":\"uint8\"},{\"internalType\":\"address[]\",\"name\":\"signers\",\"type\":\"address[]\"}],\"internalType\":\"struct IDiesisPerpDeploy.MetadataKeysetV1\",\"name\":\"keyset\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"tickSize\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"lotSize\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"maxOpenInterest\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"initialMark\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"maxLeverage\",\"type\":\"uint8\"}],\"name\":\"initializePerpMarketV1\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"tickSize\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"lotSize\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"maxOpenInterest\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"initialMark\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"revision\",\"type\":\"uint64\"},{\"internalType\":\"uint16\",\"name\":\"backstopTopupBps\",\"type\":\"uint16\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"maxNotional\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"maxLeverage\",\"type\":\"uint8\"},{\"internalType\":\"uint16\",\"name\":\"maintenanceMarginBps\",\"type\":\"uint16\"}],\"internalType\":\"struct IDiesisPerpDeploy.RiskTierInputV1[]\",\"name\":\"tiers\",\"type\":\"tuple[]\"}],\"internalType\":\"struct IDiesisPerpDeploy.PerpPolicyV1\",\"name\":\"policy\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"epoch\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"threshold\",\"type\":\"uint8\"},{\"internalType\":\"address[]\",\"name\":\"signers\",\"type\":\"address[]\"}],\"internalType\":\"struct IDiesisPerpDeploy.MetadataKeysetV1\",\"name\":\"keyset\",\"type\":\"tuple\"}],\"name\":\"initializePerpMarketV2\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"initiateDelist\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint16\",\"name\":\"maxOrders\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"maxPositions\",\"type\":\"uint16\"}],\"name\":\"preparePerpMarketCloseV1\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"readyToFinalize\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"promoteToLive\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"expectedRevision\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"expectedKeysetEpoch\",\"type\":\"uint64\"},{\"internalType\":\"uint16\",\"name\":\"backstopTopupBps\",\"type\":\"uint16\"},{\"components\":[{\"internalType\":\"uint64\",\"name\":\"maxNotional\",\"type\":\"uint64\"},{\"internalType\":\"uint8\",\"name\":\"maxLeverage\",\"type\":\"uint8\"},{\"internalType\":\"uint16\",\"name\":\"maintenanceMarginBps\",\"type\":\"uint16\"}],\"internalType\":\"struct IDiesisPerpDeploy.RiskTierInputV1[]\",\"name\":\"tiers\",\"type\":\"tuple[]\"},{\"internalType\":\"address[]\",\"name\":\"nextSigners\",\"type\":\"address[]\"},{\"internalType\":\"uint8\",\"name\":\"nextThreshold\",\"type\":\"uint8\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"signer\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"}],\"internalType\":\"struct IDiesisPerpDeploy.MetadataSignatureV1[]\",\"name\":\"signatures\",\"type\":\"tuple[]\"}],\"name\":\"proposePerpPolicyV1\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"proposalId\",\"type\":\"bytes32\"},{\"internalType\":\"uint64\",\"name\":\"executeAfter\",\"type\":\"uint64\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"registrationDigest\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"evidenceHash\",\"type\":\"bytes32\"}],\"name\":\"recordAuctionWin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"liveAtBlock\",\"type\":\"uint64\"}],\"name\":\"Activated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"AuctionWinRecorded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"Closed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"windowCloseBlock\",\"type\":\"uint64\"}],\"name\":\"Delisting\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"LiveStarted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"ordersCancelled\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"positionsSettled\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"readyToFinalize\",\"type\":\"bool\"}],\"name\":\"PerpMarketClosePreparedV1\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"PerpMarketInitializedV1\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"policyHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"keysetHash\",\"type\":\"bytes32\"}],\"name\":\"PerpMarketInitializedV2\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"reason\",\"type\":\"uint8\"}],\"name\":\"Slashed\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DeadlineExceeded\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidStateTransition\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NoSuchMarket\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"PerpDeployCallFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"WrongOperator\",\"type\":\"error\"}]",
     ).joinToString("")
 
-    /** Canonical signature of `applyPerpAbandonment(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`. */
-    const val APPLY_PERP_ABANDONMENT_SIGNATURE: String = "applyPerpAbandonment(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)"
+    /** Canonical signature of `applyPerpAbandonmentV1(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`. */
+    const val APPLY_PERP_ABANDONMENT_V1_SIGNATURE: String = "applyPerpAbandonmentV1(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)"
 
-    /** Selector of `applyPerpAbandonment(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`. */
-    const val APPLY_PERP_ABANDONMENT_SELECTOR: String = "0xc6e91ba7"
+    /** Selector of `applyPerpAbandonmentV1(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`. */
+    const val APPLY_PERP_ABANDONMENT_V1_SELECTOR: String = "0x440c9ce4"
 
     /** Canonical signature of `applySlash(bytes32,uint8)`. */
     const val APPLY_SLASH_SIGNATURE: String = "applySlash(bytes32,uint8)"
@@ -42,17 +42,17 @@ object IDiesisPerpDeploy {
     /** Selector of `deployPerp(bytes32,bytes32,bytes,bytes,bytes)`. */
     const val DEPLOY_PERP_SELECTOR: String = "0x6fd95f59"
 
-    /** Canonical signature of `expireNextUnactivatedPerp()`. */
-    const val EXPIRE_NEXT_UNACTIVATED_PERP_SIGNATURE: String = "expireNextUnactivatedPerp()"
+    /** Canonical signature of `expireNextUnactivatedPerpV1()`. */
+    const val EXPIRE_NEXT_UNACTIVATED_PERP_V1_SIGNATURE: String = "expireNextUnactivatedPerpV1()"
 
-    /** Selector of `expireNextUnactivatedPerp()`. */
-    const val EXPIRE_NEXT_UNACTIVATED_PERP_SELECTOR: String = "0x387be752"
+    /** Selector of `expireNextUnactivatedPerpV1()`. */
+    const val EXPIRE_NEXT_UNACTIVATED_PERP_V1_SELECTOR: String = "0x0e96e909"
 
-    /** Canonical signature of `expireUnactivatedPerp(bytes32)`. */
-    const val EXPIRE_UNACTIVATED_PERP_SIGNATURE: String = "expireUnactivatedPerp(bytes32)"
+    /** Canonical signature of `expireUnactivatedPerpV1(bytes32)`. */
+    const val EXPIRE_UNACTIVATED_PERP_V1_SIGNATURE: String = "expireUnactivatedPerpV1(bytes32)"
 
-    /** Selector of `expireUnactivatedPerp(bytes32)`. */
-    const val EXPIRE_UNACTIVATED_PERP_SELECTOR: String = "0x72a00fd8"
+    /** Selector of `expireUnactivatedPerpV1(bytes32)`. */
+    const val EXPIRE_UNACTIVATED_PERP_V1_SELECTOR: String = "0x1572341b"
 
     /** Canonical signature of `finalizeClose(bytes32)`. */
     const val FINALIZE_CLOSE_SIGNATURE: String = "finalizeClose(bytes32)"
@@ -60,11 +60,11 @@ object IDiesisPerpDeploy {
     /** Selector of `finalizeClose(bytes32)`. */
     const val FINALIZE_CLOSE_SELECTOR: String = "0xb589db7b"
 
-    /** Canonical signature of `finalizePerpPolicy(bytes32,uint64,bytes32)`. */
-    const val FINALIZE_PERP_POLICY_SIGNATURE: String = "finalizePerpPolicy(bytes32,uint64,bytes32)"
+    /** Canonical signature of `finalizePerpPolicyV1(bytes32,uint64,bytes32)`. */
+    const val FINALIZE_PERP_POLICY_V1_SIGNATURE: String = "finalizePerpPolicyV1(bytes32,uint64,bytes32)"
 
-    /** Selector of `finalizePerpPolicy(bytes32,uint64,bytes32)`. */
-    const val FINALIZE_PERP_POLICY_SELECTOR: String = "0x9a4008d3"
+    /** Selector of `finalizePerpPolicyV1(bytes32,uint64,bytes32)`. */
+    const val FINALIZE_PERP_POLICY_V1_SELECTOR: String = "0x86c0a24e"
 
     /** Canonical signature of `getDeploymentState(bytes32)`. */
     const val GET_DEPLOYMENT_STATE_SIGNATURE: String = "getDeploymentState(bytes32)"
@@ -84,29 +84,23 @@ object IDiesisPerpDeploy {
     /** Selector of `getOperatorBalance(address)`. */
     const val GET_OPERATOR_BALANCE_SELECTOR: String = "0xf6be9333"
 
-    /** Canonical signature of `getPerpPolicy(bytes32)`. */
-    const val GET_PERP_POLICY_SIGNATURE: String = "getPerpPolicy(bytes32)"
+    /** Canonical signature of `getPerpPolicyV1(bytes32)`. */
+    const val GET_PERP_POLICY_V1_SIGNATURE: String = "getPerpPolicyV1(bytes32)"
 
-    /** Selector of `getPerpPolicy(bytes32)`. */
-    const val GET_PERP_POLICY_SELECTOR: String = "0xf07b7c02"
+    /** Selector of `getPerpPolicyV1(bytes32)`. */
+    const val GET_PERP_POLICY_V1_SELECTOR: String = "0xb5ebefbd"
 
-    /** Canonical signature of `initializeBasicPerpMarket(address,address,uint64,uint64,uint256,uint256,uint8)`. */
-    const val INITIALIZE_BASIC_PERP_MARKET_SIGNATURE: String = "initializeBasicPerpMarket(address,address,uint64,uint64,uint256,uint256,uint8)"
+    /** Canonical signature of `initializePerpMarketV1(address,address,uint64,uint64,uint256,uint256,uint8)`. */
+    const val INITIALIZE_PERP_MARKET_V1_SIGNATURE: String = "initializePerpMarketV1(address,address,uint64,uint64,uint256,uint256,uint8)"
 
-    /** Selector of `initializeBasicPerpMarket(address,address,uint64,uint64,uint256,uint256,uint8)`. */
-    const val INITIALIZE_BASIC_PERP_MARKET_SELECTOR: String = "0x03485432"
+    /** Selector of `initializePerpMarketV1(address,address,uint64,uint64,uint256,uint256,uint8)`. */
+    const val INITIALIZE_PERP_MARKET_V1_SELECTOR: String = "0xe19fe61c"
 
-    /** Canonical signature of `initializePolicyPerpMarket(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
-    const val INITIALIZE_POLICY_PERP_MARKET_SIGNATURE: String = "initializePolicyPerpMarket(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))"
+    /** Canonical signature of `initializePerpMarketV2(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
+    const val INITIALIZE_PERP_MARKET_V2_SIGNATURE: String = "initializePerpMarketV2(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))"
 
-    /** Selector of `initializePolicyPerpMarket(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
-    const val INITIALIZE_POLICY_PERP_MARKET_SELECTOR: String = "0x79a6a477"
-
-    /** Canonical signature of `initializePricedPerpMarket(address,address,uint64,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
-    const val INITIALIZE_PRICED_PERP_MARKET_SIGNATURE: String = "initializePricedPerpMarket(address,address,uint64,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))"
-
-    /** Selector of `initializePricedPerpMarket(address,address,uint64,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
-    const val INITIALIZE_PRICED_PERP_MARKET_SELECTOR: String = "0x74ff5e86"
+    /** Selector of `initializePerpMarketV2(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
+    const val INITIALIZE_PERP_MARKET_V2_SELECTOR: String = "0xdf4c851f"
 
     /** Canonical signature of `initiateDelist(bytes32)`. */
     const val INITIATE_DELIST_SIGNATURE: String = "initiateDelist(bytes32)"
@@ -114,17 +108,11 @@ object IDiesisPerpDeploy {
     /** Selector of `initiateDelist(bytes32)`. */
     const val INITIATE_DELIST_SELECTOR: String = "0xf0c6838b"
 
-    /** Canonical signature of `installPricedOracleDescriptor(bytes32,uint8,uint8,uint8,bytes32)`. */
-    const val INSTALL_PRICED_ORACLE_DESCRIPTOR_SIGNATURE: String = "installPricedOracleDescriptor(bytes32,uint8,uint8,uint8,bytes32)"
+    /** Canonical signature of `preparePerpMarketCloseV1(bytes32,uint16,uint16)`. */
+    const val PREPARE_PERP_MARKET_CLOSE_V1_SIGNATURE: String = "preparePerpMarketCloseV1(bytes32,uint16,uint16)"
 
-    /** Selector of `installPricedOracleDescriptor(bytes32,uint8,uint8,uint8,bytes32)`. */
-    const val INSTALL_PRICED_ORACLE_DESCRIPTOR_SELECTOR: String = "0xdb77803b"
-
-    /** Canonical signature of `preparePerpMarketClose(bytes32,uint16,uint16)`. */
-    const val PREPARE_PERP_MARKET_CLOSE_SIGNATURE: String = "preparePerpMarketClose(bytes32,uint16,uint16)"
-
-    /** Selector of `preparePerpMarketClose(bytes32,uint16,uint16)`. */
-    const val PREPARE_PERP_MARKET_CLOSE_SELECTOR: String = "0x05e069d5"
+    /** Selector of `preparePerpMarketCloseV1(bytes32,uint16,uint16)`. */
+    const val PREPARE_PERP_MARKET_CLOSE_V1_SELECTOR: String = "0x4d67fa55"
 
     /** Canonical signature of `promoteToLive(bytes32)`. */
     const val PROMOTE_TO_LIVE_SIGNATURE: String = "promoteToLive(bytes32)"
@@ -132,11 +120,11 @@ object IDiesisPerpDeploy {
     /** Selector of `promoteToLive(bytes32)`. */
     const val PROMOTE_TO_LIVE_SELECTOR: String = "0x4df652de"
 
-    /** Canonical signature of `proposePerpPolicy(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
-    const val PROPOSE_PERP_POLICY_SIGNATURE: String = "proposePerpPolicy(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])"
+    /** Canonical signature of `proposePerpPolicyV1(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
+    const val PROPOSE_PERP_POLICY_V1_SIGNATURE: String = "proposePerpPolicyV1(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])"
 
-    /** Selector of `proposePerpPolicy(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
-    const val PROPOSE_PERP_POLICY_SELECTOR: String = "0xe69d2df8"
+    /** Selector of `proposePerpPolicyV1(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
+    const val PROPOSE_PERP_POLICY_V1_SELECTOR: String = "0x1df21b1c"
 
     /** Canonical signature of `recordAuctionWin(bytes32,address,bytes32,bytes32)`. */
     const val RECORD_AUCTION_WIN_SIGNATURE: String = "recordAuctionWin(bytes32,address,bytes32,bytes32)"
@@ -156,12 +144,6 @@ object IDiesisPerpDeploy {
     /** Topic 0 of the `AuctionWinRecorded(bytes32,address)` event. */
     const val AUCTION_WIN_RECORDED_EVENT_TOPIC: String = "0x4264cde79ea237476aa133bff675c85cc1a2e8f3ef5b5c73744d0f7450e14504"
 
-    /** Canonical signature of the `BasicPerpMarketInitialized(bytes32)` event. */
-    const val BASIC_PERP_MARKET_INITIALIZED_EVENT_SIGNATURE: String = "BasicPerpMarketInitialized(bytes32)"
-
-    /** Topic 0 of the `BasicPerpMarketInitialized(bytes32)` event. */
-    const val BASIC_PERP_MARKET_INITIALIZED_EVENT_TOPIC: String = "0x8ed4a782ada6aeb6b27230c6be1cc205df314b153e77cc29e9f4fb9f0d60aebb"
-
     /** Canonical signature of the `Closed(bytes32)` event. */
     const val CLOSED_EVENT_SIGNATURE: String = "Closed(bytes32)"
 
@@ -180,17 +162,23 @@ object IDiesisPerpDeploy {
     /** Topic 0 of the `LiveStarted(bytes32)` event. */
     const val LIVE_STARTED_EVENT_TOPIC: String = "0xe8b5e8710b78486516de984c3ccc804dec98c920471c7c17aa664c50f2ae9838"
 
-    /** Canonical signature of the `PerpMarketClosePrepared(bytes32,uint16,uint16,bool)` event. */
-    const val PERP_MARKET_CLOSE_PREPARED_EVENT_SIGNATURE: String = "PerpMarketClosePrepared(bytes32,uint16,uint16,bool)"
+    /** Canonical signature of the `PerpMarketClosePreparedV1(bytes32,uint16,uint16,bool)` event. */
+    const val PERP_MARKET_CLOSE_PREPARED_V1_EVENT_SIGNATURE: String = "PerpMarketClosePreparedV1(bytes32,uint16,uint16,bool)"
 
-    /** Topic 0 of the `PerpMarketClosePrepared(bytes32,uint16,uint16,bool)` event. */
-    const val PERP_MARKET_CLOSE_PREPARED_EVENT_TOPIC: String = "0x5ddbb5614e90260d3ac9da4d0926a1c69cb6e3ad9461650a61be186dc0f5ed6d"
+    /** Topic 0 of the `PerpMarketClosePreparedV1(bytes32,uint16,uint16,bool)` event. */
+    const val PERP_MARKET_CLOSE_PREPARED_V1_EVENT_TOPIC: String = "0x117ace778384c5297b6d983d8c36978b771db2a21cef458d9f2ee2709dcd5e40"
 
-    /** Canonical signature of the `PolicyPerpMarketInitialized(bytes32,bytes32,bytes32)` event. */
-    const val POLICY_PERP_MARKET_INITIALIZED_EVENT_SIGNATURE: String = "PolicyPerpMarketInitialized(bytes32,bytes32,bytes32)"
+    /** Canonical signature of the `PerpMarketInitializedV1(bytes32)` event. */
+    const val PERP_MARKET_INITIALIZED_V1_EVENT_SIGNATURE: String = "PerpMarketInitializedV1(bytes32)"
 
-    /** Topic 0 of the `PolicyPerpMarketInitialized(bytes32,bytes32,bytes32)` event. */
-    const val POLICY_PERP_MARKET_INITIALIZED_EVENT_TOPIC: String = "0x578f90f2924a4aec498933f49a45d147533da03409ff3d9cab2d47a31a4d863d"
+    /** Topic 0 of the `PerpMarketInitializedV1(bytes32)` event. */
+    const val PERP_MARKET_INITIALIZED_V1_EVENT_TOPIC: String = "0xd453dec56e0945cf9b3fceb927bd4c84bcb1bcbf27b1fa0ecb44a29b2e124cce"
+
+    /** Canonical signature of the `PerpMarketInitializedV2(bytes32,bytes32,bytes32)` event. */
+    const val PERP_MARKET_INITIALIZED_V2_EVENT_SIGNATURE: String = "PerpMarketInitializedV2(bytes32,bytes32,bytes32)"
+
+    /** Topic 0 of the `PerpMarketInitializedV2(bytes32,bytes32,bytes32)` event. */
+    const val PERP_MARKET_INITIALIZED_V2_EVENT_TOPIC: String = "0x5c97bb0eda07f3e36a297c1748da18db057fa3223a9847438f679eca067e4676"
 
     /** Canonical signature of the `Slashed(bytes32,uint8)` event. */
     const val SLASHED_EVENT_SIGNATURE: String = "Slashed(bytes32,uint8)"
@@ -238,8 +226,8 @@ object IDiesisPerpDeploy {
         constructor(stateTag: Uint8, deadlineOrLiveBlock: Uint64, windowCloseBlock: Uint64, slashReason: Uint8) : this(stateTag.value, deadlineOrLiveBlock.value, windowCloseBlock.value, slashReason.value)
     }
 
-    /** The `RiskTierInput` tuple. */
-    data class RiskTierInput(
+    /** The `RiskTierInputV1` tuple. */
+    data class RiskTierInputV1(
         val maxNotional: BigInteger,
         val maxLeverage: BigInteger,
         val maintenanceMarginBps: BigInteger,
@@ -247,17 +235,17 @@ object IDiesisPerpDeploy {
         constructor(maxNotional: Uint64, maxLeverage: Uint8, maintenanceMarginBps: Uint16) : this(maxNotional.value, maxLeverage.value, maintenanceMarginBps.value)
     }
 
-    /** The `PerpPolicy` tuple. */
-    data class PerpPolicy(
+    /** The `PerpPolicyV1` tuple. */
+    data class PerpPolicyV1(
         val revision: BigInteger,
         val backstopTopupBps: BigInteger,
-        val tiers: List<RiskTierInput>,
-    ) : DynamicStruct(Uint64(revision), Uint16(backstopTopupBps), DynamicArray(RiskTierInput::class.java, tiers)) {
-        constructor(revision: Uint64, backstopTopupBps: Uint16, @Parameterized(type = RiskTierInput::class) tiers: DynamicArray<RiskTierInput>) : this(revision.value, backstopTopupBps.value, tiers.value)
+        val tiers: List<RiskTierInputV1>,
+    ) : DynamicStruct(Uint64(revision), Uint16(backstopTopupBps), DynamicArray(RiskTierInputV1::class.java, tiers)) {
+        constructor(revision: Uint64, backstopTopupBps: Uint16, @Parameterized(type = RiskTierInputV1::class) tiers: DynamicArray<RiskTierInputV1>) : this(revision.value, backstopTopupBps.value, tiers.value)
     }
 
-    /** The `MetadataKeyset` tuple. */
-    data class MetadataKeyset(
+    /** The `MetadataKeysetV1` tuple. */
+    data class MetadataKeysetV1(
         val epoch: BigInteger,
         val threshold: BigInteger,
         val signers: List<String>,
@@ -265,8 +253,8 @@ object IDiesisPerpDeploy {
         constructor(epoch: Uint64, threshold: Uint8, @Parameterized(type = Address::class) signers: DynamicArray<Address>) : this(epoch.value, threshold.value, signers.value.map { it.value })
     }
 
-    /** The `MetadataSignature` tuple. */
-    data class MetadataSignature(
+    /** The `MetadataSignatureV1` tuple. */
+    data class MetadataSignatureV1(
         val signer: String,
         val r: Bytes32,
         val s: Bytes32,
@@ -276,12 +264,12 @@ object IDiesisPerpDeploy {
     }
 
     /**
-     * Arguments of `applyPerpAbandonment(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`.
+     * Arguments of `applyPerpAbandonmentV1(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`.
      *
      * Apply one consensus-attested perpetual-market abandonment transition.
      * Native-runtime only: the dispatcher accepts this fixed-width selector      only from the system caller (`address(0)`).
      */
-    data class ApplyPerpAbandonmentParams(
+    data class ApplyPerpAbandonmentV1Params(
         val marketId: Bytes32,
         val parentHash: Bytes32,
         val blockNumber: BigInteger,
@@ -316,7 +304,7 @@ object IDiesisPerpDeploy {
      * Arguments of `deployPerp(bytes32,bytes32,bytes,bytes,bytes)`.
      *
      * Sole production deployment path for a settled slot.
-     * Caller must be the recorded operator. The runtime validates all      dynamic fields before ABI allocation and requires their canonical      combined commitment to equal the auction registration evidence.      For a priced registration, sourceList is exactly ASCII      "diesis.exchange.oracle-source-configuration.v2" followed by the      32-byte descriptor commitment and the 32-byte source-set hash.      Legacy sourceList bytes stay opaque. Metadata and signatures stay      opaque; signature bytes are not validated as attestations here.
+     * Caller must be the recorded operator. The runtime validates all      dynamic fields before ABI allocation and requires their canonical      combined commitment to equal the auction registration evidence.      The fields are opaque bytes: this version does not parse them or      validate the signature bytes as attestations.
      */
     data class DeployPerpParams(
         val slotId: Bytes32,
@@ -327,12 +315,12 @@ object IDiesisPerpDeploy {
     )
 
     /**
-     * Arguments of `expireUnactivatedPerp(bytes32)`.
+     * Arguments of `expireUnactivatedPerpV1(bytes32)`.
      *
      * Expire one incomplete auction deployment after its deadline.
      * Native-runtime only. This covers both an untouched winner and a      cooling/live deployment that never completed canonical market      initialization. Missing bonds close without slashing; a posted bond      is atomically slashed before the deployment record closes.
      */
-    data class ExpireUnactivatedPerpParams(
+    data class ExpireUnactivatedPerpV1Params(
         val marketId: Bytes32,
     )
 
@@ -347,11 +335,11 @@ object IDiesisPerpDeploy {
     )
 
     /**
-     * Arguments of `finalizePerpPolicy(bytes32,uint64,bytes32)`.
+     * Arguments of `finalizePerpPolicyV1(bytes32,uint64,bytes32)`.
      *
      * Apply one due, system-owned perpetual policy proposal.
      */
-    data class FinalizePerpPolicyParams(
+    data class FinalizePerpPolicyV1Params(
         val marketId: Bytes32,
         val revision: BigInteger,
         val proposalId: Bytes32,
@@ -386,21 +374,21 @@ object IDiesisPerpDeploy {
     )
 
     /**
-     * Arguments of `getPerpPolicy(bytes32)`.
+     * Arguments of `getPerpPolicyV1(bytes32)`.
      *
      * Read the active perpetual policy through the native precompile.
      * M0 freezes the selector and structured return schema. Native policy      read implementation remains deferred to X4b M2.
      */
-    data class GetPerpPolicyParams(
+    data class GetPerpPolicyV1Params(
         val marketId: Bytes32,
     )
 
     /**
-     * Arguments of `initializeBasicPerpMarket(address,address,uint64,uint64,uint256,uint256,uint8)`.
+     * Arguments of `initializePerpMarketV1(address,address,uint64,uint64,uint256,uint256,uint8)`.
      *
      * Materialize a live auction deployment into the canonical market         and clearing registries. `initialMark` is an unscaled tick price.
      */
-    data class InitializeBasicPerpMarketParams(
+    data class InitializePerpMarketV1Params(
         val baseToken: String,
         val quoteToken: String,
         val tickSize: BigInteger,
@@ -411,38 +399,20 @@ object IDiesisPerpDeploy {
     )
 
     /**
-     * Arguments of `initializePolicyPerpMarket(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`.
+     * Arguments of `initializePerpMarketV2(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`.
      *
      * Atomically initialize the market and its first policy/keyset.
      * This freezes the public V2 wire contract only. Native validation,      registry writes, and idempotence are introduced by X4b M2.
      */
-    data class InitializePolicyPerpMarketParams(
+    data class InitializePerpMarketV2Params(
         val baseToken: String,
         val quoteToken: String,
         val tickSize: BigInteger,
         val lotSize: BigInteger,
         val maxOpenInterest: BigInteger,
         val initialMark: BigInteger,
-        val policy: PerpPolicy,
-        val keyset: MetadataKeyset,
-    )
-
-    /**
-     * Arguments of `initializePricedPerpMarket(address,address,uint64,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`.
-     *
-     * Initialize a priced market and its first policy/keyset atomically.
-     * Requires the retained accepted version-one listing identity and      matching nonzero denominator. The denominator divides lotSize.      maxOpenInterest is full-width canonical q/priceDenominator size;      initialMark is p in immutable market price units. Clearing stores      its scaled p*PRICE_SCALE mirror. This returns one bytes32 market id.
-     */
-    data class InitializePricedPerpMarketParams(
-        val baseToken: String,
-        val quoteToken: String,
-        val tickSize: BigInteger,
-        val lotSize: BigInteger,
-        val priceDenominator: BigInteger,
-        val maxOpenInterest: BigInteger,
-        val initialMark: BigInteger,
-        val policy: PerpPolicy,
-        val keyset: MetadataKeyset,
+        val policy: PerpPolicyV1,
+        val keyset: MetadataKeysetV1,
     )
 
     /**
@@ -456,26 +426,12 @@ object IDiesisPerpDeploy {
     )
 
     /**
-     * Arguments of `installPricedOracleDescriptor(bytes32,uint8,uint8,uint8,bytes32)`.
-     *
-     * Install the immutable authenticated priced oracle descriptor.
-     * Caller must be the accepted operator of an initialized Live priced      deployment. Decimals are explicit and at most 77. roundingPolicy      must be one, nearest tick with ties toward the lower tick.      sourceSetHash must be nonzero. Its descriptor-bound configuration      commitment must equal accepted deployment evidence.sourceListHash.      Identical retries return no data; conflicting metadata reverts.
-     */
-    data class InstallPricedOracleDescriptorParams(
-        val marketId: Bytes32,
-        val baseDecimals: BigInteger,
-        val quoteDecimals: BigInteger,
-        val roundingPolicy: BigInteger,
-        val sourceSetHash: Bytes32,
-    )
-
-    /**
-     * Arguments of `preparePerpMarketClose(bytes32,uint16,uint16)`.
+     * Arguments of `preparePerpMarketCloseV1(bytes32,uint16,uint16)`.
      *
      * Advance one bounded step of market-close preparation.
      * Cancels open orders with exact reserve release, settles funding,      and closes or transfers residual positions in restart-safe chunks,      charging a hard bound before mutation. Progress is persisted to the      canonical close cursor so repeated calls resume deterministically.      A `Slashed` market may be progressed permissionlessly because no      caller-controlled economic transition remains after slashing.      `finalizeClose` may only succeed once this returns `true`. Later      tasks implement the continuation; this freezes the release selector      and bounded argument layout.
      */
-    data class PreparePerpMarketCloseParams(
+    data class PreparePerpMarketCloseV1Params(
         val marketId: Bytes32,
         val maxOrders: BigInteger,
         val maxPositions: BigInteger,
@@ -492,20 +448,20 @@ object IDiesisPerpDeploy {
     )
 
     /**
-     * Arguments of `proposePerpPolicy(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`.
+     * Arguments of `proposePerpPolicyV1(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`.
      *
      * Propose a timelocked, current-keyset-attested policy update.
      * Signature validation and timelock persistence are introduced by      X4b M2; this packet intentionally freezes only the ABI.
      */
-    data class ProposePerpPolicyParams(
+    data class ProposePerpPolicyV1Params(
         val marketId: Bytes32,
         val expectedRevision: BigInteger,
         val expectedKeysetEpoch: BigInteger,
         val backstopTopupBps: BigInteger,
-        val tiers: List<RiskTierInput>,
+        val tiers: List<RiskTierInputV1>,
         val nextSigners: List<String>,
         val nextThreshold: BigInteger,
-        val signatures: List<MetadataSignature>,
+        val signatures: List<MetadataSignatureV1>,
     )
 
     /**
@@ -533,11 +489,6 @@ object IDiesisPerpDeploy {
         val operator: String,
     )
 
-    /** Fields of the `BasicPerpMarketInitialized(bytes32)` event. */
-    data class BasicPerpMarketInitializedEvent(
-        val marketId: Bytes32,
-    )
-
     /** Fields of the `Closed(bytes32)` event. */
     data class ClosedEvent(
         val marketId: Bytes32,
@@ -554,16 +505,21 @@ object IDiesisPerpDeploy {
         val marketId: Bytes32,
     )
 
-    /** Fields of the `PerpMarketClosePrepared(bytes32,uint16,uint16,bool)` event. */
-    data class PerpMarketClosePreparedEvent(
+    /** Fields of the `PerpMarketClosePreparedV1(bytes32,uint16,uint16,bool)` event. */
+    data class PerpMarketClosePreparedV1Event(
         val marketId: Bytes32,
         val ordersCancelled: BigInteger,
         val positionsSettled: BigInteger,
         val readyToFinalize: Boolean,
     )
 
-    /** Fields of the `PolicyPerpMarketInitialized(bytes32,bytes32,bytes32)` event. */
-    data class PolicyPerpMarketInitializedEvent(
+    /** Fields of the `PerpMarketInitializedV1(bytes32)` event. */
+    data class PerpMarketInitializedV1Event(
+        val marketId: Bytes32,
+    )
+
+    /** Fields of the `PerpMarketInitializedV2(bytes32,bytes32,bytes32)` event. */
+    data class PerpMarketInitializedV2Event(
         val marketId: Bytes32,
         val policyHash: Bytes32,
         val keysetHash: Bytes32,
@@ -707,71 +663,71 @@ object IDiesisPerpDeploy {
         object : org.web3j.abi.TypeReference<DeploymentInfo>(false, listOf(object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint8>() {})) {}
 
     @Suppress("UNCHECKED_CAST")
-    private fun layoutRiskTierInput(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value })) { values -> RiskTierInput(values[0] as BigInteger, values[1] as BigInteger, values[2] as BigInteger) }
+    private fun layoutRiskTierInputV1(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value })) { values -> RiskTierInputV1(values[0] as BigInteger, values[1] as BigInteger, values[2] as BigInteger) }
 
-    /** Decodes a single ABI return value of tuple `RiskTierInput`. */
+    /** Decodes a single ABI return value of tuple `RiskTierInputV1`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeRiskTierInputValue(data: String): RiskTierInput =
-        (decodeLayout(data, AbiTuple(listOf(layoutRiskTierInput())) { it }) as List<Any>)[0] as RiskTierInput
+    fun decodeRiskTierInputV1Value(data: String): RiskTierInputV1 =
+        (decodeLayout(data, AbiTuple(listOf(layoutRiskTierInputV1())) { it }) as List<Any>)[0] as RiskTierInputV1
 
-    /** Type reference for decoding the `RiskTierInput` tuple. */
-    fun referenceRiskTierInput(): org.web3j.abi.TypeReference<RiskTierInput> =
-        object : org.web3j.abi.TypeReference<RiskTierInput>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<Uint16>() {})) {}
-
-    @Suppress("UNCHECKED_CAST")
-    private fun layoutPerpPolicy(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value }, AbiArray(layoutRiskTierInput(), null))) { values -> PerpPolicy(values[0] as BigInteger, values[1] as BigInteger, values[2] as List<RiskTierInput>) }
-
-    /** Decodes a single ABI return value of tuple `PerpPolicy`. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodePerpPolicyValue(data: String): PerpPolicy =
-        (decodeLayout(data, AbiTuple(listOf(layoutPerpPolicy())) { it }) as List<Any>)[0] as PerpPolicy
-
-    /** Type reference for decoding the `PerpPolicy` tuple. */
-    fun referencePerpPolicy(): org.web3j.abi.TypeReference<PerpPolicy> =
-        object : org.web3j.abi.TypeReference<PerpPolicy>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}, object : org.web3j.abi.TypeReference<DynamicArray<RiskTierInput>>(false, listOf(object : org.web3j.abi.TypeReference<RiskTierInput>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<Uint16>() {})) {})) {})) {}
+    /** Type reference for decoding the `RiskTierInputV1` tuple. */
+    fun referenceRiskTierInputV1(): org.web3j.abi.TypeReference<RiskTierInputV1> =
+        object : org.web3j.abi.TypeReference<RiskTierInputV1>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<Uint16>() {})) {}
 
     @Suppress("UNCHECKED_CAST")
-    private fun layoutMetadataKeyset(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiArray(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, null))) { values -> MetadataKeyset(values[0] as BigInteger, values[1] as BigInteger, values[2] as List<String>) }
+    private fun layoutPerpPolicyV1(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value }, AbiArray(layoutRiskTierInputV1(), null))) { values -> PerpPolicyV1(values[0] as BigInteger, values[1] as BigInteger, values[2] as List<RiskTierInputV1>) }
 
-    /** Decodes a single ABI return value of tuple `MetadataKeyset`. */
+    /** Decodes a single ABI return value of tuple `PerpPolicyV1`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeMetadataKeysetValue(data: String): MetadataKeyset =
-        (decodeLayout(data, AbiTuple(listOf(layoutMetadataKeyset())) { it }) as List<Any>)[0] as MetadataKeyset
+    fun decodePerpPolicyV1Value(data: String): PerpPolicyV1 =
+        (decodeLayout(data, AbiTuple(listOf(layoutPerpPolicyV1())) { it }) as List<Any>)[0] as PerpPolicyV1
 
-    /** Type reference for decoding the `MetadataKeyset` tuple. */
-    fun referenceMetadataKeyset(): org.web3j.abi.TypeReference<MetadataKeyset> =
-        object : org.web3j.abi.TypeReference<MetadataKeyset>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<DynamicArray<Address>>(false, listOf(object : org.web3j.abi.TypeReference<Address>() {})) {})) {}
+    /** Type reference for decoding the `PerpPolicyV1` tuple. */
+    fun referencePerpPolicyV1(): org.web3j.abi.TypeReference<PerpPolicyV1> =
+        object : org.web3j.abi.TypeReference<PerpPolicyV1>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}, object : org.web3j.abi.TypeReference<DynamicArray<RiskTierInputV1>>(false, listOf(object : org.web3j.abi.TypeReference<RiskTierInputV1>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<Uint16>() {})) {})) {})) {}
 
     @Suppress("UNCHECKED_CAST")
-    private fun layoutMetadataSignature(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value })) { values -> MetadataSignature(values[0] as String, values[1] as Bytes32, values[2] as Bytes32, values[3] as BigInteger) }
+    private fun layoutMetadataKeysetV1(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiArray(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, null))) { values -> MetadataKeysetV1(values[0] as BigInteger, values[1] as BigInteger, values[2] as List<String>) }
 
-    /** Decodes a single ABI return value of tuple `MetadataSignature`. */
+    /** Decodes a single ABI return value of tuple `MetadataKeysetV1`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeMetadataSignatureValue(data: String): MetadataSignature =
-        (decodeLayout(data, AbiTuple(listOf(layoutMetadataSignature())) { it }) as List<Any>)[0] as MetadataSignature
+    fun decodeMetadataKeysetV1Value(data: String): MetadataKeysetV1 =
+        (decodeLayout(data, AbiTuple(listOf(layoutMetadataKeysetV1())) { it }) as List<Any>)[0] as MetadataKeysetV1
 
-    /** Type reference for decoding the `MetadataSignature` tuple. */
-    fun referenceMetadataSignature(): org.web3j.abi.TypeReference<MetadataSignature> =
-        object : org.web3j.abi.TypeReference<MetadataSignature>(false, listOf(object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint8>() {})) {}
+    /** Type reference for decoding the `MetadataKeysetV1` tuple. */
+    fun referenceMetadataKeysetV1(): org.web3j.abi.TypeReference<MetadataKeysetV1> =
+        object : org.web3j.abi.TypeReference<MetadataKeysetV1>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<DynamicArray<Address>>(false, listOf(object : org.web3j.abi.TypeReference<Address>() {})) {})) {}
 
-    /** ABI function for `applyPerpAbandonment(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`. */
-    fun functionApplyPerpAbandonment(marketId: Bytes32, parentHash: Bytes32, blockNumber: BigInteger, policyEpoch: BigInteger, policyHash: Bytes32, windowStart: BigInteger, windowEnd: BigInteger, filledVolume: BigInteger, operatorFees: BigInteger, lastMetadataUpdate: BigInteger, inputHash: Bytes32, committeeEpoch: BigInteger, committeeIdentity: Bytes32, quorumPower: BigInteger, attestingPower: BigInteger, voterCount: BigInteger, evidenceHash: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("applyPerpAbandonment", listOf(marketId, parentHash, Uint64(blockNumber), Uint64(policyEpoch), policyHash, Uint64(windowStart), Uint64(windowEnd), Uint256(filledVolume), Uint256(operatorFees), Uint64(lastMetadataUpdate), inputHash, Uint64(committeeEpoch), committeeIdentity, Uint64(quorumPower), Uint64(attestingPower), Uint16(voterCount), evidenceHash), emptyList())
-
-    /** Encodes calldata for `applyPerpAbandonment(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)` without an RPC call. */
-    fun encodeApplyPerpAbandonment(marketId: Bytes32, parentHash: Bytes32, blockNumber: BigInteger, policyEpoch: BigInteger, policyHash: Bytes32, windowStart: BigInteger, windowEnd: BigInteger, filledVolume: BigInteger, operatorFees: BigInteger, lastMetadataUpdate: BigInteger, inputHash: Bytes32, committeeEpoch: BigInteger, committeeIdentity: Bytes32, quorumPower: BigInteger, attestingPower: BigInteger, voterCount: BigInteger, evidenceHash: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionApplyPerpAbandonment(marketId, parentHash, blockNumber, policyEpoch, policyHash, windowStart, windowEnd, filledVolume, operatorFees, lastMetadataUpdate, inputHash, committeeEpoch, committeeIdentity, quorumPower, attestingPower, voterCount, evidenceHash))
-
-    /** Decodes the ABI output of `applyPerpAbandonment(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeApplyPerpAbandonmentResult(data: String): Unit {
+    private fun layoutMetadataSignatureV1(): AbiLayout = AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Address::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value })) { values -> MetadataSignatureV1(values[0] as String, values[1] as Bytes32, values[2] as Bytes32, values[3] as BigInteger) }
+
+    /** Decodes a single ABI return value of tuple `MetadataSignatureV1`. */
+    @Suppress("UNCHECKED_CAST")
+    fun decodeMetadataSignatureV1Value(data: String): MetadataSignatureV1 =
+        (decodeLayout(data, AbiTuple(listOf(layoutMetadataSignatureV1())) { it }) as List<Any>)[0] as MetadataSignatureV1
+
+    /** Type reference for decoding the `MetadataSignatureV1` tuple. */
+    fun referenceMetadataSignatureV1(): org.web3j.abi.TypeReference<MetadataSignatureV1> =
+        object : org.web3j.abi.TypeReference<MetadataSignatureV1>(false, listOf(object : org.web3j.abi.TypeReference<Address>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint8>() {})) {}
+
+    /** ABI function for `applyPerpAbandonmentV1(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`. */
+    fun functionApplyPerpAbandonmentV1(marketId: Bytes32, parentHash: Bytes32, blockNumber: BigInteger, policyEpoch: BigInteger, policyHash: Bytes32, windowStart: BigInteger, windowEnd: BigInteger, filledVolume: BigInteger, operatorFees: BigInteger, lastMetadataUpdate: BigInteger, inputHash: Bytes32, committeeEpoch: BigInteger, committeeIdentity: Bytes32, quorumPower: BigInteger, attestingPower: BigInteger, voterCount: BigInteger, evidenceHash: Bytes32): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("applyPerpAbandonmentV1", listOf(marketId, parentHash, Uint64(blockNumber), Uint64(policyEpoch), policyHash, Uint64(windowStart), Uint64(windowEnd), Uint256(filledVolume), Uint256(operatorFees), Uint64(lastMetadataUpdate), inputHash, Uint64(committeeEpoch), committeeIdentity, Uint64(quorumPower), Uint64(attestingPower), Uint16(voterCount), evidenceHash), emptyList())
+
+    /** Encodes calldata for `applyPerpAbandonmentV1(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)` without an RPC call. */
+    fun encodeApplyPerpAbandonmentV1(marketId: Bytes32, parentHash: Bytes32, blockNumber: BigInteger, policyEpoch: BigInteger, policyHash: Bytes32, windowStart: BigInteger, windowEnd: BigInteger, filledVolume: BigInteger, operatorFees: BigInteger, lastMetadataUpdate: BigInteger, inputHash: Bytes32, committeeEpoch: BigInteger, committeeIdentity: Bytes32, quorumPower: BigInteger, attestingPower: BigInteger, voterCount: BigInteger, evidenceHash: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionApplyPerpAbandonmentV1(marketId, parentHash, blockNumber, policyEpoch, policyHash, windowStart, windowEnd, filledVolume, operatorFees, lastMetadataUpdate, inputHash, committeeEpoch, committeeIdentity, quorumPower, attestingPower, voterCount, evidenceHash))
+
+    /** Decodes the ABI output of `applyPerpAbandonmentV1(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`. */
+    @Suppress("UNCHECKED_CAST")
+    fun decodeApplyPerpAbandonmentV1Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `applyPerpAbandonment(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`. */
-    fun sendApplyPerpAbandonment(client: Client, marketId: Bytes32, parentHash: Bytes32, blockNumber: BigInteger, policyEpoch: BigInteger, policyHash: Bytes32, windowStart: BigInteger, windowEnd: BigInteger, filledVolume: BigInteger, operatorFees: BigInteger, lastMetadataUpdate: BigInteger, inputHash: Bytes32, committeeEpoch: BigInteger, committeeIdentity: Bytes32, quorumPower: BigInteger, attestingPower: BigInteger, voterCount: BigInteger, evidenceHash: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `applyPerpAbandonmentV1(bytes32,bytes32,uint64,uint64,bytes32,uint64,uint64,uint256,uint256,uint64,bytes32,uint64,bytes32,uint64,uint64,uint16,bytes32)`. */
+    fun sendApplyPerpAbandonmentV1(client: Client, marketId: Bytes32, parentHash: Bytes32, blockNumber: BigInteger, policyEpoch: BigInteger, policyHash: Bytes32, windowStart: BigInteger, windowEnd: BigInteger, filledVolume: BigInteger, operatorFees: BigInteger, lastMetadataUpdate: BigInteger, inputHash: Bytes32, committeeEpoch: BigInteger, committeeIdentity: Bytes32, quorumPower: BigInteger, attestingPower: BigInteger, voterCount: BigInteger, evidenceHash: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeApplyPerpAbandonment(marketId, parentHash, blockNumber, policyEpoch, policyHash, windowStart, windowEnd, filledVolume, operatorFees, lastMetadataUpdate, inputHash, committeeEpoch, committeeIdentity, quorumPower, attestingPower, voterCount, evidenceHash), options)
+        return client.send(encodeApplyPerpAbandonmentV1(marketId, parentHash, blockNumber, policyEpoch, policyHash, windowStart, windowEnd, filledVolume, operatorFees, lastMetadataUpdate, inputHash, committeeEpoch, committeeIdentity, quorumPower, attestingPower, voterCount, evidenceHash), options)
     }
 
     /** ABI function for `applySlash(bytes32,uint8)`. */
@@ -815,44 +771,44 @@ object IDiesisPerpDeploy {
         return client.send(encodeDeployPerp(slotId, marketId, sourceList, metadata, signatures), options)
     }
 
-    /** ABI function for `expireNextUnactivatedPerp()`. */
-    fun functionExpireNextUnactivatedPerp(): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("expireNextUnactivatedPerp", emptyList(), emptyList())
+    /** ABI function for `expireNextUnactivatedPerpV1()`. */
+    fun functionExpireNextUnactivatedPerpV1(): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("expireNextUnactivatedPerpV1", emptyList(), emptyList())
 
-    /** Encodes calldata for `expireNextUnactivatedPerp()` without an RPC call. */
-    fun encodeExpireNextUnactivatedPerp(): String = org.web3j.abi.FunctionEncoder.encode(functionExpireNextUnactivatedPerp())
+    /** Encodes calldata for `expireNextUnactivatedPerpV1()` without an RPC call. */
+    fun encodeExpireNextUnactivatedPerpV1(): String = org.web3j.abi.FunctionEncoder.encode(functionExpireNextUnactivatedPerpV1())
 
-    /** Decodes the ABI output of `expireNextUnactivatedPerp()`. */
+    /** Decodes the ABI output of `expireNextUnactivatedPerpV1()`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeExpireNextUnactivatedPerpResult(data: String): Unit {
+    fun decodeExpireNextUnactivatedPerpV1Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `expireNextUnactivatedPerp()`. */
-    fun sendExpireNextUnactivatedPerp(client: Client, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `expireNextUnactivatedPerpV1()`. */
+    fun sendExpireNextUnactivatedPerpV1(client: Client, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeExpireNextUnactivatedPerp(), options)
+        return client.send(encodeExpireNextUnactivatedPerpV1(), options)
     }
 
-    /** ABI function for `expireUnactivatedPerp(bytes32)`. */
-    fun functionExpireUnactivatedPerp(marketId: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("expireUnactivatedPerp", listOf(marketId), emptyList())
+    /** ABI function for `expireUnactivatedPerpV1(bytes32)`. */
+    fun functionExpireUnactivatedPerpV1(marketId: Bytes32): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("expireUnactivatedPerpV1", listOf(marketId), emptyList())
 
-    /** Encodes calldata for `expireUnactivatedPerp(bytes32)` without an RPC call. */
-    fun encodeExpireUnactivatedPerp(marketId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionExpireUnactivatedPerp(marketId))
+    /** Encodes calldata for `expireUnactivatedPerpV1(bytes32)` without an RPC call. */
+    fun encodeExpireUnactivatedPerpV1(marketId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionExpireUnactivatedPerpV1(marketId))
 
-    /** Decodes the ABI output of `expireUnactivatedPerp(bytes32)`. */
+    /** Decodes the ABI output of `expireUnactivatedPerpV1(bytes32)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeExpireUnactivatedPerpResult(data: String): Unit {
+    fun decodeExpireUnactivatedPerpV1Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `expireUnactivatedPerp(bytes32)`. */
-    fun sendExpireUnactivatedPerp(client: Client, marketId: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `expireUnactivatedPerpV1(bytes32)`. */
+    fun sendExpireUnactivatedPerpV1(client: Client, marketId: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeExpireUnactivatedPerp(marketId), options)
+        return client.send(encodeExpireUnactivatedPerpV1(marketId), options)
     }
 
     /** ABI function for `finalizeClose(bytes32)`. */
@@ -875,24 +831,24 @@ object IDiesisPerpDeploy {
         return client.send(encodeFinalizeClose(marketId), options)
     }
 
-    /** ABI function for `finalizePerpPolicy(bytes32,uint64,bytes32)`. */
-    fun functionFinalizePerpPolicy(marketId: Bytes32, revision: BigInteger, proposalId: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("finalizePerpPolicy", listOf(marketId, Uint64(revision), proposalId), emptyList())
+    /** ABI function for `finalizePerpPolicyV1(bytes32,uint64,bytes32)`. */
+    fun functionFinalizePerpPolicyV1(marketId: Bytes32, revision: BigInteger, proposalId: Bytes32): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("finalizePerpPolicyV1", listOf(marketId, Uint64(revision), proposalId), emptyList())
 
-    /** Encodes calldata for `finalizePerpPolicy(bytes32,uint64,bytes32)` without an RPC call. */
-    fun encodeFinalizePerpPolicy(marketId: Bytes32, revision: BigInteger, proposalId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionFinalizePerpPolicy(marketId, revision, proposalId))
+    /** Encodes calldata for `finalizePerpPolicyV1(bytes32,uint64,bytes32)` without an RPC call. */
+    fun encodeFinalizePerpPolicyV1(marketId: Bytes32, revision: BigInteger, proposalId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionFinalizePerpPolicyV1(marketId, revision, proposalId))
 
-    /** Decodes the ABI output of `finalizePerpPolicy(bytes32,uint64,bytes32)`. */
+    /** Decodes the ABI output of `finalizePerpPolicyV1(bytes32,uint64,bytes32)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeFinalizePerpPolicyResult(data: String): Unit {
+    fun decodeFinalizePerpPolicyV1Result(data: String): Unit {
         require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
         return Unit
     }
 
-    /** Sends a write transaction for `finalizePerpPolicy(bytes32,uint64,bytes32)`. */
-    fun sendFinalizePerpPolicy(client: Client, marketId: Bytes32, revision: BigInteger, proposalId: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `finalizePerpPolicyV1(bytes32,uint64,bytes32)`. */
+    fun sendFinalizePerpPolicyV1(client: Client, marketId: Bytes32, revision: BigInteger, proposalId: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeFinalizePerpPolicy(marketId, revision, proposalId), options)
+        return client.send(encodeFinalizePerpPolicyV1(marketId, revision, proposalId), options)
     }
 
     /** ABI function for `getDeploymentState(bytes32)`. */
@@ -952,92 +908,71 @@ object IDiesisPerpDeploy {
     fun callGetOperatorBalance(client: Client, operator: String): BigInteger =
         decodeGetOperatorBalanceResult(client.call(encodeGetOperatorBalance(operator)))
 
-    /** ABI function for `getPerpPolicy(bytes32)`. */
-    fun functionGetPerpPolicy(marketId: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("getPerpPolicy", listOf(marketId), listOf(object : org.web3j.abi.TypeReference<PerpPolicy>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}, object : org.web3j.abi.TypeReference<DynamicArray<RiskTierInput>>(false, listOf(object : org.web3j.abi.TypeReference<RiskTierInput>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<Uint16>() {})) {})) {})) {}, object : org.web3j.abi.TypeReference<MetadataKeyset>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<DynamicArray<Address>>(false, listOf(object : org.web3j.abi.TypeReference<Address>() {})) {})) {}))
+    /** ABI function for `getPerpPolicyV1(bytes32)`. */
+    fun functionGetPerpPolicyV1(marketId: Bytes32): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("getPerpPolicyV1", listOf(marketId), listOf(object : org.web3j.abi.TypeReference<PerpPolicyV1>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint16>() {}, object : org.web3j.abi.TypeReference<DynamicArray<RiskTierInputV1>>(false, listOf(object : org.web3j.abi.TypeReference<RiskTierInputV1>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<Uint16>() {})) {})) {})) {}, object : org.web3j.abi.TypeReference<MetadataKeysetV1>(false, listOf(object : org.web3j.abi.TypeReference<Uint64>() {}, object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<DynamicArray<Address>>(false, listOf(object : org.web3j.abi.TypeReference<Address>() {})) {})) {}))
 
-    /** Encodes calldata for `getPerpPolicy(bytes32)` without an RPC call. */
-    fun encodeGetPerpPolicy(marketId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionGetPerpPolicy(marketId))
+    /** Encodes calldata for `getPerpPolicyV1(bytes32)` without an RPC call. */
+    fun encodeGetPerpPolicyV1(marketId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionGetPerpPolicyV1(marketId))
 
-    /** Decoded result of `getPerpPolicy(bytes32)`. */
-    data class GetPerpPolicyResult(
-        val policy: PerpPolicy,
-        val keyset: MetadataKeyset,
+    /** Decoded result of `getPerpPolicyV1(bytes32)`. */
+    data class GetPerpPolicyV1Result(
+        val policy: PerpPolicyV1,
+        val keyset: MetadataKeysetV1,
     )
 
-    /** Decodes the ABI output of `getPerpPolicy(bytes32)`. */
+    /** Decodes the ABI output of `getPerpPolicyV1(bytes32)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeGetPerpPolicyResult(data: String): GetPerpPolicyResult {
-        val values = decodeLayout(data, AbiTuple(listOf(layoutPerpPolicy(), layoutMetadataKeyset())) { it }) as List<Any>
-        require(values.size == 2) { "incorrect result arity for getPerpPolicy(bytes32)" }
-        return GetPerpPolicyResult(values[0] as PerpPolicy, values[1] as MetadataKeyset)
+    fun decodeGetPerpPolicyV1Result(data: String): GetPerpPolicyV1Result {
+        val values = decodeLayout(data, AbiTuple(listOf(layoutPerpPolicyV1(), layoutMetadataKeysetV1())) { it }) as List<Any>
+        require(values.size == 2) { "incorrect result arity for getPerpPolicyV1(bytes32)" }
+        return GetPerpPolicyV1Result(values[0] as PerpPolicyV1, values[1] as MetadataKeysetV1)
     }
 
-    /** Executes a read call for `getPerpPolicy(bytes32)`. */
-    fun callGetPerpPolicy(client: Client, marketId: Bytes32): GetPerpPolicyResult =
-        decodeGetPerpPolicyResult(client.call(encodeGetPerpPolicy(marketId)))
+    /** Executes a read call for `getPerpPolicyV1(bytes32)`. */
+    fun callGetPerpPolicyV1(client: Client, marketId: Bytes32): GetPerpPolicyV1Result =
+        decodeGetPerpPolicyV1Result(client.call(encodeGetPerpPolicyV1(marketId)))
 
-    /** ABI function for `initializeBasicPerpMarket(address,address,uint64,uint64,uint256,uint256,uint8)`. */
-    fun functionInitializeBasicPerpMarket(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, maxLeverage: BigInteger): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("initializeBasicPerpMarket", listOf(Address(baseToken), Address(quoteToken), Uint64(tickSize), Uint64(lotSize), Uint256(maxOpenInterest), Uint256(initialMark), Uint8(maxLeverage)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
+    /** ABI function for `initializePerpMarketV1(address,address,uint64,uint64,uint256,uint256,uint8)`. */
+    fun functionInitializePerpMarketV1(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, maxLeverage: BigInteger): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("initializePerpMarketV1", listOf(Address(baseToken), Address(quoteToken), Uint64(tickSize), Uint64(lotSize), Uint256(maxOpenInterest), Uint256(initialMark), Uint8(maxLeverage)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
 
-    /** Encodes calldata for `initializeBasicPerpMarket(address,address,uint64,uint64,uint256,uint256,uint8)` without an RPC call. */
-    fun encodeInitializeBasicPerpMarket(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, maxLeverage: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionInitializeBasicPerpMarket(baseToken, quoteToken, tickSize, lotSize, maxOpenInterest, initialMark, maxLeverage))
+    /** Encodes calldata for `initializePerpMarketV1(address,address,uint64,uint64,uint256,uint256,uint8)` without an RPC call. */
+    fun encodeInitializePerpMarketV1(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, maxLeverage: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionInitializePerpMarketV1(baseToken, quoteToken, tickSize, lotSize, maxOpenInterest, initialMark, maxLeverage))
 
-    /** Decodes the ABI output of `initializeBasicPerpMarket(address,address,uint64,uint64,uint256,uint256,uint8)`. */
+    /** Decodes the ABI output of `initializePerpMarketV1(address,address,uint64,uint64,uint256,uint256,uint8)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeInitializeBasicPerpMarketResult(data: String): Bytes32 {
+    fun decodeInitializePerpMarketV1Result(data: String): Bytes32 {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for initializeBasicPerpMarket(address,address,uint64,uint64,uint256,uint256,uint8)" }
+        require(values.size == 1) { "incorrect result arity for initializePerpMarketV1(address,address,uint64,uint64,uint256,uint256,uint8)" }
         return values[0] as Bytes32
     }
 
-    /** Sends a write transaction for `initializeBasicPerpMarket(address,address,uint64,uint64,uint256,uint256,uint8)`. */
-    fun sendInitializeBasicPerpMarket(client: Client, baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, maxLeverage: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `initializePerpMarketV1(address,address,uint64,uint64,uint256,uint256,uint8)`. */
+    fun sendInitializePerpMarketV1(client: Client, baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, maxLeverage: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeInitializeBasicPerpMarket(baseToken, quoteToken, tickSize, lotSize, maxOpenInterest, initialMark, maxLeverage), options)
+        return client.send(encodeInitializePerpMarketV1(baseToken, quoteToken, tickSize, lotSize, maxOpenInterest, initialMark, maxLeverage), options)
     }
 
-    /** ABI function for `initializePolicyPerpMarket(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
-    fun functionInitializePolicyPerpMarket(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, policy: PerpPolicy, keyset: MetadataKeyset): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("initializePolicyPerpMarket", listOf(Address(baseToken), Address(quoteToken), Uint64(tickSize), Uint64(lotSize), Uint256(maxOpenInterest), Uint256(initialMark), policy, keyset), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
+    /** ABI function for `initializePerpMarketV2(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
+    fun functionInitializePerpMarketV2(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, policy: PerpPolicyV1, keyset: MetadataKeysetV1): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("initializePerpMarketV2", listOf(Address(baseToken), Address(quoteToken), Uint64(tickSize), Uint64(lotSize), Uint256(maxOpenInterest), Uint256(initialMark), policy, keyset), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
 
-    /** Encodes calldata for `initializePolicyPerpMarket(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))` without an RPC call. */
-    fun encodeInitializePolicyPerpMarket(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, policy: PerpPolicy, keyset: MetadataKeyset): String = org.web3j.abi.FunctionEncoder.encode(functionInitializePolicyPerpMarket(baseToken, quoteToken, tickSize, lotSize, maxOpenInterest, initialMark, policy, keyset))
+    /** Encodes calldata for `initializePerpMarketV2(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))` without an RPC call. */
+    fun encodeInitializePerpMarketV2(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, policy: PerpPolicyV1, keyset: MetadataKeysetV1): String = org.web3j.abi.FunctionEncoder.encode(functionInitializePerpMarketV2(baseToken, quoteToken, tickSize, lotSize, maxOpenInterest, initialMark, policy, keyset))
 
-    /** Decodes the ABI output of `initializePolicyPerpMarket(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
+    /** Decodes the ABI output of `initializePerpMarketV2(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeInitializePolicyPerpMarketResult(data: String): Bytes32 {
+    fun decodeInitializePerpMarketV2Result(data: String): Bytes32 {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for initializePolicyPerpMarket(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))" }
+        require(values.size == 1) { "incorrect result arity for initializePerpMarketV2(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))" }
         return values[0] as Bytes32
     }
 
-    /** Sends a write transaction for `initializePolicyPerpMarket(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
-    fun sendInitializePolicyPerpMarket(client: Client, baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, policy: PerpPolicy, keyset: MetadataKeyset, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `initializePerpMarketV2(address,address,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
+    fun sendInitializePerpMarketV2(client: Client, baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, policy: PerpPolicyV1, keyset: MetadataKeysetV1, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeInitializePolicyPerpMarket(baseToken, quoteToken, tickSize, lotSize, maxOpenInterest, initialMark, policy, keyset), options)
-    }
-
-    /** ABI function for `initializePricedPerpMarket(address,address,uint64,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
-    fun functionInitializePricedPerpMarket(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, priceDenominator: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, policy: PerpPolicy, keyset: MetadataKeyset): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("initializePricedPerpMarket", listOf(Address(baseToken), Address(quoteToken), Uint64(tickSize), Uint64(lotSize), Uint64(priceDenominator), Uint256(maxOpenInterest), Uint256(initialMark), policy, keyset), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
-
-    /** Encodes calldata for `initializePricedPerpMarket(address,address,uint64,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))` without an RPC call. */
-    fun encodeInitializePricedPerpMarket(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, priceDenominator: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, policy: PerpPolicy, keyset: MetadataKeyset): String = org.web3j.abi.FunctionEncoder.encode(functionInitializePricedPerpMarket(baseToken, quoteToken, tickSize, lotSize, priceDenominator, maxOpenInterest, initialMark, policy, keyset))
-
-    /** Decodes the ABI output of `initializePricedPerpMarket(address,address,uint64,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodeInitializePricedPerpMarketResult(data: String): Bytes32 {
-        val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for initializePricedPerpMarket(address,address,uint64,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))" }
-        return values[0] as Bytes32
-    }
-
-    /** Sends a write transaction for `initializePricedPerpMarket(address,address,uint64,uint64,uint64,uint256,uint256,(uint64,uint16,(uint64,uint8,uint16)[]),(uint64,uint8,address[]))`. */
-    fun sendInitializePricedPerpMarket(client: Client, baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, priceDenominator: BigInteger, maxOpenInterest: BigInteger, initialMark: BigInteger, policy: PerpPolicy, keyset: MetadataKeyset, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
-        require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeInitializePricedPerpMarket(baseToken, quoteToken, tickSize, lotSize, priceDenominator, maxOpenInterest, initialMark, policy, keyset), options)
+        return client.send(encodeInitializePerpMarketV2(baseToken, quoteToken, tickSize, lotSize, maxOpenInterest, initialMark, policy, keyset), options)
     }
 
     /** ABI function for `initiateDelist(bytes32)`. */
@@ -1060,45 +995,25 @@ object IDiesisPerpDeploy {
         return client.send(encodeInitiateDelist(marketId), options)
     }
 
-    /** ABI function for `installPricedOracleDescriptor(bytes32,uint8,uint8,uint8,bytes32)`. */
-    fun functionInstallPricedOracleDescriptor(marketId: Bytes32, baseDecimals: BigInteger, quoteDecimals: BigInteger, roundingPolicy: BigInteger, sourceSetHash: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("installPricedOracleDescriptor", listOf(marketId, Uint8(baseDecimals), Uint8(quoteDecimals), Uint8(roundingPolicy), sourceSetHash), emptyList())
+    /** ABI function for `preparePerpMarketCloseV1(bytes32,uint16,uint16)`. */
+    fun functionPreparePerpMarketCloseV1(marketId: Bytes32, maxOrders: BigInteger, maxPositions: BigInteger): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("preparePerpMarketCloseV1", listOf(marketId, Uint16(maxOrders), Uint16(maxPositions)), listOf(object : org.web3j.abi.TypeReference<Bool>() {}))
 
-    /** Encodes calldata for `installPricedOracleDescriptor(bytes32,uint8,uint8,uint8,bytes32)` without an RPC call. */
-    fun encodeInstallPricedOracleDescriptor(marketId: Bytes32, baseDecimals: BigInteger, quoteDecimals: BigInteger, roundingPolicy: BigInteger, sourceSetHash: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionInstallPricedOracleDescriptor(marketId, baseDecimals, quoteDecimals, roundingPolicy, sourceSetHash))
+    /** Encodes calldata for `preparePerpMarketCloseV1(bytes32,uint16,uint16)` without an RPC call. */
+    fun encodePreparePerpMarketCloseV1(marketId: Bytes32, maxOrders: BigInteger, maxPositions: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionPreparePerpMarketCloseV1(marketId, maxOrders, maxPositions))
 
-    /** Decodes the ABI output of `installPricedOracleDescriptor(bytes32,uint8,uint8,uint8,bytes32)`. */
+    /** Decodes the ABI output of `preparePerpMarketCloseV1(bytes32,uint16,uint16)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeInstallPricedOracleDescriptorResult(data: String): Unit {
-        require(data == "0x" || data.isEmpty()) { "unexpected output for void function" }
-        return Unit
-    }
-
-    /** Sends a write transaction for `installPricedOracleDescriptor(bytes32,uint8,uint8,uint8,bytes32)`. */
-    fun sendInstallPricedOracleDescriptor(client: Client, marketId: Bytes32, baseDecimals: BigInteger, quoteDecimals: BigInteger, roundingPolicy: BigInteger, sourceSetHash: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
-        require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeInstallPricedOracleDescriptor(marketId, baseDecimals, quoteDecimals, roundingPolicy, sourceSetHash), options)
-    }
-
-    /** ABI function for `preparePerpMarketClose(bytes32,uint16,uint16)`. */
-    fun functionPreparePerpMarketClose(marketId: Bytes32, maxOrders: BigInteger, maxPositions: BigInteger): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("preparePerpMarketClose", listOf(marketId, Uint16(maxOrders), Uint16(maxPositions)), listOf(object : org.web3j.abi.TypeReference<Bool>() {}))
-
-    /** Encodes calldata for `preparePerpMarketClose(bytes32,uint16,uint16)` without an RPC call. */
-    fun encodePreparePerpMarketClose(marketId: Bytes32, maxOrders: BigInteger, maxPositions: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionPreparePerpMarketClose(marketId, maxOrders, maxPositions))
-
-    /** Decodes the ABI output of `preparePerpMarketClose(bytes32,uint16,uint16)`. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodePreparePerpMarketCloseResult(data: String): Boolean {
+    fun decodePreparePerpMarketCloseV1Result(data: String): Boolean {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bool::class.java); decoded.value })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for preparePerpMarketClose(bytes32,uint16,uint16)" }
+        require(values.size == 1) { "incorrect result arity for preparePerpMarketCloseV1(bytes32,uint16,uint16)" }
         return values[0] as Boolean
     }
 
-    /** Sends a write transaction for `preparePerpMarketClose(bytes32,uint16,uint16)`. */
-    fun sendPreparePerpMarketClose(client: Client, marketId: Bytes32, maxOrders: BigInteger, maxPositions: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `preparePerpMarketCloseV1(bytes32,uint16,uint16)`. */
+    fun sendPreparePerpMarketCloseV1(client: Client, marketId: Bytes32, maxOrders: BigInteger, maxPositions: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodePreparePerpMarketClose(marketId, maxOrders, maxPositions), options)
+        return client.send(encodePreparePerpMarketCloseV1(marketId, maxOrders, maxPositions), options)
     }
 
     /** ABI function for `promoteToLive(bytes32)`. */
@@ -1121,31 +1036,31 @@ object IDiesisPerpDeploy {
         return client.send(encodePromoteToLive(marketId), options)
     }
 
-    /** ABI function for `proposePerpPolicy(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
-    fun functionProposePerpPolicy(marketId: Bytes32, expectedRevision: BigInteger, expectedKeysetEpoch: BigInteger, backstopTopupBps: BigInteger, tiers: List<RiskTierInput>, nextSigners: List<String>, nextThreshold: BigInteger, signatures: List<MetadataSignature>): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("proposePerpPolicy", listOf(marketId, Uint64(expectedRevision), Uint64(expectedKeysetEpoch), Uint16(backstopTopupBps), DynamicArray(RiskTierInput::class.java, tiers), DynamicArray(Address::class.java, nextSigners.map { Address(it) }), Uint8(nextThreshold), DynamicArray(MetadataSignature::class.java, signatures)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint64>() {}))
+    /** ABI function for `proposePerpPolicyV1(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
+    fun functionProposePerpPolicyV1(marketId: Bytes32, expectedRevision: BigInteger, expectedKeysetEpoch: BigInteger, backstopTopupBps: BigInteger, tiers: List<RiskTierInputV1>, nextSigners: List<String>, nextThreshold: BigInteger, signatures: List<MetadataSignatureV1>): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("proposePerpPolicyV1", listOf(marketId, Uint64(expectedRevision), Uint64(expectedKeysetEpoch), Uint16(backstopTopupBps), DynamicArray(RiskTierInputV1::class.java, tiers), DynamicArray(Address::class.java, nextSigners.map { Address(it) }), Uint8(nextThreshold), DynamicArray(MetadataSignatureV1::class.java, signatures)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint64>() {}))
 
-    /** Encodes calldata for `proposePerpPolicy(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])` without an RPC call. */
-    fun encodeProposePerpPolicy(marketId: Bytes32, expectedRevision: BigInteger, expectedKeysetEpoch: BigInteger, backstopTopupBps: BigInteger, tiers: List<RiskTierInput>, nextSigners: List<String>, nextThreshold: BigInteger, signatures: List<MetadataSignature>): String = org.web3j.abi.FunctionEncoder.encode(functionProposePerpPolicy(marketId, expectedRevision, expectedKeysetEpoch, backstopTopupBps, tiers, nextSigners, nextThreshold, signatures))
+    /** Encodes calldata for `proposePerpPolicyV1(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])` without an RPC call. */
+    fun encodeProposePerpPolicyV1(marketId: Bytes32, expectedRevision: BigInteger, expectedKeysetEpoch: BigInteger, backstopTopupBps: BigInteger, tiers: List<RiskTierInputV1>, nextSigners: List<String>, nextThreshold: BigInteger, signatures: List<MetadataSignatureV1>): String = org.web3j.abi.FunctionEncoder.encode(functionProposePerpPolicyV1(marketId, expectedRevision, expectedKeysetEpoch, backstopTopupBps, tiers, nextSigners, nextThreshold, signatures))
 
-    /** Decoded result of `proposePerpPolicy(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
-    data class ProposePerpPolicyResult(
+    /** Decoded result of `proposePerpPolicyV1(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
+    data class ProposePerpPolicyV1Result(
         val proposalId: Bytes32,
         val executeAfter: BigInteger,
     )
 
-    /** Decodes the ABI output of `proposePerpPolicy(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
+    /** Decodes the ABI output of `proposePerpPolicyV1(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeProposePerpPolicyResult(data: String): ProposePerpPolicyResult {
+    fun decodeProposePerpPolicyV1Result(data: String): ProposePerpPolicyV1Result {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value })) { it }) as List<Any>
-        require(values.size == 2) { "incorrect result arity for proposePerpPolicy(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])" }
-        return ProposePerpPolicyResult(values[0] as Bytes32, values[1] as BigInteger)
+        require(values.size == 2) { "incorrect result arity for proposePerpPolicyV1(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])" }
+        return ProposePerpPolicyV1Result(values[0] as Bytes32, values[1] as BigInteger)
     }
 
-    /** Sends a write transaction for `proposePerpPolicy(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
-    fun sendProposePerpPolicy(client: Client, marketId: Bytes32, expectedRevision: BigInteger, expectedKeysetEpoch: BigInteger, backstopTopupBps: BigInteger, tiers: List<RiskTierInput>, nextSigners: List<String>, nextThreshold: BigInteger, signatures: List<MetadataSignature>, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `proposePerpPolicyV1(bytes32,uint64,uint64,uint16,(uint64,uint8,uint16)[],address[],uint8,(address,bytes32,bytes32,uint8)[])`. */
+    fun sendProposePerpPolicyV1(client: Client, marketId: Bytes32, expectedRevision: BigInteger, expectedKeysetEpoch: BigInteger, backstopTopupBps: BigInteger, tiers: List<RiskTierInputV1>, nextSigners: List<String>, nextThreshold: BigInteger, signatures: List<MetadataSignatureV1>, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeProposePerpPolicy(marketId, expectedRevision, expectedKeysetEpoch, backstopTopupBps, tiers, nextSigners, nextThreshold, signatures), options)
+        return client.send(encodeProposePerpPolicyV1(marketId, expectedRevision, expectedKeysetEpoch, backstopTopupBps, tiers, nextSigners, nextThreshold, signatures), options)
     }
 
     /** ABI function for `recordAuctionWin(bytes32,address,bytes32,bytes32)`. */
@@ -1207,25 +1122,6 @@ object IDiesisPerpDeploy {
         return filter
     }
 
-    /** Decodes a matching `BasicPerpMarketInitialized(bytes32)` log, or returns null. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodeBasicPerpMarketInitializedEvent(log: org.web3j.protocol.core.methods.response.Log): BasicPerpMarketInitializedEvent? {
-        if (log.topics.firstOrNull()?.equals("0x8ed4a782ada6aeb6b27230c6be1cc205df314b153e77cc29e9f4fb9f0d60aebb", ignoreCase = true) != true) return null
-        val indexed = log.topics.drop(1)
-        if (indexed.size != 1) return null
-        val values = decodeLayout(log.data, AbiTuple(listOf()) { it }) as List<Any>
-        require(values.size == 0) { "incorrect event data arity" }
-        return BasicPerpMarketInitializedEvent((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32))
-    }
-
-    /** Creates an SDK filter for `BasicPerpMarketInitialized(bytes32)` at one contract address. */
-    fun filterBasicPerpMarketInitializedEvent(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
-        val filter = org.web3j.protocol.core.methods.request.EthFilter(fromBlock, toBlock, address)
-        filter.addSingleTopic("0x8ed4a782ada6aeb6b27230c6be1cc205df314b153e77cc29e9f4fb9f0d60aebb")
-        if (marketId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(marketId))
-        return filter
-    }
-
     /** Decodes a matching `Closed(bytes32)` log, or returns null. */
     @Suppress("UNCHECKED_CAST")
     fun decodeClosedEvent(log: org.web3j.protocol.core.methods.response.Log): ClosedEvent? {
@@ -1283,40 +1179,59 @@ object IDiesisPerpDeploy {
         return filter
     }
 
-    /** Decodes a matching `PerpMarketClosePrepared(bytes32,uint16,uint16,bool)` log, or returns null. */
+    /** Decodes a matching `PerpMarketClosePreparedV1(bytes32,uint16,uint16,bool)` log, or returns null. */
     @Suppress("UNCHECKED_CAST")
-    fun decodePerpMarketClosePreparedEvent(log: org.web3j.protocol.core.methods.response.Log): PerpMarketClosePreparedEvent? {
-        if (log.topics.firstOrNull()?.equals("0x5ddbb5614e90260d3ac9da4d0926a1c69cb6e3ad9461650a61be186dc0f5ed6d", ignoreCase = true) != true) return null
+    fun decodePerpMarketClosePreparedV1Event(log: org.web3j.protocol.core.methods.response.Log): PerpMarketClosePreparedV1Event? {
+        if (log.topics.firstOrNull()?.equals("0x117ace778384c5297b6d983d8c36978b771db2a21cef458d9f2ee2709dcd5e40", ignoreCase = true) != true) return null
         val indexed = log.topics.drop(1)
         if (indexed.size != 1) return null
         val values = decodeLayout(log.data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint16::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bool::class.java); decoded.value })) { it }) as List<Any>
         require(values.size == 3) { "incorrect event data arity" }
-        return PerpMarketClosePreparedEvent((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[0] as BigInteger, values[1] as BigInteger, values[2] as Boolean)
+        return PerpMarketClosePreparedV1Event((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[0] as BigInteger, values[1] as BigInteger, values[2] as Boolean)
     }
 
-    /** Creates an SDK filter for `PerpMarketClosePrepared(bytes32,uint16,uint16,bool)` at one contract address. */
-    fun filterPerpMarketClosePreparedEvent(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
+    /** Creates an SDK filter for `PerpMarketClosePreparedV1(bytes32,uint16,uint16,bool)` at one contract address. */
+    fun filterPerpMarketClosePreparedV1Event(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
         val filter = org.web3j.protocol.core.methods.request.EthFilter(fromBlock, toBlock, address)
-        filter.addSingleTopic("0x5ddbb5614e90260d3ac9da4d0926a1c69cb6e3ad9461650a61be186dc0f5ed6d")
+        filter.addSingleTopic("0x117ace778384c5297b6d983d8c36978b771db2a21cef458d9f2ee2709dcd5e40")
         if (marketId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(marketId))
         return filter
     }
 
-    /** Decodes a matching `PolicyPerpMarketInitialized(bytes32,bytes32,bytes32)` log, or returns null. */
+    /** Decodes a matching `PerpMarketInitializedV1(bytes32)` log, or returns null. */
     @Suppress("UNCHECKED_CAST")
-    fun decodePolicyPerpMarketInitializedEvent(log: org.web3j.protocol.core.methods.response.Log): PolicyPerpMarketInitializedEvent? {
-        if (log.topics.firstOrNull()?.equals("0x578f90f2924a4aec498933f49a45d147533da03409ff3d9cab2d47a31a4d863d", ignoreCase = true) != true) return null
+    fun decodePerpMarketInitializedV1Event(log: org.web3j.protocol.core.methods.response.Log): PerpMarketInitializedV1Event? {
+        if (log.topics.firstOrNull()?.equals("0xd453dec56e0945cf9b3fceb927bd4c84bcb1bcbf27b1fa0ecb44a29b2e124cce", ignoreCase = true) != true) return null
+        val indexed = log.topics.drop(1)
+        if (indexed.size != 1) return null
+        val values = decodeLayout(log.data, AbiTuple(listOf()) { it }) as List<Any>
+        require(values.size == 0) { "incorrect event data arity" }
+        return PerpMarketInitializedV1Event((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32))
+    }
+
+    /** Creates an SDK filter for `PerpMarketInitializedV1(bytes32)` at one contract address. */
+    fun filterPerpMarketInitializedV1Event(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
+        val filter = org.web3j.protocol.core.methods.request.EthFilter(fromBlock, toBlock, address)
+        filter.addSingleTopic("0xd453dec56e0945cf9b3fceb927bd4c84bcb1bcbf27b1fa0ecb44a29b2e124cce")
+        if (marketId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(marketId))
+        return filter
+    }
+
+    /** Decodes a matching `PerpMarketInitializedV2(bytes32,bytes32,bytes32)` log, or returns null. */
+    @Suppress("UNCHECKED_CAST")
+    fun decodePerpMarketInitializedV2Event(log: org.web3j.protocol.core.methods.response.Log): PerpMarketInitializedV2Event? {
+        if (log.topics.firstOrNull()?.equals("0x5c97bb0eda07f3e36a297c1748da18db057fa3223a9847438f679eca067e4676", ignoreCase = true) != true) return null
         val indexed = log.topics.drop(1)
         if (indexed.size != 1) return null
         val values = decodeLayout(log.data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
         require(values.size == 2) { "incorrect event data arity" }
-        return PolicyPerpMarketInitializedEvent((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[0] as Bytes32, values[1] as Bytes32)
+        return PerpMarketInitializedV2Event((org.web3j.abi.FunctionReturnDecoder.decodeIndexedValue(indexed[0], object : org.web3j.abi.TypeReference<Bytes32>(true) {}) as Bytes32), values[0] as Bytes32, values[1] as Bytes32)
     }
 
-    /** Creates an SDK filter for `PolicyPerpMarketInitialized(bytes32,bytes32,bytes32)` at one contract address. */
-    fun filterPolicyPerpMarketInitializedEvent(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
+    /** Creates an SDK filter for `PerpMarketInitializedV2(bytes32,bytes32,bytes32)` at one contract address. */
+    fun filterPerpMarketInitializedV2Event(address: String, fromBlock: org.web3j.protocol.core.DefaultBlockParameter, toBlock: org.web3j.protocol.core.DefaultBlockParameter, marketId: Bytes32? = null): org.web3j.protocol.core.methods.request.EthFilter {
         val filter = org.web3j.protocol.core.methods.request.EthFilter(fromBlock, toBlock, address)
-        filter.addSingleTopic("0x578f90f2924a4aec498933f49a45d147533da03409ff3d9cab2d47a31a4d863d")
+        filter.addSingleTopic("0x5c97bb0eda07f3e36a297c1748da18db057fa3223a9847438f679eca067e4676")
         if (marketId == null) filter.addNullTopic() else filter.addSingleTopic("0x" + org.web3j.abi.TypeEncoder.encode(marketId))
         return filter
     }

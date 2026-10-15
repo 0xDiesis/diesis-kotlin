@@ -17,7 +17,7 @@ object IDiesisMarkets {
     /** JSON ABI of the `IDiesisMarkets` contract. */
     @JvmField
     val JSON: String = arrayOf(
-        "[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"currentPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"referencePrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"thresholdBps\",\"type\":\"uint256\"}],\"name\":\"checkCircuitBreaker\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"tripped\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"tickSize\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"lotSize\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"priceDenominator\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"bond\",\"type\":\"uint256\"}],\"name\":\"createPricedSpotMarket\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"tickSize\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"lotSize\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"bond\",\"type\":\"uint256\"}],\"name\":\"createSpotMarket\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes11\",\"name\":\"symbol\",\"type\":\"bytes11\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"initialSupply\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dsBond\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"usdcFee\",\"type\":\"uint256\"}],\"name\":\"deployTokenAndSpotBook\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getMarket\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"slot0\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"slot1\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"maxOpenInterest\",\"type\":\"uint256\"}],\"internalType\":\"struct IDiesisMarkets.PackedMarket\",\"name\":\"market\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getMarketPricing\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"pricingVersion\",\"type\":\"uint8\"},{\"internalType\":\"uint64\",\"name\":\"priceDenominator\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"resumeMarket\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"success\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"priceDeviation\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"threshold\",\"type\":\"uint256\"}],\"name\":\"CircuitBreakerTriggered\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"marketType\",\"type\":\"uint8\"}],\"name\":\"MarketCreated\",\"type\":\"event\"}]",
+        "[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"currentPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"referencePrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"thresholdBps\",\"type\":\"uint256\"}],\"name\":\"checkCircuitBreaker\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"tripped\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"tickSize\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"lotSize\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"bond\",\"type\":\"uint256\"}],\"name\":\"createSpotMarket\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes11\",\"name\":\"symbol\",\"type\":\"bytes11\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"initialSupply\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dsBond\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"usdcFee\",\"type\":\"uint256\"}],\"name\":\"deployTokenAndSpotBook\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"getMarket\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"slot0\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"slot1\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"maxOpenInterest\",\"type\":\"uint256\"}],\"internalType\":\"struct IDiesisMarkets.PackedMarket\",\"name\":\"market\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"}],\"name\":\"resumeMarket\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"success\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"priceDeviation\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"threshold\",\"type\":\"uint256\"}],\"name\":\"CircuitBreakerTriggered\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"marketType\",\"type\":\"uint8\"}],\"name\":\"MarketCreated\",\"type\":\"event\"}]",
     ).joinToString("")
 
     /** Canonical signature of `checkCircuitBreaker(bytes32,uint256,uint256,uint256)`. */
@@ -25,12 +25,6 @@ object IDiesisMarkets {
 
     /** Selector of `checkCircuitBreaker(bytes32,uint256,uint256,uint256)`. */
     const val CHECK_CIRCUIT_BREAKER_SELECTOR: String = "0x9de24fc6"
-
-    /** Canonical signature of `createPricedSpotMarket(address,address,uint64,uint64,uint64,uint256)`. */
-    const val CREATE_PRICED_SPOT_MARKET_SIGNATURE: String = "createPricedSpotMarket(address,address,uint64,uint64,uint64,uint256)"
-
-    /** Selector of `createPricedSpotMarket(address,address,uint64,uint64,uint64,uint256)`. */
-    const val CREATE_PRICED_SPOT_MARKET_SELECTOR: String = "0x64e058cc"
 
     /** Canonical signature of `createSpotMarket(address,address,uint64,uint64,uint256)`. */
     const val CREATE_SPOT_MARKET_SIGNATURE: String = "createSpotMarket(address,address,uint64,uint64,uint256)"
@@ -49,12 +43,6 @@ object IDiesisMarkets {
 
     /** Selector of `getMarket(bytes32)`. */
     const val GET_MARKET_SELECTOR: String = "0xc3c95c7b"
-
-    /** Canonical signature of `getMarketPricing(bytes32)`. */
-    const val GET_MARKET_PRICING_SIGNATURE: String = "getMarketPricing(bytes32)"
-
-    /** Selector of `getMarketPricing(bytes32)`. */
-    const val GET_MARKET_PRICING_SELECTOR: String = "0x6f710490"
 
     /** Canonical signature of `resumeMarket(bytes32)`. */
     const val RESUME_MARKET_SIGNATURE: String = "resumeMarket(bytes32)"
@@ -96,24 +84,9 @@ object IDiesisMarkets {
     )
 
     /**
-     * Arguments of `createPricedSpotMarket(address,address,uint64,uint64,uint64,uint256)`.
-     *
-     * Create a spot market with immutable version-one price units.
-     * Public quantities are raw q; canonical size is q/priceDenominator.      Quote notional is p*(q/priceDenominator). The denominator is nonzero      and divides the nonzero lotSize. The market id commits to version      one and the denominator using the native address20 token identity.      Bond custody and the market ordinal bound match createSpotMarket.
-     */
-    data class CreatePricedSpotMarketParams(
-        val baseToken: String,
-        val quoteToken: String,
-        val tickSize: BigInteger,
-        val lotSize: BigInteger,
-        val priceDenominator: BigInteger,
-        val bond: BigInteger,
-    )
-
-    /**
      * Arguments of `createSpotMarket(address,address,uint64,uint64,uint256)`.
      *
-     * `bond`, when nonzero, is deducted from the creator's WDS settlement balance. Reverts after the append-only 256-market ordinal namespace is full.
+     * Legacy provisioning requires the current Config owner. Public issuance uses `deployTokenAndSpotBook`. `bond`, when nonzero, is deducted from the creator's WDS settlement balance. Reverts after the append-only 256-market ordinal namespace is full.
      */
     data class CreateSpotMarketParams(
         val baseToken: String,
@@ -138,16 +111,6 @@ object IDiesisMarkets {
 
     /** Arguments of `getMarket(bytes32)`. */
     data class GetMarketParams(
-        val marketId: Bytes32,
-    )
-
-    /**
-     * Arguments of `getMarketPricing(bytes32)`.
-     *
-     * Read authenticated immutable market price units.
-     * Returns version zero and denominator one for a proved legacy      address20 identity. Missing or inconsistent market metadata reverts.
-     */
-    data class GetMarketPricingParams(
         val marketId: Bytes32,
     )
 
@@ -308,27 +271,6 @@ object IDiesisMarkets {
         return client.send(encodeCheckCircuitBreaker(marketId, currentPrice, referencePrice, thresholdBps), options)
     }
 
-    /** ABI function for `createPricedSpotMarket(address,address,uint64,uint64,uint64,uint256)`. */
-    fun functionCreatePricedSpotMarket(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, priceDenominator: BigInteger, bond: BigInteger): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("createPricedSpotMarket", listOf(Address(baseToken), Address(quoteToken), Uint64(tickSize), Uint64(lotSize), Uint64(priceDenominator), Uint256(bond)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
-
-    /** Encodes calldata for `createPricedSpotMarket(address,address,uint64,uint64,uint64,uint256)` without an RPC call. */
-    fun encodeCreatePricedSpotMarket(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, priceDenominator: BigInteger, bond: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionCreatePricedSpotMarket(baseToken, quoteToken, tickSize, lotSize, priceDenominator, bond))
-
-    /** Decodes the ABI output of `createPricedSpotMarket(address,address,uint64,uint64,uint64,uint256)`. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodeCreatePricedSpotMarketResult(data: String): Bytes32 {
-        val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for createPricedSpotMarket(address,address,uint64,uint64,uint64,uint256)" }
-        return values[0] as Bytes32
-    }
-
-    /** Sends a write transaction for `createPricedSpotMarket(address,address,uint64,uint64,uint64,uint256)`. */
-    fun sendCreatePricedSpotMarket(client: Client, baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, priceDenominator: BigInteger, bond: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
-        require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeCreatePricedSpotMarket(baseToken, quoteToken, tickSize, lotSize, priceDenominator, bond), options)
-    }
-
     /** ABI function for `createSpotMarket(address,address,uint64,uint64,uint256)`. */
     fun functionCreateSpotMarket(baseToken: String, quoteToken: String, tickSize: BigInteger, lotSize: BigInteger, bond: BigInteger): org.web3j.abi.datatypes.Function =
         org.web3j.abi.datatypes.Function("createSpotMarket", listOf(Address(baseToken), Address(quoteToken), Uint64(tickSize), Uint64(lotSize), Uint256(bond)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
@@ -395,31 +337,6 @@ object IDiesisMarkets {
     /** Executes a read call for `getMarket(bytes32)`. */
     fun callGetMarket(client: Client, marketId: Bytes32): PackedMarket =
         decodeGetMarketResult(client.call(encodeGetMarket(marketId)))
-
-    /** ABI function for `getMarketPricing(bytes32)`. */
-    fun functionGetMarketPricing(marketId: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("getMarketPricing", listOf(marketId), listOf(object : org.web3j.abi.TypeReference<Uint8>() {}, object : org.web3j.abi.TypeReference<Uint64>() {}))
-
-    /** Encodes calldata for `getMarketPricing(bytes32)` without an RPC call. */
-    fun encodeGetMarketPricing(marketId: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionGetMarketPricing(marketId))
-
-    /** Decoded result of `getMarketPricing(bytes32)`. */
-    data class GetMarketPricingResult(
-        val pricingVersion: BigInteger,
-        val priceDenominator: BigInteger,
-    )
-
-    /** Decodes the ABI output of `getMarketPricing(bytes32)`. */
-    @Suppress("UNCHECKED_CAST")
-    fun decodeGetMarketPricingResult(data: String): GetMarketPricingResult {
-        val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint8::class.java); decoded.value }, AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value })) { it }) as List<Any>
-        require(values.size == 2) { "incorrect result arity for getMarketPricing(bytes32)" }
-        return GetMarketPricingResult(values[0] as BigInteger, values[1] as BigInteger)
-    }
-
-    /** Executes a read call for `getMarketPricing(bytes32)`. */
-    fun callGetMarketPricing(client: Client, marketId: Bytes32): GetMarketPricingResult =
-        decodeGetMarketPricingResult(client.call(encodeGetMarketPricing(marketId)))
 
     /** ABI function for `resumeMarket(bytes32)`. */
     fun functionResumeMarket(marketId: Bytes32): org.web3j.abi.datatypes.Function =

@@ -147,7 +147,12 @@ object ILiquidStakedDS {
         val amount: BigInteger,
     )
 
-    /** Arguments of `burnFrom(address,uint256)`. */
+    /**
+     * Arguments of `burnFrom(address,uint256)`.
+     *
+     * Burn holder tokens. Callers other than `from` must have allowance, including DiesisPosition.
+     * Finite allowance decreases by the burn; maximum allowance is unchanged. Failed burns preserve allowance.
+     */
     data class BurnFromParams(
         val from: String,
         val amount: BigInteger,

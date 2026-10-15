@@ -17,14 +17,20 @@ object IDiesisSettlement {
     /** JSON ABI of the `IDiesisSettlement` contract. */
     @JvmField
     val JSON: String = arrayOf(
-        "[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sessionKey\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"actionScope\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"validUntil\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"maxNotionalOrSpend\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"allowedMarketsMask\",\"type\":\"bytes32\"}],\"name\":\"authorizeSessionKey\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"generation\",\"type\":\"uint64\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"availableBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"available\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint248\",\"name\":\"wordPos\",\"type\":\"uint248\"}],\"name\":\"cancelNonceWord\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"}],\"name\":\"cancelOrderNonce\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"creditRouterDeposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"debitRouterWithdrawal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"}],\"name\":\"fundPerpBackstop\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"transactionId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tradingKey\",\"type\":\"address\"}],\"name\":\"getTradingKeyAuth\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"header\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"maxOrderNotional\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"allowedMarketsMask\",\"type\":\"bytes32\"}],\"internalType\":\"struct IDiesisSettlement.TradingKeyAuth\",\"name\":\"auth\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"}],\"name\":\"isNonceUsed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"used\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tradingKey\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"validUntil\",\"type\":\"uint64\"},{\"internalType\":\"uint128\",\"name\":\"maxOrderNotional\",\"type\":\"uint128\"},{\"internalType\":\"bytes32\",\"name\":\"allowedMarketsMask\",\"type\":\"bytes32\"},{\"internalType\":\"bool\",\"name\":\"canWithdraw\",\"type\":\"bool\"}],\"name\":\"registerTradingKey\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sessionKey\",\"type\":\"address\"}],\"name\":\"revokeSessionKey\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"generation\",\"type\":\"uint64\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tradingKey\",\"type\":\"address\"}],\"name\":\"revokeTradingKey\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"totalBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"total\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"}],\"name\":\"NonceCancelled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"funder\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"transactionId\",\"type\":\"bytes32\"}],\"name\":\"PerpBackstopFunded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tradingKey\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"validUntil\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint128\",\"name\":\"maxOrderNotional\",\"type\":\"uint128\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"allowedMarketsMask\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"canWithdraw\",\"type\":\"bool\"}],\"name\":\"TradingKeyRegistered\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tradingKey\",\"type\":\"address\"}],\"name\":\"TradingKeyRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Withdrawal\",\"type\":\"event\"}]",
+        "[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"principal\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"actionScope\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"validUntil\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"maxNotionalOrSpend\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"allowedMarketsMask\",\"type\":\"bytes32\"}],\"name\":\"acceptSessionKeyV2\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"generation\",\"type\":\"uint64\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sessionKey\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"actionScope\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"validUntil\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"maxNotionalOrSpend\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"allowedMarketsMask\",\"type\":\"bytes32\"}],\"name\":\"authorizeSessionKeyV2\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"generation\",\"type\":\"uint64\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"availableBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"available\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint248\",\"name\":\"wordPos\",\"type\":\"uint248\"}],\"name\":\"cancelNonceWord\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"}],\"name\":\"cancelOrderNonce\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"creditRouterDeposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"debitRouterWithdrawal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"}],\"name\":\"fundPerpBackstopV1\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"transactionId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tradingKey\",\"type\":\"address\"}],\"name\":\"getTradingKeyAuth\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"header\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"maxOrderNotional\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"allowedMarketsMask\",\"type\":\"bytes32\"}],\"internalType\":\"struct IDiesisSettlement.TradingKeyAuth\",\"name\":\"auth\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"}],\"name\":\"isNonceUsed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"used\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tradingKey\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"validUntil\",\"type\":\"uint64\"},{\"internalType\":\"uint128\",\"name\":\"maxOrderNotional\",\"type\":\"uint128\"},{\"internalType\":\"bytes32\",\"name\":\"allowedMarketsMask\",\"type\":\"bytes32\"},{\"internalType\":\"bool\",\"name\":\"canWithdraw\",\"type\":\"bool\"}],\"name\":\"registerTradingKey\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sessionKey\",\"type\":\"address\"}],\"name\":\"revokeSessionKeyV2\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"generation\",\"type\":\"uint64\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tradingKey\",\"type\":\"address\"}],\"name\":\"revokeTradingKey\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"totalBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"total\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"}],\"name\":\"NonceCancelled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"funder\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"marketId\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"quoteToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"transactionId\",\"type\":\"bytes32\"}],\"name\":\"PerpBackstopFunded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tradingKey\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"validUntil\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint128\",\"name\":\"maxOrderNotional\",\"type\":\"uint128\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"allowedMarketsMask\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"canWithdraw\",\"type\":\"bool\"}],\"name\":\"TradingKeyRegistered\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tradingKey\",\"type\":\"address\"}],\"name\":\"TradingKeyRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Withdrawal\",\"type\":\"event\"}]",
     ).joinToString("")
 
-    /** Canonical signature of `authorizeSessionKey(address,uint256,uint64,uint256,bytes32)`. */
-    const val AUTHORIZE_SESSION_KEY_SIGNATURE: String = "authorizeSessionKey(address,uint256,uint64,uint256,bytes32)"
+    /** Canonical signature of `acceptSessionKeyV2(address,uint256,uint64,uint256,bytes32)`. */
+    const val ACCEPT_SESSION_KEY_V2_SIGNATURE: String = "acceptSessionKeyV2(address,uint256,uint64,uint256,bytes32)"
 
-    /** Selector of `authorizeSessionKey(address,uint256,uint64,uint256,bytes32)`. */
-    const val AUTHORIZE_SESSION_KEY_SELECTOR: String = "0x52f0072f"
+    /** Selector of `acceptSessionKeyV2(address,uint256,uint64,uint256,bytes32)`. */
+    const val ACCEPT_SESSION_KEY_V2_SELECTOR: String = "0xca2bba63"
+
+    /** Canonical signature of `authorizeSessionKeyV2(address,uint256,uint64,uint256,bytes32)`. */
+    const val AUTHORIZE_SESSION_KEY_V2_SIGNATURE: String = "authorizeSessionKeyV2(address,uint256,uint64,uint256,bytes32)"
+
+    /** Selector of `authorizeSessionKeyV2(address,uint256,uint64,uint256,bytes32)`. */
+    const val AUTHORIZE_SESSION_KEY_V2_SELECTOR: String = "0xd1df736a"
 
     /** Canonical signature of `availableBalance(address,address)`. */
     const val AVAILABLE_BALANCE_SIGNATURE: String = "availableBalance(address,address)"
@@ -62,11 +68,11 @@ object IDiesisSettlement {
     /** Selector of `deposit(address,uint256)`. */
     const val DEPOSIT_SELECTOR: String = "0x47e7ef24"
 
-    /** Canonical signature of `fundPerpBackstop(bytes32,uint256,uint256)`. */
-    const val FUND_PERP_BACKSTOP_SIGNATURE: String = "fundPerpBackstop(bytes32,uint256,uint256)"
+    /** Canonical signature of `fundPerpBackstopV1(bytes32,uint256,uint256)`. */
+    const val FUND_PERP_BACKSTOP_V1_SIGNATURE: String = "fundPerpBackstopV1(bytes32,uint256,uint256)"
 
-    /** Selector of `fundPerpBackstop(bytes32,uint256,uint256)`. */
-    const val FUND_PERP_BACKSTOP_SELECTOR: String = "0x04244758"
+    /** Selector of `fundPerpBackstopV1(bytes32,uint256,uint256)`. */
+    const val FUND_PERP_BACKSTOP_V1_SELECTOR: String = "0xb8032646"
 
     /** Canonical signature of `getTradingKeyAuth(address,address)`. */
     const val GET_TRADING_KEY_AUTH_SIGNATURE: String = "getTradingKeyAuth(address,address)"
@@ -86,11 +92,11 @@ object IDiesisSettlement {
     /** Selector of `registerTradingKey(address,uint64,uint128,bytes32,bool)`. */
     const val REGISTER_TRADING_KEY_SELECTOR: String = "0xb5ad16ba"
 
-    /** Canonical signature of `revokeSessionKey(address)`. */
-    const val REVOKE_SESSION_KEY_SIGNATURE: String = "revokeSessionKey(address)"
+    /** Canonical signature of `revokeSessionKeyV2(address)`. */
+    const val REVOKE_SESSION_KEY_V2_SIGNATURE: String = "revokeSessionKeyV2(address)"
 
-    /** Selector of `revokeSessionKey(address)`. */
-    const val REVOKE_SESSION_KEY_SELECTOR: String = "0x84f4fc6a"
+    /** Selector of `revokeSessionKeyV2(address)`. */
+    const val REVOKE_SESSION_KEY_V2_SELECTOR: String = "0xa8163070"
 
     /** Canonical signature of `revokeTradingKey(address)`. */
     const val REVOKE_TRADING_KEY_SIGNATURE: String = "revokeTradingKey(address)"
@@ -156,12 +162,26 @@ object IDiesisSettlement {
     }
 
     /**
-     * Arguments of `authorizeSessionKey(address,uint256,uint64,uint256,bytes32)`.
+     * Arguments of `acceptSessionKeyV2(address,uint256,uint64,uint256,bytes32)`.
      *
-     * Authorize one ordinary Ethereum sender as a scoped V2 session key.
-     * A zero maximum is uncapped. Principal is always `msg.sender`.
+     * Accept exact authorization terms as the session key before principal activation.
+     * One-use consent binds chain, endpoint, principal, key, terms and next generation.      This call changes neither sender identity nor the principal's active-session count.
      */
-    data class AuthorizeSessionKeyParams(
+    data class AcceptSessionKeyV2Params(
+        val principal: String,
+        val actionScope: BigInteger,
+        val validUntil: BigInteger,
+        val maxNotionalOrSpend: BigInteger,
+        val allowedMarketsMask: Bytes32,
+    )
+
+    /**
+     * Arguments of `authorizeSessionKeyV2(address,uint256,uint64,uint256,bytes32)`.
+     *
+     * Activate one scoped V2 session after its key accepted these exact terms.
+     * A zero maximum is uncapped. Principal is always `msg.sender`; consent is consumed.
+     */
+    data class AuthorizeSessionKeyV2Params(
         val sessionKey: String,
         val actionScope: BigInteger,
         val validUntil: BigInteger,
@@ -221,12 +241,12 @@ object IDiesisSettlement {
     )
 
     /**
-     * Arguments of `fundPerpBackstop(bytes32,uint256,uint256)`.
+     * Arguments of `fundPerpBackstopV1(bytes32,uint256,uint256)`.
      *
      * Permanently contribute already-deposited quote collateral to a perpetual market's canonical liquidation backstop.
      * `nonce` shares the settlement replay bitmap with other user-owned actions.
      */
-    data class FundPerpBackstopParams(
+    data class FundPerpBackstopV1Params(
         val marketId: Bytes32,
         val amount: BigInteger,
         val nonce: BigInteger,
@@ -254,11 +274,12 @@ object IDiesisSettlement {
     )
 
     /**
-     * Arguments of `revokeSessionKey(address)`.
+     * Arguments of `revokeSessionKeyV2(address)`.
      *
-     * Revoke a V2 session key and advance its invalidating generation.
+     * Principal or key may revoke an active session and advance its generation.
+     * A key may also cancel its pending consent. Expiry restores direct sender      identity; explicit revocation releases the principal's retained capacity.
      */
-    data class RevokeSessionKeyParams(
+    data class RevokeSessionKeyV2Params(
         val sessionKey: String,
     )
 
@@ -444,25 +465,46 @@ object IDiesisSettlement {
     fun referenceTradingKeyAuth(): org.web3j.abi.TypeReference<TradingKeyAuth> =
         object : org.web3j.abi.TypeReference<TradingKeyAuth>(false, listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}, object : org.web3j.abi.TypeReference<Uint256>() {}, object : org.web3j.abi.TypeReference<Bytes32>() {})) {}
 
-    /** ABI function for `authorizeSessionKey(address,uint256,uint64,uint256,bytes32)`. */
-    fun functionAuthorizeSessionKey(sessionKey: String, actionScope: BigInteger, validUntil: BigInteger, maxNotionalOrSpend: BigInteger, allowedMarketsMask: Bytes32): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("authorizeSessionKey", listOf(Address(sessionKey), Uint256(actionScope), Uint64(validUntil), Uint256(maxNotionalOrSpend), allowedMarketsMask), listOf(object : org.web3j.abi.TypeReference<Uint64>() {}))
+    /** ABI function for `acceptSessionKeyV2(address,uint256,uint64,uint256,bytes32)`. */
+    fun functionAcceptSessionKeyV2(principal: String, actionScope: BigInteger, validUntil: BigInteger, maxNotionalOrSpend: BigInteger, allowedMarketsMask: Bytes32): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("acceptSessionKeyV2", listOf(Address(principal), Uint256(actionScope), Uint64(validUntil), Uint256(maxNotionalOrSpend), allowedMarketsMask), listOf(object : org.web3j.abi.TypeReference<Uint64>() {}))
 
-    /** Encodes calldata for `authorizeSessionKey(address,uint256,uint64,uint256,bytes32)` without an RPC call. */
-    fun encodeAuthorizeSessionKey(sessionKey: String, actionScope: BigInteger, validUntil: BigInteger, maxNotionalOrSpend: BigInteger, allowedMarketsMask: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionAuthorizeSessionKey(sessionKey, actionScope, validUntil, maxNotionalOrSpend, allowedMarketsMask))
+    /** Encodes calldata for `acceptSessionKeyV2(address,uint256,uint64,uint256,bytes32)` without an RPC call. */
+    fun encodeAcceptSessionKeyV2(principal: String, actionScope: BigInteger, validUntil: BigInteger, maxNotionalOrSpend: BigInteger, allowedMarketsMask: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionAcceptSessionKeyV2(principal, actionScope, validUntil, maxNotionalOrSpend, allowedMarketsMask))
 
-    /** Decodes the ABI output of `authorizeSessionKey(address,uint256,uint64,uint256,bytes32)`. */
+    /** Decodes the ABI output of `acceptSessionKeyV2(address,uint256,uint64,uint256,bytes32)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeAuthorizeSessionKeyResult(data: String): BigInteger {
+    fun decodeAcceptSessionKeyV2Result(data: String): BigInteger {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for authorizeSessionKey(address,uint256,uint64,uint256,bytes32)" }
+        require(values.size == 1) { "incorrect result arity for acceptSessionKeyV2(address,uint256,uint64,uint256,bytes32)" }
         return values[0] as BigInteger
     }
 
-    /** Sends a write transaction for `authorizeSessionKey(address,uint256,uint64,uint256,bytes32)`. */
-    fun sendAuthorizeSessionKey(client: Client, sessionKey: String, actionScope: BigInteger, validUntil: BigInteger, maxNotionalOrSpend: BigInteger, allowedMarketsMask: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `acceptSessionKeyV2(address,uint256,uint64,uint256,bytes32)`. */
+    fun sendAcceptSessionKeyV2(client: Client, principal: String, actionScope: BigInteger, validUntil: BigInteger, maxNotionalOrSpend: BigInteger, allowedMarketsMask: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeAuthorizeSessionKey(sessionKey, actionScope, validUntil, maxNotionalOrSpend, allowedMarketsMask), options)
+        return client.send(encodeAcceptSessionKeyV2(principal, actionScope, validUntil, maxNotionalOrSpend, allowedMarketsMask), options)
+    }
+
+    /** ABI function for `authorizeSessionKeyV2(address,uint256,uint64,uint256,bytes32)`. */
+    fun functionAuthorizeSessionKeyV2(sessionKey: String, actionScope: BigInteger, validUntil: BigInteger, maxNotionalOrSpend: BigInteger, allowedMarketsMask: Bytes32): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("authorizeSessionKeyV2", listOf(Address(sessionKey), Uint256(actionScope), Uint64(validUntil), Uint256(maxNotionalOrSpend), allowedMarketsMask), listOf(object : org.web3j.abi.TypeReference<Uint64>() {}))
+
+    /** Encodes calldata for `authorizeSessionKeyV2(address,uint256,uint64,uint256,bytes32)` without an RPC call. */
+    fun encodeAuthorizeSessionKeyV2(sessionKey: String, actionScope: BigInteger, validUntil: BigInteger, maxNotionalOrSpend: BigInteger, allowedMarketsMask: Bytes32): String = org.web3j.abi.FunctionEncoder.encode(functionAuthorizeSessionKeyV2(sessionKey, actionScope, validUntil, maxNotionalOrSpend, allowedMarketsMask))
+
+    /** Decodes the ABI output of `authorizeSessionKeyV2(address,uint256,uint64,uint256,bytes32)`. */
+    @Suppress("UNCHECKED_CAST")
+    fun decodeAuthorizeSessionKeyV2Result(data: String): BigInteger {
+        val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value })) { it }) as List<Any>
+        require(values.size == 1) { "incorrect result arity for authorizeSessionKeyV2(address,uint256,uint64,uint256,bytes32)" }
+        return values[0] as BigInteger
+    }
+
+    /** Sends a write transaction for `authorizeSessionKeyV2(address,uint256,uint64,uint256,bytes32)`. */
+    fun sendAuthorizeSessionKeyV2(client: Client, sessionKey: String, actionScope: BigInteger, validUntil: BigInteger, maxNotionalOrSpend: BigInteger, allowedMarketsMask: Bytes32, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+        require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
+        return client.send(encodeAuthorizeSessionKeyV2(sessionKey, actionScope, validUntil, maxNotionalOrSpend, allowedMarketsMask), options)
     }
 
     /** ABI function for `availableBalance(address,address)`. */
@@ -584,25 +626,25 @@ object IDiesisSettlement {
         return client.send(encodeDeposit(token, amount), options)
     }
 
-    /** ABI function for `fundPerpBackstop(bytes32,uint256,uint256)`. */
-    fun functionFundPerpBackstop(marketId: Bytes32, amount: BigInteger, nonce: BigInteger): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("fundPerpBackstop", listOf(marketId, Uint256(amount), Uint256(nonce)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
+    /** ABI function for `fundPerpBackstopV1(bytes32,uint256,uint256)`. */
+    fun functionFundPerpBackstopV1(marketId: Bytes32, amount: BigInteger, nonce: BigInteger): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("fundPerpBackstopV1", listOf(marketId, Uint256(amount), Uint256(nonce)), listOf(object : org.web3j.abi.TypeReference<Bytes32>() {}))
 
-    /** Encodes calldata for `fundPerpBackstop(bytes32,uint256,uint256)` without an RPC call. */
-    fun encodeFundPerpBackstop(marketId: Bytes32, amount: BigInteger, nonce: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionFundPerpBackstop(marketId, amount, nonce))
+    /** Encodes calldata for `fundPerpBackstopV1(bytes32,uint256,uint256)` without an RPC call. */
+    fun encodeFundPerpBackstopV1(marketId: Bytes32, amount: BigInteger, nonce: BigInteger): String = org.web3j.abi.FunctionEncoder.encode(functionFundPerpBackstopV1(marketId, amount, nonce))
 
-    /** Decodes the ABI output of `fundPerpBackstop(bytes32,uint256,uint256)`. */
+    /** Decodes the ABI output of `fundPerpBackstopV1(bytes32,uint256,uint256)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeFundPerpBackstopResult(data: String): Bytes32 {
+    fun decodeFundPerpBackstopV1Result(data: String): Bytes32 {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Bytes32::class.java); decoded })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for fundPerpBackstop(bytes32,uint256,uint256)" }
+        require(values.size == 1) { "incorrect result arity for fundPerpBackstopV1(bytes32,uint256,uint256)" }
         return values[0] as Bytes32
     }
 
-    /** Sends a write transaction for `fundPerpBackstop(bytes32,uint256,uint256)`. */
-    fun sendFundPerpBackstop(client: Client, marketId: Bytes32, amount: BigInteger, nonce: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `fundPerpBackstopV1(bytes32,uint256,uint256)`. */
+    fun sendFundPerpBackstopV1(client: Client, marketId: Bytes32, amount: BigInteger, nonce: BigInteger, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeFundPerpBackstop(marketId, amount, nonce), options)
+        return client.send(encodeFundPerpBackstopV1(marketId, amount, nonce), options)
     }
 
     /** ABI function for `getTradingKeyAuth(address,address)`. */
@@ -663,25 +705,25 @@ object IDiesisSettlement {
         return client.send(encodeRegisterTradingKey(tradingKey, validUntil, maxOrderNotional, allowedMarketsMask, canWithdraw), options)
     }
 
-    /** ABI function for `revokeSessionKey(address)`. */
-    fun functionRevokeSessionKey(sessionKey: String): org.web3j.abi.datatypes.Function =
-        org.web3j.abi.datatypes.Function("revokeSessionKey", listOf(Address(sessionKey)), listOf(object : org.web3j.abi.TypeReference<Uint64>() {}))
+    /** ABI function for `revokeSessionKeyV2(address)`. */
+    fun functionRevokeSessionKeyV2(sessionKey: String): org.web3j.abi.datatypes.Function =
+        org.web3j.abi.datatypes.Function("revokeSessionKeyV2", listOf(Address(sessionKey)), listOf(object : org.web3j.abi.TypeReference<Uint64>() {}))
 
-    /** Encodes calldata for `revokeSessionKey(address)` without an RPC call. */
-    fun encodeRevokeSessionKey(sessionKey: String): String = org.web3j.abi.FunctionEncoder.encode(functionRevokeSessionKey(sessionKey))
+    /** Encodes calldata for `revokeSessionKeyV2(address)` without an RPC call. */
+    fun encodeRevokeSessionKeyV2(sessionKey: String): String = org.web3j.abi.FunctionEncoder.encode(functionRevokeSessionKeyV2(sessionKey))
 
-    /** Decodes the ABI output of `revokeSessionKey(address)`. */
+    /** Decodes the ABI output of `revokeSessionKeyV2(address)`. */
     @Suppress("UNCHECKED_CAST")
-    fun decodeRevokeSessionKeyResult(data: String): BigInteger {
+    fun decodeRevokeSessionKeyV2Result(data: String): BigInteger {
         val values = decodeLayout(data, AbiTuple(listOf(AbiAtom(false) { hex, at -> val decoded = org.web3j.abi.TypeDecoder.decode(hex, Math.multiplyExact(at, 2), Uint64::class.java); decoded.value })) { it }) as List<Any>
-        require(values.size == 1) { "incorrect result arity for revokeSessionKey(address)" }
+        require(values.size == 1) { "incorrect result arity for revokeSessionKeyV2(address)" }
         return values[0] as BigInteger
     }
 
-    /** Sends a write transaction for `revokeSessionKey(address)`. */
-    fun sendRevokeSessionKey(client: Client, sessionKey: String, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
+    /** Sends a write transaction for `revokeSessionKeyV2(address)`. */
+    fun sendRevokeSessionKeyV2(client: Client, sessionKey: String, options: TransactionOptions): org.web3j.protocol.core.methods.response.EthSendTransaction {
         require(options.value == java.math.BigInteger.ZERO) { "nonpayable function cannot receive value" }
-        return client.send(encodeRevokeSessionKey(sessionKey), options)
+        return client.send(encodeRevokeSessionKeyV2(sessionKey), options)
     }
 
     /** ABI function for `revokeTradingKey(address)`. */
