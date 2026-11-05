@@ -97,8 +97,8 @@ object IDiesisOperatorBond {
     /**
      * Arguments of `postBond(bytes32)`.
      *
-     * Post the operator bond for `marketId` with `msg.value` DS.
-     * `msg.value` must equal exactly 50,000 DS. Reverts if a bond already      exists for `marketId`.
+     * Post the operator bond for `marketId` with `msg.value` DS.      exists for `marketId`.
+     * `msg.value` must equal exactly 50,000 DS. Reverts if a bond already
      */
     data class PostBondParams(
         val marketId: Bytes32,
@@ -107,8 +107,8 @@ object IDiesisOperatorBond {
     /**
      * Arguments of `requestRelease(bytes32)`.
      *
-     * Request voluntary release of the bond.
-     * Subject to a 30-day timelock. Pending claims against the backstop      must be resolved before the operator can finalize.
+     * Request voluntary release of the bond.      must be resolved before the operator can finalize.
+     * Subject to a 30-day timelock. Pending claims against the backstop
      */
     data class RequestReleaseParams(
         val marketId: Bytes32,

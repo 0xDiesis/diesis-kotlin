@@ -91,8 +91,8 @@ object IDiesisConductors {
     /**
      * Arguments of `requestDecrease(uint256)`.
      *
-     * Signal intent to decrease bond by `amount`.
-     * Tier is recomputed against the post-decrease bond immediately (spec §5.6).      The refund is redeemable via `finalizeDecrease` after a 7-day timelock.
+     * Signal intent to decrease bond by `amount`.      The refund is redeemable via `finalizeDecrease` after a 7-day timelock.
+     * Tier is recomputed against the post-decrease bond immediately (spec §5.6).
      */
     data class RequestDecreaseParams(
         val amount: BigInteger,

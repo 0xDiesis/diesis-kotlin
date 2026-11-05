@@ -181,8 +181,8 @@ object IDiesisSpotBook {
     /**
      * Arguments of `amendOrder(bytes32,uint256,uint256,uint8)`.
      *
-     * Amend an active order owned by the caller.
-     * Cancel-and-replace preserving the original `orderId`. Preserving the      id keeps user/market indexes and signed-intent nonce mappings stable.      Requires the original market to still be active and new price/amount      to be nonzero.
+     * Amend an active order owned by the caller.      id keeps user/market indexes and signed-intent nonce mappings stable.      Requires the original market to still be active and new price/amount      to be nonzero.
+     * Cancel-and-replace preserving the original `orderId`. Preserving the
      */
     data class AmendOrderParams(
         val orderId: Bytes32,
@@ -194,8 +194,8 @@ object IDiesisSpotBook {
     /**
      * Arguments of `cancelOrder(bytes32)`.
      *
-     * Cancel an active order owned by the caller.
-     * Releases the order's locked collateral and clears the order storage.      Historical user and market order lists may still contain the order id;      clients should filter by order existence. Cancelling a dormant signed      stop removes its bounded stop-index membership and releases its lock.
+     * Cancel an active order owned by the caller.      Historical user and market order lists may still contain the order id;      clients should filter by order existence. Cancelling a dormant signed      stop removes its bounded stop-index membership and releases its lock.
+     * Releases the order's locked collateral and clears the order storage.
      */
     data class CancelOrderParams(
         val orderId: Bytes32,
@@ -229,8 +229,8 @@ object IDiesisSpotBook {
     /**
      * Arguments of `finalizeOpeningAuction(bytes32)`.
      *
-     * Finalize an ended opening auction and return the market to active trading.
-     * System-only. Runs the batch auction, settles crossing orders, restores      residual live orders into the continuous BBO cache, emits      `BatchAuctionCleared`, and stores final auction totals.
+     * Finalize an ended opening auction and return the market to active trading.      residual live orders into the continuous BBO cache, emits      `BatchAuctionCleared`, and stores final auction totals.
+     * System-only. Runs the batch auction, settles crossing orders, restores
      */
     data class FinalizeOpeningAuctionParams(
         val marketId: Bytes32,
@@ -266,8 +266,8 @@ object IDiesisSpotBook {
     /**
      * Arguments of `getOrderBookDepth(bytes32,uint8)`.
      *
-     * Return on-chain book depth.
-     * Runtime returns real best-bid/best-ask data at level 0 only. Levels 1+      are zero-filled; full multi-level depth is available over exchange RPC.
+     * Return on-chain book depth.      are zero-filled; full multi-level depth is available over exchange RPC.
+     * Runtime returns real best-bid/best-ask data at level 0 only. Levels 1+
      */
     data class GetOrderBookDepthParams(
         val marketId: Bytes32,
@@ -288,8 +288,8 @@ object IDiesisSpotBook {
     /**
      * Arguments of `startOpeningAuction(bytes32,uint64,uint64,uint256)`.
      *
-     * Start an opening auction for an active empty market.
-     * System-only. The market must be active and have no live open orders.      Historical cleared order ids do not block auction start, but the call      charges gas for scanning those historical ids.
+     * Start an opening auction for an active empty market.      Historical cleared order ids do not block auction start, but the call      charges gas for scanning those historical ids.
+     * System-only. The market must be active and have no live open orders.
      */
     data class StartOpeningAuctionParams(
         val marketId: Bytes32,
@@ -301,8 +301,8 @@ object IDiesisSpotBook {
     /**
      * Arguments of `submitExchangeActionsV2(bytes)`.
      *
-     * Submit one strictly bounded canonical V2 action batch.
-     * The ordinary EVM caller authenticates the batch. The encoded bytes      contain no action-level signature or replay nonce. `resultHash`      commits to the original bytes and every ordered action outcome.
+     * Submit one strictly bounded canonical V2 action batch.      contain no action-level signature or replay nonce. `resultHash`      commits to the original bytes and every ordered action outcome.
+     * The ordinary EVM caller authenticates the batch. The encoded bytes
      */
     data class SubmitExchangeActionsV2Params(
         val encodedActions: DynamicBytes,
@@ -311,8 +311,8 @@ object IDiesisSpotBook {
     /**
      * Arguments of `submitLimitOrder(bytes32,uint8,uint256,uint256,uint8)`.
      *
-     * Place a limit order in an active spot market.
-     * Requires an active market, `priceTicks > 0`, `amountLots > 0`, a prior      settlement deposit flag, and enough available collateral. Buy orders      lock quote collateral equal to `priceTicks * amountLots`; sell orders      lock base collateral equal to `amountLots`.
+     * Place a limit order in an active spot market.      settlement deposit flag, and enough available collateral. Buy orders      lock quote collateral equal to `priceTicks * amountLots`; sell orders      lock base collateral equal to `amountLots`.
+     * Requires an active market, `priceTicks > 0`, `amountLots > 0`, a prior
      */
     data class SubmitLimitOrderParams(
         val marketId: Bytes32,
@@ -325,8 +325,8 @@ object IDiesisSpotBook {
     /**
      * Arguments of `submitMarketOrder(bytes32,uint8,uint256)`.
      *
-     * Submit a market order intent against the active continuous book.
-     * Requires an active market and `amountLots > 0`. The returned      `filledAmount` is currently zero; economic fills are emitted as      canonical `OrderFilled` events when matching settles.
+     * Submit a market order intent against the active continuous book.      `filledAmount` is currently zero; economic fills are emitted as      canonical `OrderFilled` events when matching settles.
+     * Requires an active market and `amountLots > 0`. The returned
      */
     data class SubmitMarketOrderParams(
         val marketId: Bytes32,
@@ -337,8 +337,8 @@ object IDiesisSpotBook {
     /**
      * Arguments of `submitSignedCancelAllSpotIntent(bytes)`.
      *
-     * Submit a signed request to cancel all active orders in one market.
-     * The payload is a JSON-encoded signed cancel-all spot intent. The      signature binds trader, market, expiry, and replay nonce. The call      scans the trader's historical user-order list for `marketId`, charges      per scanned order, cancels currently active matching orders, and rolls      back nonce consumption if cancellation fails.
+     * Submit a signed request to cancel all active orders in one market.      signature binds trader, market, expiry, and replay nonce. The call      scans the trader's historical user-order list for `marketId`, charges      per scanned order, cancels currently active matching orders, and rolls      back nonce consumption if cancellation fails.
+     * The payload is a JSON-encoded signed cancel-all spot intent. The
      */
     data class SubmitSignedCancelAllSpotIntentParams(
         val signedCancelAllJson: DynamicBytes,
@@ -347,8 +347,8 @@ object IDiesisSpotBook {
     /**
      * Arguments of `submitSignedSpotIntent(bytes)`.
      *
-     * Submit a signed order or cancel intent.
-     * The payload is a JSON-encoded `SignedIntent`. Order intents may be      submitted by any relayer; the precompile verifies the signature and      uses the signed trader as the effective caller. Trading-key signed      order and cancel intents are constrained by the key's market mask and      notional limit. This ABI intentionally declares no return value because      order and cancel variants have different raw return data. Clients that      need the returned order id should either call direct order methods or      use a low-level call and decode the variant-specific bytes.
+     * Submit a signed order or cancel intent.      submitted by any relayer; the precompile verifies the signature and      uses the signed trader as the effective caller. Trading-key signed      order and cancel intents are constrained by the key's market mask and      notional limit. This ABI intentionally declares no return value because      order and cancel variants have different raw return data. Clients that      need the returned order id should either call direct order methods or      use a low-level call and decode the variant-specific bytes.
+     * The payload is a JSON-encoded `SignedIntent`. Order intents may be
      */
     data class SubmitSignedSpotIntentParams(
         val signedIntentJson: DynamicBytes,
@@ -357,8 +357,8 @@ object IDiesisSpotBook {
     /**
      * Arguments of `triggerSpotStops(bytes32,uint16)`.
      *
-     * Activate dormant stops triggered by the market's last settled trade.
-     * Permissionless bounded continuation. A buy stop triggers when the      canonical last-trade price rises to or above its trigger price; a sell      stop triggers when it falls to or below. `maxOrders` is clamped to the      protocol activation limit and to the call's gas headroom; the call      never triggers from an oracle, RPC quote, or user-supplied      observation. Each activated stop inserts into the live book and matches      at its limit/protection price (a stop-market executes as an IOC      protected limit) and emits a `StopOrderTriggered` event. A paused      market or a market with no settled trade activates nothing.
+     * Activate dormant stops triggered by the market's last settled trade.      canonical last-trade price rises to or above its trigger price; a sell      stop triggers when it falls to or below. `maxOrders` is clamped to the      protocol activation limit and to the call's gas headroom; the call      never triggers from an oracle, RPC quote, or user-supplied      observation. Each activated stop inserts into the live book and matches      at its limit/protection price (a stop-market executes as an IOC      protected limit) and emits a `StopOrderTriggered` event. A paused      market or a market with no settled trade activates nothing.
+     * Permissionless bounded continuation. A buy stop triggers when the
      */
     data class TriggerSpotStopsParams(
         val marketId: Bytes32,

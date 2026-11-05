@@ -153,8 +153,8 @@ object IDiesisBundleEscrow {
     /**
      * Arguments of `cancelBundle(address,bytes32,uint256)`.
      *
-     * Cancel a reservation and credit the full locked amount to the payer.
-     * Node-only (`msg.sender == address(0)`). Used when a bundle is rejected      or terminalized before settlement. Exactly-once via `settled`.
+     * Cancel a reservation and credit the full locked amount to the payer.      or terminalized before settlement. Exactly-once via `settled`.
+     * Node-only (`msg.sender == address(0)`). Used when a bundle is rejected
      */
     data class CancelBundleParams(
         val payer: String,
@@ -174,8 +174,8 @@ object IDiesisBundleEscrow {
     /**
      * Arguments of `finalizeBundle(address,bytes32,uint256,uint256,address)`.
      *
-     * Finalize a reservation after the member outcome is known.
-     * Node-only (`msg.sender == address(0)`). Credits `beneficiary` the      committed builder payment and the payer the capped skipped-work refund      plus the unearned reserve. Purely mutates claimable balances with      saturating arithmetic, so it can never revert on hostile terms or a      hostile recipient. Exactly-once via the `settled` guard.
+     * Finalize a reservation after the member outcome is known.      committed builder payment and the payer the capped skipped-work refund      plus the unearned reserve. Purely mutates claimable balances with      saturating arithmetic, so it can never revert on hostile terms or a      hostile recipient. Exactly-once via the `settled` guard.
+     * Node-only (`msg.sender == address(0)`). Credits `beneficiary` the
      */
     data class FinalizeBundleParams(
         val payer: String,
@@ -188,8 +188,8 @@ object IDiesisBundleEscrow {
     /**
      * Arguments of `reclaimExpiredBundle(bytes32,uint256)`.
      *
-     * Payer-initiated reclaim of an expired, unsettled reservation.
-     * Callable only by the reservation's payer (`msg.sender`), and only once      the committed expiry has passed. Credits the payer the full locked      amount. Exactly-once via `settled`.
+     * Payer-initiated reclaim of an expired, unsettled reservation.      the committed expiry has passed. Credits the payer the full locked      amount. Exactly-once via `settled`.
+     * Callable only by the reservation's payer (`msg.sender`), and only once
      */
     data class ReclaimExpiredBundleParams(
         val planHash: Bytes32,
@@ -210,8 +210,8 @@ object IDiesisBundleEscrow {
     /**
      * Arguments of `reserveBundle(bytes32,uint256,uint256,uint256,uint256,uint64)`.
      *
-     * Lock `maximumBuilderPayment + maximumRefund` for a bundle plan.
-     * Called by the payer as the bundle's reservation transaction. Must be      funded with exactly `maximumBuilderPayment + maximumRefund` native      wei. The reservation is keyed by `(msg.sender, planHash, escrowNonce)`;      a live reservation for that triple rejects nonce replay.
+     * Lock `maximumBuilderPayment + maximumRefund` for a bundle plan.      funded with exactly `maximumBuilderPayment + maximumRefund` native      wei. The reservation is keyed by `(msg.sender, planHash, escrowNonce)`;      a live reservation for that triple rejects nonce replay.        and plan hash.
+     * Called by the payer as the bundle's reservation transaction. Must be
      */
     data class ReserveBundleParams(
         val planHash: Bytes32,

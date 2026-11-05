@@ -185,8 +185,8 @@ object IDiesisPerpsBook {
     /**
      * Arguments of `adjustIsolatedMargin(bytes32,int256)`.
      *
-     * Add or remove isolated margin on the caller's position.
-     * A positive `marginDelta` locks quote collateral from the caller's      available settlement balance into the position's isolated margin; a      negative one releases it. Reductions are consensus-guarded and revert      when they would leave the position below maintenance margin. Emits      {IsolatedMarginAdjusted}.
+     * Add or remove isolated margin on the caller's position.      available settlement balance into the position's isolated margin; a      negative one releases it. Reductions are consensus-guarded and revert      when they would leave the position below maintenance margin. Emits      {IsolatedMarginAdjusted}.
+     * A positive `marginDelta` locks quote collateral from the caller's
      */
     data class AdjustIsolatedMarginParams(
         val marketId: Bytes32,
@@ -228,8 +228,8 @@ object IDiesisPerpsBook {
     /**
      * Arguments of `executePerpTradeV1(bytes32,bytes32,uint256,uint256)`.
      *
-     * Commit one system-owned opposite-side fill through canonical clearing.
-     * Reads and validates both stored V1 orders, derives deterministic      maker/taker fees and persistent frontier proofs, then commits the      PreparedClearingTransactionV1 and both order consumptions under one      outer EVM checkpoint. The lower order ID is the canonical maker.
+     * Commit one system-owned opposite-side fill through canonical clearing.      maker/taker fees and persistent frontier proofs, then commits the      PreparedClearingTransactionV1 and both order consumptions under one      outer EVM checkpoint. The lower order ID is the canonical maker.
+     * Reads and validates both stored V1 orders, derives deterministic
      */
     data class ExecutePerpTradeV1Params(
         val makerOrderId: Bytes32,
@@ -250,8 +250,8 @@ object IDiesisPerpsBook {
     /**
      * Arguments of `finalizePerpFeeEpochV2(bytes32,uint64,bytes32)`.
      *
-     * Finalize the exact stored snapshot of one closed fee epoch.
-     * Native queue/accounting behavior is introduced by X4b M3. This      declaration prevents public ABI drift before that implementation.
+     * Finalize the exact stored snapshot of one closed fee epoch.      declaration prevents public ABI drift before that implementation.
+     * Native queue/accounting behavior is introduced by X4b M3. This
      */
     data class FinalizePerpFeeEpochV2Params(
         val marketId: Bytes32,
@@ -282,8 +282,8 @@ object IDiesisPerpsBook {
     /**
      * Arguments of `submitExchangeActionsV2(bytes)`.
      *
-     * Encode the shared bounded V2 action call for future Lane B use.
-     * The ABI is frozen for tooling parity, but perpetual V2 execution      remains protocol-gated until the Lane B activation revision.      `resultHash` commits to the original bytes and every ordered action outcome.
+     * Encode the shared bounded V2 action call for future Lane B use.      remains protocol-gated until the Lane B activation revision.      `resultHash` commits to the original bytes and every ordered action outcome.
+     * The ABI is frozen for tooling parity, but perpetual V2 execution
      */
     data class SubmitExchangeActionsV2Params(
         val encodedActions: DynamicBytes,
@@ -292,8 +292,8 @@ object IDiesisPerpsBook {
     /**
      * Arguments of `submitPerpOrderV1(bytes32,uint8,uint8,uint256,uint256,uint8,uint8,uint64)`.
      *
-     * Submit one versioned perpetual order funded from canonical settlement custody.
-     * The call atomically moves initial margin plus the deterministic fee      reserve from GlobalUserAvailable to the market's UserMargin ledger.      `price` is a nonzero integer tick and price-protected market orders      use it as their worst acceptable execution price. `expiry == 0`      selects GTC; otherwise expiry is a Unix timestamp in seconds.      V1 requires `flags == 0`; reduce-only and advanced time-in-force      semantics are reserved for the bounded V2 action surface.
+     * Submit one versioned perpetual order funded from canonical settlement custody.      reserve from GlobalUserAvailable to the market's UserMargin ledger.      `price` is a nonzero integer tick and price-protected market orders      use it as their worst acceptable execution price. `expiry == 0`      selects GTC; otherwise expiry is a Unix timestamp in seconds.      V1 requires `flags == 0`; reduce-only and advanced time-in-force      semantics are reserved for the bounded V2 action surface.
+     * The call atomically moves initial margin plus the deterministic fee
      */
     data class SubmitPerpOrderV1Params(
         val marketId: Bytes32,
@@ -309,8 +309,8 @@ object IDiesisPerpsBook {
     /**
      * Arguments of `submitSignedPerpActionsV2(bytes)`.
      *
-     * Execute a sponsored bounded V2 action batch on behalf of a signer.
-     * The relayer is the outer transaction sender and pays fees; the      recovered EIP-712 signer of `signedEnvelope` is the trading      principal. The precompile verifies the signature, consumes the      signer's canonical per-trader nonce-bitmap bit, and executes the      exact same canonical action bytes, admission policy, replay      protection, clearing journal, and logs as the direct      `submitExchangeActionsV2` path. Later tasks implement verification      and execution; this freezes the release selector and wire shape.
+     * Execute a sponsored bounded V2 action batch on behalf of a signer.      recovered EIP-712 signer of `signedEnvelope` is the trading      principal. The precompile verifies the signature, consumes the      signer's canonical per-trader nonce-bitmap bit, and executes the      exact same canonical action bytes, admission policy, replay      protection, clearing journal, and logs as the direct      `submitExchangeActionsV2` path. Later tasks implement verification      and execution; this freezes the release selector and wire shape.        perpetual-actions envelope.
+     * The relayer is the outer transaction sender and pays fees; the
      */
     data class SubmitSignedPerpActionsV2Params(
         val signedEnvelope: DynamicBytes,
@@ -319,8 +319,8 @@ object IDiesisPerpsBook {
     /**
      * Arguments of `updatePerpMarkV1(bytes32,uint256)`.
      *
-     * Advance the canonical scaled mark through solvency-frontier segments.
-     * System-only. If a root is reached, the market enters Protection and      persists the original target until liquidation resolves the root.
+     * Advance the canonical scaled mark through solvency-frontier segments.      persists the original target until liquidation resolves the root.
+     * System-only. If a root is reached, the market enters Protection and
      */
     data class UpdatePerpMarkV1Params(
         val marketId: Bytes32,
@@ -330,8 +330,8 @@ object IDiesisPerpsBook {
     /**
      * Arguments of `updatePerpOracleV1(bytes32,uint256,uint256,uint64,uint64,bytes32,bytes32)`.
      *
-     * Persist one validator-attested oracle round for a market.
-     * System-only. Accepts strictly increasing rounds and observed-at      timestamps, an active `sourceSetHash`, and a canonical `evidenceHash`      commitment. The call atomically writes the canonical index/mark,      round, observed-at, source-set/evidence commitments, and derived      circuit-breaker/recovery state; there is no operator path that      bypasses freshness or evidence. Later tasks implement the transition;      this freezes the release selector and argument layout.
+     * Persist one validator-attested oracle round for a market.      timestamps, an active `sourceSetHash`, and a canonical `evidenceHash`      commitment. The call atomically writes the canonical index/mark,      round, observed-at, source-set/evidence commitments, and derived      circuit-breaker/recovery state; there is no operator path that      bypasses freshness or evidence. Later tasks implement the transition;      this freezes the release selector and argument layout.
+     * System-only. Accepts strictly increasing rounds and observed-at
      */
     data class UpdatePerpOracleV1Params(
         val marketId: Bytes32,

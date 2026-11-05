@@ -603,7 +603,18 @@ object IDiesisPosition {
     /**
      * Arguments of `approve(address,uint256)`.
      *
-     * Gives permission to `to` to transfer `tokenId` token to another account. The approval is cleared when the token is transferred. Only a single account can be approved at a time, so approving the zero address clears previous approvals. Requirements: - The caller must own the token or be an approved operator. - `tokenId` must exist. Emits an {Approval} event.
+     * Gives permission to `to` to transfer `tokenId` token to another account.
+     * * The approval is cleared when the token is transferred.
+     * *
+     * * Only a single account can be approved at a time, so approving the zero address clears previous approvals.
+     * *
+     * * Requirements:
+     * *
+     * * - The caller must own the token or be an approved operator.
+     * * - `tokenId` must exist.
+     * *
+     * * Emits an {Approval} event.
+     *
      */
     data class ApproveParams(
         val to: String,
@@ -614,6 +625,7 @@ object IDiesisPosition {
      * Arguments of `balanceOf(address)`.
      *
      * Returns the number of tokens in ``owner``'s account.
+     *
      */
     data class BalanceOfParams(
         val owner: String,
@@ -628,8 +640,8 @@ object IDiesisPosition {
     /**
      * Arguments of `createRedemptionPosition(uint32)`.
      *
-     * Create a zero-stake position to receive existing backing on a registered validator.
-     * Nonpayable. Inactive validators are allowed; funded delegation remains subject to its active gate.      Creates the backing staking NFT before the public NFT. Adds no principal or debt.
+     * Create a zero-stake position to receive existing backing on a registered validator.      Creates the backing staking NFT before the public NFT. Adds no principal or debt.
+     * Nonpayable. Inactive validators are allowed; funded delegation remains subject to its active gate.
      */
     data class CreateRedemptionPositionParams(
         val validator: BigInteger,
@@ -661,7 +673,12 @@ object IDiesisPosition {
     /**
      * Arguments of `getApproved(uint256)`.
      *
-     * Returns the account approved for `tokenId` token. Requirements: - `tokenId` must exist.
+     * Returns the account approved for `tokenId` token.
+     * *
+     * * Requirements:
+     * *
+     * * - `tokenId` must exist.
+     *
      */
     data class GetApprovedParams(
         val tokenId: BigInteger,
@@ -681,7 +698,10 @@ object IDiesisPosition {
     /**
      * Arguments of `isApprovedForAll(address,address)`.
      *
-     * Returns if the `operator` is allowed to manage all of the assets of `owner`. See {setApprovalForAll}
+     * Returns if the `operator` is allowed to manage all of the assets of `owner`.
+     * *
+     * * See {setApprovalForAll}
+     *
      */
     data class IsApprovedForAllParams(
         val owner: String,
@@ -709,8 +729,8 @@ object IDiesisPosition {
     /**
      * Arguments of `lockPositionFor(uint256,bytes32,uint40)`.
      *
-     * Lock a position on behalf of its owner.
-     * Callable by authorized lock managers. Outstanding records remain enumerable after expiry      until their manager removes them; at most `MAX_LOCK_RECORDS` may exist per position.      A zero duration or a deadline that does not strictly extend the same record reverts.
+     * Lock a position on behalf of its owner.      until their manager removes them; at most `MAX_LOCK_RECORDS` may exist per position.      A zero duration or a deadline that does not strictly extend the same record reverts.
+     * Callable by authorized lock managers. Outstanding records remain enumerable after expiry
      */
     data class LockPositionForParams(
         val tokenId: BigInteger,
@@ -751,8 +771,8 @@ object IDiesisPosition {
     /**
      * Arguments of `mergePosition(uint256,uint256)`.
      *
-     * Atomically merge two positions on the same validator.
-     * Source must have no debt and not be locked. Uses swapDelegate for atomic re-delegation.      Burns the source NFT.
+     * Atomically merge two positions on the same validator.      Burns the source NFT.
+     * Source must have no debt and not be locked. Uses swapDelegate for atomic re-delegation.
      */
     data class MergePositionParams(
         val fromTokenId: BigInteger,
@@ -780,7 +800,12 @@ object IDiesisPosition {
     /**
      * Arguments of `ownerOf(uint256)`.
      *
-     * Returns the owner of the `tokenId` token. Requirements: - `tokenId` must exist.
+     * Returns the owner of the `tokenId` token.
+     * *
+     * * Requirements:
+     * *
+     * * - `tokenId` must exist.
+     *
      */
     data class OwnerOfParams(
         val tokenId: BigInteger,
@@ -823,7 +848,21 @@ object IDiesisPosition {
     /**
      * Arguments of `safeTransferFrom(address,address,uint256)`.
      *
-     * Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients are aware of the ERC-721 protocol to prevent tokens from being forever locked. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must exist and be owned by `from`. - If the caller is not `from`, it must have been allowed to move this token by either {approve} or   {setApprovalForAll}. - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon   a safe transfer. Emits a {Transfer} event.
+     * Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients
+     * * are aware of the ERC-721 protocol to prevent tokens from being forever locked.
+     * *
+     * * Requirements:
+     * *
+     * * - `from` cannot be the zero address.
+     * * - `to` cannot be the zero address.
+     * * - `tokenId` token must exist and be owned by `from`.
+     * * - If the caller is not `from`, it must have been allowed to move this token by either {approve} or
+     * *   {setApprovalForAll}.
+     * * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon
+     * *   a safe transfer.
+     * *
+     * * Emits a {Transfer} event.
+     *
      */
     data class SafeTransferFrom0Params(
         val from: String,
@@ -834,7 +873,19 @@ object IDiesisPosition {
     /**
      * Arguments of `safeTransferFrom(address,address,uint256,bytes)`.
      *
-     * Safely transfers `tokenId` token from `from` to `to`. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must exist and be owned by `from`. - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}. - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon   a safe transfer. Emits a {Transfer} event.
+     * Safely transfers `tokenId` token from `from` to `to`.
+     * *
+     * * Requirements:
+     * *
+     * * - `from` cannot be the zero address.
+     * * - `to` cannot be the zero address.
+     * * - `tokenId` token must exist and be owned by `from`.
+     * * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.
+     * * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon
+     * *   a safe transfer.
+     * *
+     * * Emits a {Transfer} event.
+     *
      */
     data class SafeTransferFrom1Params(
         val from: String,
@@ -846,7 +897,15 @@ object IDiesisPosition {
     /**
      * Arguments of `setApprovalForAll(address,bool)`.
      *
-     * Approve or remove `operator` as an operator for the caller. Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller. Requirements: - The `operator` cannot be the address zero. Emits an {ApprovalForAll} event.
+     * Approve or remove `operator` as an operator for the caller.
+     * * Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller.
+     * *
+     * * Requirements:
+     * *
+     * * - The `operator` cannot be the address zero.
+     * *
+     * * Emits an {ApprovalForAll} event.
+     *
      */
     data class SetApprovalForAllParams(
         val operator: String,
@@ -874,7 +933,7 @@ object IDiesisPosition {
     /**
      * Arguments of `splitPosition(uint256,uint256)`.
      *
-     * Atomically split a position into two on the same validator (no unbonding delay).
+     * Atomically split a position into two on the same validator (no unbonding delay).        source remainder must be 0 or ≥ MIN_STAKE).
      * Uses swapDelegate for instant re-delegation between positions.
      */
     data class SplitPositionParams(
@@ -894,7 +953,13 @@ object IDiesisPosition {
     /**
      * Arguments of `supportsInterface(bytes4)`.
      *
-     * Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[ERC section] to learn more about how these ids are created. This function call must use less than 30 000 gas.
+     * Returns true if this contract implements the interface defined by
+     * * `interfaceId`. See the corresponding
+     * * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[ERC section]
+     * * to learn more about how these ids are created.
+     * *
+     * * This function call must use less than 30 000 gas.
+     *
      */
     data class SupportsInterfaceParams(
         val interfaceId: Bytes4,
@@ -933,7 +998,21 @@ object IDiesisPosition {
     /**
      * Arguments of `transferFrom(address,address,uint256)`.
      *
-     * Transfers `tokenId` token from `from` to `to`. WARNING: Note that the caller is responsible to confirm that the recipient is capable of receiving ERC-721 or else they may be permanently lost. Usage of {safeTransferFrom} prevents loss, though the caller must understand this adds an external call which potentially creates a reentrancy vulnerability. Requirements: - `from` cannot be the zero address. - `to` cannot be the zero address. - `tokenId` token must be owned by `from`. - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}. Emits a {Transfer} event.
+     * Transfers `tokenId` token from `from` to `to`.
+     * *
+     * * WARNING: Note that the caller is responsible to confirm that the recipient is capable of receiving ERC-721
+     * * or else they may be permanently lost. Usage of {safeTransferFrom} prevents loss, though the caller must
+     * * understand this adds an external call which potentially creates a reentrancy vulnerability.
+     * *
+     * * Requirements:
+     * *
+     * * - `from` cannot be the zero address.
+     * * - `to` cannot be the zero address.
+     * * - `tokenId` token must be owned by `from`.
+     * * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.
+     * *
+     * * Emits a {Transfer} event.
+     *
      */
     data class TransferFromParams(
         val from: String,
@@ -973,8 +1052,8 @@ object IDiesisPosition {
     /**
      * Arguments of `withdrawTo(uint256,uint256,address)`.
      *
-     * Complete a matured withdrawal and forward the native tokens directly to `recipient`.
-     * The amount is determined by DiesisStaking's stored unstake request; callers cannot         supply a partial amount. `recipient` must be non-zero.
+     * Complete a matured withdrawal and forward the native tokens directly to `recipient`.         supply a partial amount. `recipient` must be non-zero.
+     * The amount is determined by DiesisStaking's stored unstake request; callers cannot
      */
     data class WithdrawToParams(
         val tokenId: BigInteger,

@@ -105,8 +105,8 @@ object IDiesisBuybackBurn {
     /**
      * Arguments of `lastTwapAveragePrice(address)`.
      *
-     * Last TWAP-average execution price recorded for `token`.
-     * DS-quote, oracle scale. Updated incrementally on each successful      chunk emission; zero if no chunks have executed yet.
+     * Last TWAP-average execution price recorded for `token`.      chunk emission; zero if no chunks have executed yet.
+     * DS-quote, oracle scale. Updated incrementally on each successful
      */
     data class LastTwapAveragePriceParams(
         val token: String,
@@ -115,8 +115,8 @@ object IDiesisBuybackBurn {
     /**
      * Arguments of `nextWindowStartBlock(address)`.
      *
-     * Block at which the next TWAP window for `token` opens.
-     * When a window is active, this returns the active window's end      block (the earliest block at which a fresh window may begin).      Returns zero when no window has ever been scheduled for `token`.
+     * Block at which the next TWAP window for `token` opens.      block (the earliest block at which a fresh window may begin).      Returns zero when no window has ever been scheduled for `token`.
+     * When a window is active, this returns the active window's end
      */
     data class NextWindowStartBlockParams(
         val token: String,
@@ -125,8 +125,8 @@ object IDiesisBuybackBurn {
     /**
      * Arguments of `pendingPurchaseByAsset(address)`.
      *
-     * Read the pending (non-DS) accumulator for `token`.
-     * DS deposits burn immediately and never accumulate; this returns      zero for DS.
+     * Read the pending (non-DS) accumulator for `token`.      zero for DS.
+     * DS deposits burn immediately and never accumulate; this returns
      */
     data class PendingPurchaseByAssetParams(
         val token: String,

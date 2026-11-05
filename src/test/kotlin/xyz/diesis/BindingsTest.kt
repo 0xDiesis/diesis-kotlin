@@ -52,7 +52,12 @@ class BindingsTest {
         assumeTrue(TestData.contractsDir.resolve("out").isDirectory, "contracts checkout not found")
         for ((_, contract, _) in TestData.publicContracts) {
             val artifact = TestData.mapper.readTree(TestData.contractsDir.resolve("out/$contract.sol/$contract.json"))
-            assertEquals(artifact["abi"], TestData.mapper.readTree(embeddedAbi(contract)), contract)
+            // Compare every full ABI entry with multiplicity; compiler order may differ.
+            assertEquals(
+                artifact["abi"].groupingBy { it }.eachCount(),
+                TestData.mapper.readTree(embeddedAbi(contract)).groupingBy { it }.eachCount(),
+                contract,
+            )
         }
     }
 

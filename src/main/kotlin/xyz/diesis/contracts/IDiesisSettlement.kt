@@ -164,8 +164,8 @@ object IDiesisSettlement {
     /**
      * Arguments of `acceptSessionKeyV2(address,uint256,uint64,uint256,bytes32)`.
      *
-     * Accept exact authorization terms as the session key before principal activation.
-     * One-use consent binds chain, endpoint, principal, key, terms and next generation.      This call changes neither sender identity nor the principal's active-session count.
+     * Accept exact authorization terms as the session key before principal activation.      This call changes neither sender identity nor the principal's active-session count.
+     * One-use consent binds chain, endpoint, principal, key, terms and next generation.
      */
     data class AcceptSessionKeyV2Params(
         val principal: String,
@@ -208,8 +208,8 @@ object IDiesisSettlement {
     /**
      * Arguments of `creditRouterDeposit(address,address,uint256)`.
      *
-     * Credit a generic ERC-20 settlement balance on behalf of the router.
-     * Callable only by the fixed `DiesisSettlementRouter` address. The router has already pulled `amount` of `token` into its own custody, so this selector only mutates the ledger — it never touches token storage. Reverts on a zero `user`, zero `token`, or zero `amount`.
+     * Credit a generic ERC-20 settlement balance on behalf of the router. router has already pulled `amount` of `token` into its own custody, so this selector only mutates the ledger — it never touches token storage. Reverts on a zero `user`, zero `token`, or zero `amount`.
+     * Callable only by the fixed `DiesisSettlementRouter` address. The
      */
     data class CreditRouterDepositParams(
         val user: String,
@@ -220,8 +220,8 @@ object IDiesisSettlement {
     /**
      * Arguments of `debitRouterWithdrawal(address,address,uint256)`.
      *
-     * Debit a generic ERC-20 settlement balance on behalf of the router.
-     * Callable only by the fixed `DiesisSettlementRouter` address. The ledger debit runs before the router releases custody; a reverted token transfer rolls this mutation back atomically. Preserves the locked-balance invariant (`balance - locked >= amount`) and reverts on a zero `user`, zero `token`, or zero `amount`.
+     * Debit a generic ERC-20 settlement balance on behalf of the router. ledger debit runs before the router releases custody; a reverted token transfer rolls this mutation back atomically. Preserves the locked-balance invariant (`balance - locked >= amount`) and reverts on a zero `user`, zero `token`, or zero `amount`.
+     * Callable only by the fixed `DiesisSettlementRouter` address. The
      */
     data class DebitRouterWithdrawalParams(
         val user: String,
@@ -276,8 +276,8 @@ object IDiesisSettlement {
     /**
      * Arguments of `revokeSessionKeyV2(address)`.
      *
-     * Principal or key may revoke an active session and advance its generation.
-     * A key may also cancel its pending consent. Expiry restores direct sender      identity; explicit revocation releases the principal's retained capacity.
+     * Principal or key may revoke an active session and advance its generation.      identity; explicit revocation releases the principal's retained capacity.
+     * A key may also cancel its pending consent. Expiry restores direct sender
      */
     data class RevokeSessionKeyV2Params(
         val sessionKey: String,

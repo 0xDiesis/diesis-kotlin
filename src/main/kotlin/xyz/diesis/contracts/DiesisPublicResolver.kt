@@ -496,7 +496,9 @@ object DiesisPublicResolver {
     /**
      * Arguments of `transferOwnership(address)`.
      *
-     * Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.
+     * Transfers ownership of the contract to a new account (`newOwner`).
+     * * Can only be called by the current owner.
+     *
      */
     data class TransferOwnershipParams(
         val newOwner: String,

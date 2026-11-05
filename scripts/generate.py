@@ -16,6 +16,8 @@ canonical.json is vendored from ../diesis-js/canonical.json.
 
 from __future__ import annotations
 
+from typegen_inputs import ordered_artifacts
+
 import json
 import os
 import re
@@ -280,13 +282,13 @@ def generate_bindings() -> dict[str, str]:
     """Run abi-typegen and return {file name: source}."""
     check_typegen_version()
     contracts = ",".join(contract for _, contract, _ in PUBLIC_CONTRACTS)
-    with tempfile.TemporaryDirectory(prefix="diesis-kotlin-") as temp:
+    with tempfile.TemporaryDirectory(prefix="diesis-kotlin-") as temp, ordered_artifacts(Path(os.environ.get("DIESIS_ARTIFACTS_DIR", CONTRACTS_DIR / "out")), contracts.split(",")) as inputs:
         subprocess.run(
             [
                 str(TYPEGEN),
                 "generate",
                 "--artifacts",
-                str(CONTRACTS_DIR / "out"),
+                str(inputs),
                 "--out",
                 temp,
                 "--target",

@@ -197,8 +197,8 @@ object IDiesisCoreVault {
     /**
      * Arguments of `deposit(uint8,uint256)`.
      *
-     * Deposit `amount` of the strategy's quote asset and mint         proportional shares. Reverts if the strategy is paused.
-     * `msg.value` semantics depend on the precompile's chosen      payment routing; the canonical implementation accepts native      DS for DS-denominated sub-vaults and bridges for others.
+     * Deposit `amount` of the strategy's quote asset and mint         proportional shares. Reverts if the strategy is paused.      payment routing; the canonical implementation accepts native      DS for DS-denominated sub-vaults and bridges for others.
+     * `msg.value` semantics depend on the precompile's chosen
      */
     data class DepositParams(
         val id: BigInteger,
@@ -226,7 +226,7 @@ object IDiesisCoreVault {
     /**
      * Arguments of `getCheckpoint(uint8,uint64)`.
      *
-     * Get the NAV checkpoint stored at `blockNumber`, if any.
+     * Get the NAV checkpoint stored at `blockNumber`, if any.         checkpoint exists at that block.
      */
     data class GetCheckpointParams(
         val id: BigInteger,

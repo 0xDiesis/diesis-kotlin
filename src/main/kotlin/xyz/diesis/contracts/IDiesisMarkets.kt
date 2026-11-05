@@ -86,7 +86,8 @@ object IDiesisMarkets {
     /**
      * Arguments of `createSpotMarket(address,address,uint64,uint64,uint256)`.
      *
-     * Legacy provisioning requires the current Config owner. Public issuance uses `deployTokenAndSpotBook`. `bond`, when nonzero, is deducted from the creator's WDS settlement balance. Reverts after the append-only 256-market ordinal namespace is full.
+     * uses `deployTokenAndSpotBook`. `bond`, when nonzero, is deducted from the creator's WDS settlement balance. Reverts after the append-only 256-market ordinal namespace is full.
+     * Legacy provisioning requires the current Config owner. Public issuance
      */
     data class CreateSpotMarketParams(
         val baseToken: String,

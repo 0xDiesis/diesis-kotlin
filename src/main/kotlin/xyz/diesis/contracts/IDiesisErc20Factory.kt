@@ -110,8 +110,8 @@ object IDiesisErc20Factory {
     /**
      * Arguments of `deploy((bytes11,string,uint256,address))`.
      *
-     * Deploy a new ERC-20 at the deterministic address.
-     * Reverts with `DuplicateDeployment` if the `(deployer, symbol)` pair      has already been used, with `InvalidSymbolLength` or `InvalidSupply`      on parameter validation, and with `FactoryCallFailed` for any other      precompile-side failure.External callers must equal `params.deployer`.
+     * Deploy a new ERC-20 at the deterministic address.      has already been used, with `InvalidSymbolLength` or `InvalidSupply`      on parameter validation, and with `FactoryCallFailed` for any other      precompile-side failure.
+     * Reverts with `DuplicateDeployment` if the `(deployer, symbol)` pairExternal callers must equal `params.deployer`.
      */
     data class Deploy2Params(
         val params: DeployParams,
@@ -120,8 +120,8 @@ object IDiesisErc20Factory {
     /**
      * Arguments of `predictAddress(address,bytes11)`.
      *
-     * Predict the address the factory will deploy for `(deployer, symbol)`.
-     * The address is `keccak256(0xFF || factory || salt || keccak256(initCode))[12:]`      where `salt = keccak256(deployer || symbol)` and `initCode` is the pinned      template constructor bytecode wrapping `(name, symbol, initialSupply, deployer)`.
+     * Predict the address the factory will deploy for `(deployer, symbol)`.      where `salt = keccak256(deployer || symbol)` and `initCode` is the pinned      template constructor bytecode wrapping `(name, symbol, initialSupply, deployer)`.
+     * The address is `keccak256(0xFF || factory || salt || keccak256(initCode))[12:]`
      */
     data class PredictAddressParams(
         val deployer: String,
@@ -131,8 +131,8 @@ object IDiesisErc20Factory {
     /**
      * Arguments of `proposeTemplateUpdate(bytes32)`.
      *
-     * Propose a new template bytecode hash. Subject to a 604,800-block delay.
-     * The current Config owner must propose a runtime embedded in this node build. Multiple proposals overwrite the pending hash and reset the block delay.
+     * Propose a new template bytecode hash. Subject to a 604,800-block delay. Multiple proposals overwrite the pending hash and reset the block delay.
+     * The current Config owner must propose a runtime embedded in this node build.
      */
     data class ProposeTemplateUpdateParams(
         val newHash: Bytes32,

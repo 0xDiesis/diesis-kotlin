@@ -102,8 +102,8 @@ object IDiesisIssuanceAuction {
     /**
      * Arguments of `bidPerpListingV1((bytes32,address,address,bytes32))`.
      *
-     * Place a canonical-USDC bid bound to one perpetual registration.
-     * The native runtime debits USDC; this selector is intentionally not      payable and accepts no caller-supplied winner.
+     * Place a canonical-USDC bid bound to one perpetual registration.      payable and accepts no caller-supplied winner.
+     * The native runtime debits USDC; this selector is intentionally not
      */
     data class BidPerpListingV1Params(
         val registration: PerpRegistrationV1,

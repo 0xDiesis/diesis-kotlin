@@ -707,8 +707,8 @@ object DiesisPatron {
     /**
      * Arguments of `accrueSettledBurnV2(uint64,uint256)`.
      *
-     * Accrue the block's total settled Patron fees into the burn accumulator exactly once, before block finalization.
-     * The Rust executor sums the actual fees it settled in this block and dispatches one system call. Requiring `blockNumber == block.number` and `blockNumber > lastAccruedBlock` makes double accrual unrepresentable, while canonical reorg rollback restores the prior latch and accumulator.
+     * Accrue the block's total settled Patron fees into the burn accumulator exactly once, before block finalization. dispatches one system call. Requiring `blockNumber == block.number` and `blockNumber > lastAccruedBlock` makes double accrual unrepresentable, while canonical reorg rollback restores the prior latch and accumulator.
+     * The Rust executor sums the actual fees it settled in this block and
      */
     data class AccrueSettledBurnV2Params(
         val blockNumber: BigInteger,
@@ -729,8 +729,8 @@ object DiesisPatron {
     /**
      * Arguments of `campaignIdFor(address,bytes32)`.
      *
-     * Deterministic, owner-bound campaign id for a `(owner, salt)` pair.
-     * Binding the owner into the id means only that owner can register it, so a front-running registration cannot capture a victim's planned campaign.
+     * Deterministic, owner-bound campaign id for a `(owner, salt)` pair. so a front-running registration cannot capture a victim's planned campaign.
+     * Binding the owner into the id means only that owner can register it,
      */
     data class CampaignIdForParams(
         val owner: String,
@@ -787,8 +787,8 @@ object DiesisPatron {
     /**
      * Arguments of `claimCampaignVoucherV1((bytes32,address,address,bytes4,uint32,uint256,uint64,uint256),bytes)`.
      *
-     * Claim a signed campaign voucher, atomically assigning the campaign jar to the beneficiary and installing the exact bounded authorization.
-     * Callable only by the voucher's beneficiary. A bootstrap reserve for this same claim transaction may already have consumed the fresh authorization's first transaction and provisional spend, so the voucher bounds are held to at least what is already consumed and the counters are preserved: the claim transaction itself is the first sponsored draw.
+     * Claim a signed campaign voucher, atomically assigning the campaign jar to the beneficiary and installing the exact bounded authorization. this same claim transaction may already have consumed the fresh authorization's first transaction and provisional spend, so the voucher bounds are held to at least what is already consumed and the counters are preserved: the claim transaction itself is the first sponsored draw.
+     * Callable only by the voucher's beneficiary. A bootstrap reserve for
      */
     data class ClaimCampaignVoucherV1Params(
         val voucher: IDiesisPatronCampaignVoucherV1,
@@ -868,8 +868,8 @@ object DiesisPatron {
     /**
      * Arguments of `registerCampaignV1(bytes32)`.
      *
-     * Register a campaign, deriving an owner-bound id from `salt`.
-     * Permissionless and zero-value. The campaign id is `campaignIdFor(msg.sender, salt)`, so a foreign registration derives a different id and can never collide with — and capture — another account's planned campaign. Existing funding retains its contributor ownership. Funding remains the separate `contribute` action against `grantIdForCampaign(campaignId)`.
+     * Register a campaign, deriving an owner-bound id from `salt`. `campaignIdFor(msg.sender, salt)`, so a foreign registration derives a different id and can never collide with — and capture — another account's planned campaign. Existing funding retains its contributor ownership. Funding remains the separate `contribute` action against `grantIdForCampaign(campaignId)`.
+     * Permissionless and zero-value. The campaign id is
      */
     data class RegisterCampaignV1Params(
         val salt: Bytes32,
@@ -889,7 +889,7 @@ object DiesisPatron {
     /**
      * Arguments of `reserveGrantV2(bytes32,address,address,bytes,uint256)`.
      *
-     * Reserve a grant's maximum transaction fee before user execution. Only callable by the Rust node (msg.sender == address(0)).
+     * Reserve a grant's maximum transaction fee before user execution. Only callable by the Rust node (msg.sender == address(0)). settle, and cancel write only the selected grant, beneficiary authorization, and this unique reservation slot, so disjoint transactions never contend for a shared reservation cell.
      */
     data class ReserveGrantV2Params(
         val reservationId: Bytes32,
@@ -914,8 +914,8 @@ object DiesisPatron {
     /**
      * Arguments of `resolveGrantContext(address,address,bytes,uint256)`.
      *
-     * Resolve a grant and return the effective jar and authorization bounds the node needs for pool-admission accounting in one system call.
-     * For an ordinary grant the bounds are the stored beneficiary authorization. For a campaign voucher claim (`target == this`) there is no stored authorization yet, so the bounds come from the voucher itself: the single bootstrap transaction is admitted against the voucher's declared maximum transactions and lifetime spend with zero already consumed.
+     * Resolve a grant and return the effective jar and authorization bounds the node needs for pool-admission accounting in one system call. authorization. For a campaign voucher claim (`target == this`) there is no stored authorization yet, so the bounds come from the voucher itself: the single bootstrap transaction is admitted against the voucher's declared maximum transactions and lifetime spend with zero already consumed.
+     * For an ordinary grant the bounds are the stored beneficiary
      */
     data class ResolveGrantContextParams(
         val sender: String,
@@ -998,8 +998,8 @@ object DiesisPatron {
     /**
      * Arguments of `settleGrantV2(bytes32,uint256)`.
      *
-     * Finalize one reservation at its actual transaction fee.
-     * Settlement updates jar and authorization accounting only. It does not return a value and never touches the shared burn accumulator; block-final `accrueSettledBurnV2` reduces settled fees into `accruedBurn` exactly once. This path performs no external calls and is total for every `actualFee <= maximumFee`.
+     * Finalize one reservation at its actual transaction fee. return a value and never touches the shared burn accumulator; block-final `accrueSettledBurnV2` reduces settled fees into `accruedBurn` exactly once. This path performs no external calls and is total for every `actualFee <= maximumFee`.
+     * Settlement updates jar and authorization accounting only. It does not
      */
     data class SettleGrantV2Params(
         val reservationId: Bytes32,
@@ -1009,7 +1009,9 @@ object DiesisPatron {
     /**
      * Arguments of `transferOwnership(address)`.
      *
-     * Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.
+     * Transfers ownership of the contract to a new account (`newOwner`).
+     * * Can only be called by the current owner.
+     *
      */
     data class TransferOwnershipParams(
         val newOwner: String,
@@ -1029,8 +1031,8 @@ object DiesisPatron {
     /**
      * Arguments of `withdrawContribution(bytes32,uint256)`.
      *
-     * Reclaim a proportional share of a grant's remaining balance.
-     * A withdrawal during an active reservation is a complete contributor exit: it records every live reservation-time claim before removing the caller's live share. This prevents a later refund from moving to a contributor who was never exposed to that reservation.
+     * Reclaim a proportional share of a grant's remaining balance. exit: it records every live reservation-time claim before removing the caller's live share. This prevents a later refund from moving to a contributor who was never exposed to that reservation.
+     * A withdrawal during an active reservation is a complete contributor
      */
     data class WithdrawContributionParams(
         val grantId: Bytes32,
@@ -1040,8 +1042,8 @@ object DiesisPatron {
     /**
      * Arguments of `withdrawContributionStep(bytes32)`.
      *
-     * Advance a contribution exit without traversing all held cohorts.
-     * Repeat until complete. Each call either compacts idle roots, resolves one dormant alias, or snapshots and exits one live cohort. Detached reservation claims remain separately withdrawable.
+     * Advance a contribution exit without traversing all held cohorts. resolves one dormant alias, or snapshots and exits one live cohort. Detached reservation claims remain separately withdrawable.
+     * Repeat until complete. Each call either compacts idle roots,
      */
     data class WithdrawContributionStepParams(
         val grantId: Bytes32,
