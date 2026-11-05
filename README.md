@@ -235,7 +235,7 @@ from `canonical.json`. A check mode tells you if anything is stale.
 
 **Details.** `scripts/generate.py` needs only Python 3. It reads the compiled
 contracts from `../../diesis-core/diesis/contracts/out` and runs that checkout's abi-typegen,
-version 0.8.0 or newer. Set `DIESIS_CONTRACTS_DIR` or `ABI_TYPEGEN` to use a
+version 0.9.1 or newer. Set `DIESIS_CONTRACTS_DIR` or `ABI_TYPEGEN` to use a
 different checkout or binary. It generates the bindings in the
 `xyz.diesis.contracts` package, and writes `DiesisAddresses.kt`,
 `DiesisChains.kt`, and `DiesisContracts.kt` from `canonical.json`. It copies
